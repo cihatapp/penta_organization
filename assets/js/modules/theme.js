@@ -65,6 +65,27 @@ const ThemeManager = (function() {
     currentTheme = theme;
     updateToggleButton();
     updateLogos();
+    updateFavicon();
+  }
+
+  /**
+   * Update favicon based on theme
+   */
+  function updateFavicon() {
+    const favicon = document.querySelector('link[rel="icon"]');
+    const appleTouchIcon = document.querySelector('link[rel="apple-touch-icon"]');
+
+    // Dark theme uses light logo, light theme uses dark logo
+    const faviconPath = currentTheme === THEME_DARK
+      ? './assets/images/logo.png'
+      : './assets/images/logo_dark.png';
+
+    if (favicon) {
+      favicon.href = faviconPath;
+    }
+    if (appleTouchIcon) {
+      appleTouchIcon.href = faviconPath;
+    }
   }
 
   /**

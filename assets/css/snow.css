@@ -1,0 +1,94 @@
+/* ============================================
+   SNOW EFFECT - Winter Theme
+   Kış temalı kar yağışı efekti
+   Light/Dark mod desteği ile
+   ============================================ */
+
+/* Snow Container */
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: var(--z-max);
+}
+
+/* Individual Snowflake */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: snowfall linear infinite;
+  will-change: transform;
+}
+
+/* Dark Theme - White Snowflakes */
+[data-theme="dark"] .snowflake {
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.4) 100%);
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.4),
+    0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Light Theme - Subtle Blue-Gray Snowflakes */
+[data-theme="light"] .snowflake {
+  background: radial-gradient(circle at 30% 30%,
+    rgba(120, 140, 170, 0.85) 0%,
+    rgba(140, 160, 190, 0.6) 50%,
+    rgba(160, 180, 210, 0.35) 100%);
+  box-shadow:
+    0 0 4px rgba(120, 140, 170, 0.3),
+    0 0 8px rgba(120, 140, 170, 0.15);
+}
+
+/* Snowfall Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25vh) translateX(15px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-10px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(20px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(105vh) translateX(5px) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+/* Gentle sway animation for more realism */
+@keyframes snowSway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+/* Performance: Reduce snowflakes on mobile */
+@media (max-width: 768px) {
+  .snow-container {
+    opacity: 0.7;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .snow-container {
+    display: none;
+  }
+}

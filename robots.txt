@@ -1,0 +1,24 @@
+# Penta Organizasyon - robots.txt
+# https://www.pentaorganizasyon.com
+
+User-agent: *
+Allow: /
+
+# Ana sayfalar
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /portfolio.html
+Allow: /careers.html
+Allow: /contact.html
+
+# Statik kaynaklar
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Sitemap lokasyonu
+Sitemap: https://www.pentaorganizasyon.com/sitemap.xml
+
+# Crawl-delay (optional - polite crawling)
+Crawl-delay: 1
