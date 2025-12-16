@@ -312,6 +312,27 @@
   border-radius: var(--radius-sm);
 }
 
+/* Dark/Light Mode Logo Switching */
+.header__logo-img--light,
+.footer__logo-img--light {
+  display: block;
+}
+
+.header__logo-img--dark,
+.footer__logo-img--dark {
+  display: none;
+}
+
+[data-theme="dark"] .header__logo-img--light,
+[data-theme="dark"] .footer__logo-img--light {
+  display: none;
+}
+
+[data-theme="dark"] .header__logo-img--dark,
+[data-theme="dark"] .footer__logo-img--dark {
+  display: block;
+}
+
 /* Navigation */
 .nav {
   display: none;

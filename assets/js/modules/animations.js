@@ -21,18 +21,22 @@ const AnimationManager = (function() {
    */
   function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('[data-animate]');
+    const staggerContainers = document.querySelectorAll('[data-animate-stagger]');
 
-    if (animatedElements.length === 0) return;
+    if (animatedElements.length === 0 && staggerContainers.length === 0) return;
+
+    // Mark elements that will animate (hides them initially)
+    animatedElements.forEach(el => el.classList.add('will-animate'));
+    staggerContainers.forEach(el => el.classList.add('will-animate'));
 
     observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const element = entry.target;
-          const animation = element.dataset.animate;
           const delay = element.dataset.animateDelay || 0;
 
           setTimeout(() => {
-            element.classList.add('animated', `animate-${animation}`);
+            element.classList.add('is-visible');
           }, parseInt(delay));
 
           // Unobserve after animation
@@ -42,6 +46,7 @@ const AnimationManager = (function() {
     }, config);
 
     animatedElements.forEach(el => observer.observe(el));
+    staggerContainers.forEach(el => observer.observe(el));
   }
 
   /**

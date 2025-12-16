@@ -39,22 +39,19 @@
     <div class="container header__container">
       <!-- Logo -->
       <a href="index.html" class="header__logo">
-        <img
-          src="./assets/images/logo.png"
-          alt="Penta Organization"
-          class="header__logo-img"
-        >
+        <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
+        <img src="./assets/images/logo-dark.jpeg" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="nav" aria-label="Ana navigasyon">
         <ul class="nav__list">
-          <li><a href="index.html" class="nav__link nav__link--active">Ana Sayfa</a></li>
-          <li><a href="services.html" class="nav__link">Hizmetlerimiz</a></li>
-          <li><a href="about.html" class="nav__link">Hakkımızda</a></li>
-          <li><a href="portfolio.html" class="nav__link">Referanslar</a></li>
-          <li><a href="careers.html" class="nav__link">Kariyer</a></li>
-          <li><a href="contact.html" class="nav__link">İletişim</a></li>
+          <li><a href="index.html" class="nav__link nav__link--active" data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a href="services.html" class="nav__link" data-i18n="nav.services">Hizmetlerimiz</a></li>
+          <li><a href="about.html" class="nav__link" data-i18n="nav.about">Hakkımızda</a></li>
+          <li><a href="portfolio.html" class="nav__link" data-i18n="nav.portfolio">Referanslar</a></li>
+          <li><a href="careers.html" class="nav__link" data-i18n="nav.careers">Kariyer</a></li>
+          <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">İletişim</a></li>
         </ul>
       </nav>
 
@@ -96,12 +93,12 @@
     <!-- Mobile Navigation -->
     <nav class="nav-mobile" aria-label="Mobil navigasyon">
       <ul class="nav-mobile__list">
-        <li><a href="index.html" class="nav-mobile__link nav-mobile__link--active">Ana Sayfa</a></li>
-        <li><a href="services.html" class="nav-mobile__link">Hizmetlerimiz</a></li>
-        <li><a href="about.html" class="nav-mobile__link">Hakkımızda</a></li>
-        <li><a href="portfolio.html" class="nav-mobile__link">Referanslar</a></li>
-        <li><a href="careers.html" class="nav-mobile__link">Kariyer</a></li>
-        <li><a href="contact.html" class="nav-mobile__link">İletişim</a></li>
+        <li><a href="index.html" class="nav-mobile__link nav-mobile__link--active" data-i18n="nav.home">Ana Sayfa</a></li>
+        <li><a href="services.html" class="nav-mobile__link" data-i18n="nav.services">Hizmetlerimiz</a></li>
+        <li><a href="about.html" class="nav-mobile__link" data-i18n="nav.about">Hakkımızda</a></li>
+        <li><a href="portfolio.html" class="nav-mobile__link" data-i18n="nav.portfolio">Referanslar</a></li>
+        <li><a href="careers.html" class="nav-mobile__link" data-i18n="nav.careers">Kariyer</a></li>
+        <li><a href="contact.html" class="nav-mobile__link" data-i18n="nav.contact">İletişim</a></li>
       </ul>
     </nav>
   </header>
@@ -133,7 +130,7 @@
         <div class="hero__content">
           <span class="hero__badge badge badge--primary animate-on-load" data-delay="0">Profesyonel Etkinlik Yönetimi</span>
           <h1 class="hero__title animate-on-load" data-delay="200">Unutulmaz Deneyimler <span class="text-gradient animate-gradient">Yaratıyoruz</span></h1>
-          <p class="hero__subtitle animate-on-load" data-delay="400">10 yılı aşkın deneyimimizle vizyonunuzu kusursuz bir gerçekliğe dönüştürüyoruz. Güven ve huzur felsefemizle yanınızdayız.</p>
+          <p class="hero__subtitle animate-on-load" data-delay="400">Mükemmel anlar, kusursuz bağlarla başlar.</p>
           <div class="hero__actions animate-on-load" data-delay="600">
             <a href="services.html" class="btn btn--primary btn--lg btn--glow" data-magnetic="0.2">Hizmetlerimizi Keşfedin</a>
             <a href="contact.html" class="btn btn--outline btn--lg" data-magnetic="0.2">İletişime Geçin</a>
@@ -273,102 +270,6 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials-section">
-      <div class="container">
-        <div class="section__header text-center" data-animate="fade-up">
-          <span class="section__badge badge">Müşteri Yorumları</span>
-          <h2 class="section__title">Müşterilerimiz Ne Diyor?</h2>
-        </div>
-
-        <div class="carousel" data-testimonials data-animate="fade-up">
-          <div class="carousel__track">
-            <!-- Testimonial 1 -->
-            <div class="testimonial carousel__slide--active" aria-hidden="false">
-              <div class="testimonial__content">
-                <div class="testimonial__rating">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <blockquote class="testimonial__quote">"Penta Organizasyon, kurumsal etkinliğimizi unutulmaz bir deneyime dönüştürdü. Detaylara gösterdikleri özen ve profesyonellikleri tüm beklentilerimizi aştı."</blockquote>
-                <div class="testimonial__author">
-                  <img src="./assets/images/testimonials/client-1.svg" alt="Ahmet Yılmaz" class="testimonial__avatar">
-                  <div class="testimonial__info">
-                    <cite class="testimonial__name">Ahmet Yılmaz</cite>
-                    <span class="testimonial__role">CEO, Tech Solutions</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="testimonial" aria-hidden="true">
-              <div class="testimonial__content">
-                <div class="testimonial__rating">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <blockquote class="testimonial__quote">"Penta ile çalışmak müthiş bir deneyimdi. Her detayı düşünmüşlerdi ve etkinliğimiz kusursuz geçti. Kesinlikle tavsiye ediyorum!"</blockquote>
-                <div class="testimonial__author">
-                  <img src="./assets/images/testimonials/client-2.svg" alt="Elif Demir" class="testimonial__avatar">
-                  <div class="testimonial__info">
-                    <cite class="testimonial__name">Elif Demir</cite>
-                    <span class="testimonial__role">Pazarlama Müdürü, Global Corp</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="testimonial" aria-hidden="true">
-              <div class="testimonial__content">
-                <div class="testimonial__rating">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <blockquote class="testimonial__quote">"Yıllık galalarımız için Penta ile çalışmak işimizi kolaylaştırdı. Her şeyi kusursuz bir şekilde yönettiler ve misafirlerimiz çok etkilendi."</blockquote>
-                <div class="testimonial__author">
-                  <img src="./assets/images/testimonials/client-3.svg" alt="Mehmet Kaya" class="testimonial__avatar">
-                  <div class="testimonial__info">
-                    <cite class="testimonial__name">Mehmet Kaya</cite>
-                    <span class="testimonial__role">Genel Müdür, ABC Şirketi</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carousel Controls -->
-          <button class="carousel__nav carousel__nav--prev" data-carousel-prev aria-label="Önceki yorum">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
-          <button class="carousel__nav carousel__nav--next" data-carousel-next aria-label="Sonraki yorum">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9 18 15 12 9 6"/>
-            </svg>
-          </button>
-
-          <!-- Carousel Dots -->
-          <div class="carousel__dots" role="tablist">
-            <button class="carousel__dot carousel__dot--active" role="tab" aria-selected="true" aria-label="Slayt 1"></button>
-            <button class="carousel__dot" role="tab" aria-selected="false" aria-label="Slayt 2"></button>
-            <button class="carousel__dot" role="tab" aria-selected="false" aria-label="Slayt 3"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="section cta-section">
       <div class="container">
@@ -392,20 +293,17 @@
         <!-- Brand Column -->
         <div class="footer__brand">
           <a href="index.html" class="footer__logo">
-            <img
-              src="./assets/images/logo.png"
-              alt="Penta Organizasyon"
-              class="footer__logo-img"
-            >
+            <img src="./assets/images/logo.png" alt="Penta Organizasyon" class="footer__logo-img footer__logo-img--light">
+            <img src="./assets/images/logo-dark.jpeg" alt="Penta Organizasyon" class="footer__logo-img footer__logo-img--dark">
           </a>
-          <p class="footer__tagline">10 yılı aşkın deneyimle unutulmaz etkinlikler yaratıyoruz.</p>
+          <p class="footer__tagline">Mükemmel anlar, kusursuz bağlarla başlar.</p>
           <div class="footer__social">
             <a href="#" class="social-link" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
               </svg>
             </a>
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a href="https://instagram.com/pentaorganizasyon" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
@@ -453,7 +351,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>İstanbul, Türkiye</span>
+              <span>Kültür mahallesi, 3871. Sk. Kepez/Antalya</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

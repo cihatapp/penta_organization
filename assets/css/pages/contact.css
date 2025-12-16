@@ -39,17 +39,7 @@
 /* ===================
    CONTACT LAYOUT (Legacy)
    =================== */
-.contact-section {
-  display: grid;
-  gap: var(--space-3xl);
-}
-
-@media (min-width: 1024px) {
-  .contact-section {
-    grid-template-columns: 1fr 1.5fr;
-    align-items: start;
-  }
-}
+/* Note: .contact-section is a wrapper, layout is handled by .contact-grid */
 
 /* ===================
    CONTACT INFO
