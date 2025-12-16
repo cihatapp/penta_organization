@@ -149,6 +149,32 @@ const I18nManager = (function() {
 
     // Update HTML lang attribute
     document.documentElement.lang = currentLang;
+
+    // Handle typewriter animation restart on language change
+    const typewriterContainer = document.querySelector('.typewriter-container');
+    if (typewriterContainer) {
+      const line3Wrapper = typewriterContainer.querySelector('.typewriter-line-wrapper--3');
+      const line3 = typewriterContainer.querySelector('.typewriter-line--3');
+
+      // Hide/show line 3 based on content
+      if (line3Wrapper && line3) {
+        if (line3.textContent.trim() === '') {
+          line3Wrapper.style.display = 'none';
+        } else {
+          line3Wrapper.style.display = '';
+        }
+      }
+
+      // Restart typewriter animations
+      const lines = typewriterContainer.querySelectorAll('.typewriter-line');
+      const cursors = typewriterContainer.querySelectorAll('.typewriter-cursor');
+
+      [...lines, ...cursors].forEach(el => {
+        el.style.animation = 'none';
+        el.offsetHeight; // Trigger reflow
+        el.style.animation = '';
+      });
+    }
   }
 
   /**

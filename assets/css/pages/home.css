@@ -948,12 +948,41 @@
     cursorFadeOut 0.3s ease 2s forwards;
 }
 
-/* Cursor 2 - appears when line 2 starts, hides at end */
+/* Cursor 2 - appears when line 2 starts */
 .typewriter-cursor--2 {
   animation:
     cursorAppear 0.1s ease 2.2s forwards,
     cursorBlink 0.8s step-end 2.2s infinite,
     cursorFadeOut 0.3s ease 4.5s forwards;
+}
+
+/* Line 3 - only used for English (longer text) */
+.typewriter-line--3 {
+  animation:
+    typewriterReveal 1.2s steps(12, end) 4.7s forwards,
+    glowPulse 3s ease-in-out 6s infinite;
+}
+
+/* Cursor 3 - appears when line 3 starts */
+.typewriter-cursor--3 {
+  animation:
+    cursorAppear 0.1s ease 4.7s forwards,
+    cursorBlink 0.8s step-end 4.7s infinite,
+    cursorFadeOut 0.3s ease 6.2s forwards;
+}
+
+/* Hide line 3 wrapper when empty (Turkish) */
+.typewriter-line-wrapper--3:has(.typewriter-line--3:empty) {
+  display: none;
+}
+
+/* Fallback for browsers without :has() support */
+.typewriter-line--3:empty {
+  display: none;
+}
+
+.typewriter-line--3:empty + .typewriter-cursor--3 {
+  display: none;
 }
 
 /* Typewriter reveal animation */
