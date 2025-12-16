@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="tr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,8 +43,8 @@
 
       <div class="header__actions">
         <div class="toggle toggle--lang" role="group" aria-label="Language selection">
-          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="en">EN</button>
-          <button class="toggle__btn" data-lang-toggle data-lang="tr">TR</button>
+          <button class="toggle__btn" data-lang-toggle data-lang="en">EN</button>
+          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="tr">TR</button>
         </div>
 
         <button class="btn btn--icon" data-theme-toggle aria-label="Toggle theme">
@@ -87,8 +87,8 @@
               <li><span data-i18n="nav.services">Services</span></li>
             </ol>
           </nav>
-          <h1 class="page-hero__title">Hizmetlerimiz</h1>
-          <p class="page-hero__subtitle">Vizyonunuzu gerçeğe dönüştürmek için kapsamlı etkinlik çözümleri</p>
+          <h1 class="page-hero__title" data-i18n="services.hero.title">Hizmetlerimiz</h1>
+          <p class="page-hero__subtitle" data-i18n="services.hero.subtitle">Vizyonunuzu gerçeğe dönüştürmek için kapsamlı etkinlik çözümleri</p>
         </div>
       </div>
     </section>
@@ -98,11 +98,11 @@
       <div class="container">
         <!-- Filter Tabs -->
         <div class="filter-tabs" data-animate="fade-up">
-          <button class="filter-tab filter-tab--active" data-filter="all">Tüm Hizmetler</button>
-          <button class="filter-tab" data-filter="staff">Personel</button>
-          <button class="filter-tab" data-filter="event">Etkinlik</button>
-          <button class="filter-tab" data-filter="technical">Teknik</button>
-          <button class="filter-tab" data-filter="logistics">Lojistik</button>
+          <button class="filter-tab filter-tab--active" data-filter="all" data-i18n="services.filters.all">Tüm Hizmetler</button>
+          <button class="filter-tab" data-filter="staff" data-i18n="services.filters.staff">Personel</button>
+          <button class="filter-tab" data-filter="event" data-i18n="services.filters.event">Etkinlik</button>
+          <button class="filter-tab" data-filter="technical" data-i18n="services.filters.technical">Teknik</button>
+          <button class="filter-tab" data-filter="logistics" data-i18n="services.filters.logistics">Lojistik</button>
         </div>
 
         <!-- Services Grid -->
@@ -118,16 +118,16 @@
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
               </div>
-              <h3 class="service-card__title">Part Time Ekip Tedariği</h3>
-              <p class="service-card__subtitle">Markanızın Güler Yüzü</p>
-              <p class="service-card__description">Etkinliğinizin karakterini ve kurumsal kimliğinizi yansıtacak, en önemlisi sorumluluk sahibi, eğitimli ve güler yüzlü ekip arkadaşları seçip organize ediyoruz. Ekibimiz, markanızın sahnedeki uzantısıdır.</p>
+              <h3 class="service-card__title" data-i18n="services.staff.title">Part Time Ekip Tedariği</h3>
+              <p class="service-card__subtitle" data-i18n="services.staff.subtitle">Markanızın Güler Yüzü</p>
+              <p class="service-card__description" data-i18n="services.staff.description">Etkinliğinizin karakterini ve kurumsal kimliğinizi yansıtacak, en önemlisi sorumluluk sahibi, eğitimli ve güler yüzlü ekip arkadaşları seçip organize ediyoruz. Ekibimiz, markanızın sahnedeki uzantısıdır.</p>
               <ul class="service-card__features">
-                <li>Nitelikli ve Güvenilir Kadro</li>
-                <li>Eğitimli Personel</li>
-                <li>Marka Temsili Bilinci</li>
-                <li>Esnek Çalışma Modeli</li>
+                <li data-i18n="services.staff.features.0">Nitelikli ve Güvenilir Kadro</li>
+                <li data-i18n="services.staff.features.1">Eğitimli Personel</li>
+                <li data-i18n="services.staff.features.2">Marka Temsili Bilinci</li>
+                <li data-i18n="services.staff.features.3">Esnek Çalışma Modeli</li>
               </ul>
-              <a href="contact.html?service=staff" class="btn btn--primary">İletişim</a>
+              <a href="contact.html?service=staff" class="btn btn--primary" data-i18n="services.cta">İletişim</a>
             </div>
           </article>
 
@@ -142,16 +142,16 @@
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
                 </svg>
               </div>
-              <h3 class="service-card__title">Kurumsal Etkinlik Yönetimi</h3>
-              <p class="service-card__subtitle">Vizyonunuzun Gerçeğe Dönüşümü</p>
-              <p class="service-card__description">Etkinliğinizin hedeflerine ulaşması için yaratıcı ve amaca yönelik konseptler geliştiririz. Mekân seçimi, bütçeleme ve zaman çizelgesi dahil tüm planlama süreçlerini şeffaflıkla yönetiriz.</p>
+              <h3 class="service-card__title" data-i18n="services.event.title">Kurumsal Etkinlik Yönetimi</h3>
+              <p class="service-card__subtitle" data-i18n="services.event.subtitle">Vizyonunuzun Gerçeğe Dönüşümü</p>
+              <p class="service-card__description" data-i18n="services.event.description">Etkinliğinizin hedeflerine ulaşması için yaratıcı ve amaca yönelik konseptler geliştiririz. Mekân seçimi, bütçeleme ve zaman çizelgesi dahil tüm planlama süreçlerini şeffaflıkla yönetiriz.</p>
               <ul class="service-card__features">
-                <li>Stratejik Konsept Geliştirme</li>
-                <li>Detaylı Planlama</li>
-                <li>Mekân Seçimi</li>
-                <li>Bütçe Yönetimi</li>
+                <li data-i18n="services.event.features.0">Stratejik Konsept Geliştirme</li>
+                <li data-i18n="services.event.features.1">Detaylı Planlama</li>
+                <li data-i18n="services.event.features.2">Mekân Seçimi</li>
+                <li data-i18n="services.event.features.3">Bütçe Yönetimi</li>
               </ul>
-              <a href="contact.html?service=event" class="btn btn--primary">İletişim</a>
+              <a href="contact.html?service=event" class="btn btn--primary" data-i18n="services.cta">İletişim</a>
             </div>
           </article>
 
@@ -166,16 +166,16 @@
                   <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
                 </svg>
               </div>
-              <h3 class="service-card__title">Sahne - Dekor - Ses - Işık</h3>
-              <p class="service-card__subtitle">Teknik ve Estetik Kusursuzluk</p>
-              <p class="service-card__description">Konuşmacıları ve mesajları öne çıkaran, markanızın ruhunu yansıtan etkileyici sahne tasarımları hazırlarız. Görsel estetik, teknik işlevsellikle buluşur.</p>
+              <h3 class="service-card__title" data-i18n="services.technical.title">Sahne - Dekor - Ses - Işık</h3>
+              <p class="service-card__subtitle" data-i18n="services.technical.subtitle">Teknik ve Estetik Kusursuzluk</p>
+              <p class="service-card__description" data-i18n="services.technical.description">Konuşmacıları ve mesajları öne çıkaran, markanızın ruhunu yansıtan etkileyici sahne tasarımları hazırlarız. Görsel estetik, teknik işlevsellikle buluşur.</p>
               <ul class="service-card__features">
-                <li>Etki Odaklı Sahne Tasarımı</li>
-                <li>Profesyonel Dekor</li>
-                <li>Ses Sistemleri</li>
-                <li>Işık Tasarımı</li>
+                <li data-i18n="services.technical.features.0">Etki Odaklı Sahne Tasarımı</li>
+                <li data-i18n="services.technical.features.1">Profesyonel Dekor</li>
+                <li data-i18n="services.technical.features.2">Ses Sistemleri</li>
+                <li data-i18n="services.technical.features.3">Işık Tasarımı</li>
               </ul>
-              <a href="contact.html?service=technical" class="btn btn--primary">İletişim</a>
+              <a href="contact.html?service=technical" class="btn btn--primary" data-i18n="services.cta">İletişim</a>
             </div>
           </article>
 
@@ -190,16 +190,16 @@
                   <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
                 </svg>
               </div>
-              <h3 class="service-card__title">Transfer Hizmeti ve Planlama</h3>
-              <p class="service-card__subtitle">Zamanında ve Konforlu Akış</p>
-              <p class="service-card__description">Misafirleriniz için havaalanı, otel ve etkinlik noktası arasındaki transferleri dakik ve konforlu araçlarla organize ederiz.</p>
+              <h3 class="service-card__title" data-i18n="services.transfer.title">Transfer Hizmeti ve Planlama</h3>
+              <p class="service-card__subtitle" data-i18n="services.transfer.subtitle">Zamanında ve Konforlu Akış</p>
+              <p class="service-card__description" data-i18n="services.transfer.description">Misafirleriniz için havaalanı, otel ve etkinlik noktası arasındaki transferleri dakik ve konforlu araçlarla organize ederiz.</p>
               <ul class="service-card__features">
-                <li>VIP Transfer Çözümleri</li>
-                <li>Havaalanı Transferi</li>
-                <li>Grup Taşımacılığı</li>
-                <li>Dakik Planlama</li>
+                <li data-i18n="services.transfer.features.0">VIP Transfer Çözümleri</li>
+                <li data-i18n="services.transfer.features.1">Havaalanı Transferi</li>
+                <li data-i18n="services.transfer.features.2">Grup Taşımacılığı</li>
+                <li data-i18n="services.transfer.features.3">Dakik Planlama</li>
               </ul>
-              <a href="contact.html?service=transfer" class="btn btn--primary">İletişim</a>
+              <a href="contact.html?service=transfer" class="btn btn--primary" data-i18n="services.cta">İletişim</a>
             </div>
           </article>
 
@@ -214,16 +214,16 @@
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </div>
-              <h3 class="service-card__title">Aktivite - Süsleme Hizmetleri</h3>
-              <p class="service-card__subtitle">Detaylarda Saklı Büyü</p>
-              <p class="service-card__description">Etkinliğin temasına ve ruhuna uygun, yüksek estetik değere sahip çiçek düzenlemeleri, masa dekorasyonları ve genel mekân giydirmeleri ile atmosferi sıradanlıktan uzaklaştırırız.</p>
+              <h3 class="service-card__title" data-i18n="services.decoration.title">Aktivite - Süsleme Hizmetleri</h3>
+              <p class="service-card__subtitle" data-i18n="services.decoration.subtitle">Detaylarda Saklı Büyü</p>
+              <p class="service-card__description" data-i18n="services.decoration.description">Etkinliğin temasına ve ruhuna uygun, yüksek estetik değere sahip çiçek düzenlemeleri, masa dekorasyonları ve genel mekân giydirmeleri ile atmosferi sıradanlıktan uzaklaştırırız.</p>
               <ul class="service-card__features">
-                <li>Mekân Giydirme</li>
-                <li>Etkileşimli Aktivite Tasarımı</li>
-                <li>Oyunlaştırma (Gamification)</li>
-                <li>Sosyal Medya Aktivasyonları</li>
+                <li data-i18n="services.decoration.features.0">Mekân Giydirme</li>
+                <li data-i18n="services.decoration.features.1">Etkileşimli Aktivite Tasarımı</li>
+                <li data-i18n="services.decoration.features.2">Oyunlaştırma (Gamification)</li>
+                <li data-i18n="services.decoration.features.3">Sosyal Medya Aktivasyonları</li>
               </ul>
-              <a href="contact.html?service=decoration" class="btn btn--primary">İletişim</a>
+              <a href="contact.html?service=decoration" class="btn btn--primary" data-i18n="services.cta">İletişim</a>
             </div>
           </article>
         </div>
