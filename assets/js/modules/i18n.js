@@ -9,7 +9,7 @@ const I18nManager = (function() {
 
   // Constants
   const STORAGE_KEY = 'penta-language';
-  const DEFAULT_LANG = 'en';
+  const DEFAULT_LANG = 'tr';
   const SUPPORTED_LANGS = ['en', 'tr'];
 
   // Translation data cache
