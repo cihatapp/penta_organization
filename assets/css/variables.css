@@ -20,8 +20,8 @@
   /* ===================
      TYPOGRAPHY
      =================== */
-  --font-primary: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   --text-xs: 0.75rem;     /* 12px */
@@ -92,6 +92,19 @@
   --container-max: 1440px;
   --header-height: 80px;
   --header-height-mobile: 64px;
+
+  /* ===================
+     BREAKPOINTS (Mobile-First)
+     Use these values in media queries:
+     @media (min-width: 640px)  - sm (tablet)
+     @media (min-width: 768px)  - md (tablet landscape)
+     @media (min-width: 1024px) - lg (desktop)
+     @media (min-width: 1280px) - xl (large desktop)
+     =================== */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
 /* ============================================

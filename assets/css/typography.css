@@ -6,11 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* ===================
-   HEADINGS
+   HEADINGS (Mobile-First)
    =================== */
+
+/* Mobile base styles */
 .heading-1,
 h1 {
-  font-size: var(--text-5xl);
+  font-size: var(--text-4xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
@@ -18,7 +20,7 @@ h1 {
 
 .heading-2,
 h2 {
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
@@ -26,14 +28,14 @@ h2 {
 
 .heading-3,
 h3 {
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-snug);
 }
 
 .heading-4,
 h4 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-snug);
 }
@@ -52,26 +54,26 @@ h6 {
   line-height: var(--line-height-normal);
 }
 
-/* Responsive headings */
-@media (max-width: 768px) {
+/* Tablet and up - Enhanced headings */
+@media (min-width: 768px) {
   .heading-1,
   h1 {
-    font-size: var(--text-4xl);
+    font-size: var(--text-5xl);
   }
 
   .heading-2,
   h2 {
-    font-size: var(--text-3xl);
+    font-size: var(--text-4xl);
   }
 
   .heading-3,
   h3 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
   }
 
   .heading-4,
   h4 {
-    font-size: var(--text-xl);
+    font-size: var(--text-2xl);
   }
 }
 

@@ -872,20 +872,23 @@
    CINEMATIC HERO ANIMATION
    =================== */
 .hero__title--main {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.25rem, 4vw + 0.5rem, 3rem);
   font-weight: 600;
+  font-family: var(--font-heading);
   color: #fff;
   margin-bottom: 2rem;
   position: relative;
   line-height: 1.4;
   overflow: visible;
+  padding: 0 var(--space-md);
 }
 
 .hero__title--main .typewriter {
   display: inline-block;
   color: #fff;
   opacity: 0;
-  animation: cinematicReveal 2s ease-out 0.5s forwards;
+  animation: cinematicReveal 2s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  will-change: opacity, filter, transform;
 }
 
 /* Cinematic reveal - blur to sharp, bottom to center */
@@ -896,10 +899,15 @@
     transform: translateY(40px) scale(0.95);
     text-shadow: none;
   }
-  50% {
-    opacity: 0.7;
-    filter: blur(8px);
-    transform: translateY(15px) scale(0.98);
+  40% {
+    opacity: 0.6;
+    filter: blur(10px);
+    transform: translateY(20px) scale(0.97);
+  }
+  70% {
+    opacity: 0.9;
+    filter: blur(3px);
+    transform: translateY(5px) scale(0.99);
   }
   100% {
     opacity: 1;
@@ -931,37 +939,105 @@
 
 /* Light theme */
 [data-theme="light"] .hero__title--main .typewriter {
-  color: #1a1a2e;
+  color: var(--color-primary-dark);
 }
 
 [data-theme="light"] .hero__title--main .typewriter {
   text-shadow:
-    0 0 40px rgba(99, 102, 241, 0.2),
-    0 0 80px rgba(99, 102, 241, 0.1);
+    0 0 40px rgba(114, 47, 55, 0.2),
+    0 0 80px rgba(114, 47, 55, 0.1);
 }
 
-/* Responsive */
+/* ===================
+   MOBILE RESPONSIVE HERO
+   =================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero__title--main {
+    font-size: clamp(1.25rem, 5vw, 2.25rem);
+    padding: 0 var(--space-lg);
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .hero__title--main {
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, 5.5vw, 1.75rem);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    padding: 0 var(--space-md);
   }
 
   .hero__title--main .typewriter {
-    animation: cinematicRevealMobile 1.5s ease-out 0.3s forwards;
+    animation: cinematicRevealMobile 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
   }
 
   @keyframes cinematicRevealMobile {
     0% {
       opacity: 0;
-      filter: blur(10px);
-      transform: translateY(20px);
+      filter: blur(12px);
+      transform: translateY(25px) scale(0.96);
+    }
+    50% {
+      opacity: 0.7;
+      filter: blur(5px);
+      transform: translateY(10px) scale(0.98);
     }
     100% {
       opacity: 1;
       filter: blur(0);
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
       text-shadow:
-        0 0 30px rgba(255, 255, 255, 0.25);
+        0 0 25px rgba(255, 255, 255, 0.3),
+        0 0 50px rgba(255, 255, 255, 0.15);
     }
+  }
+
+  /* Mobile glow pulse - lighter for performance */
+  .hero__title--main.revealed .typewriter {
+    animation: softPulseMobile 5s ease-in-out infinite;
+  }
+
+  @keyframes softPulseMobile {
+    0%, 100% {
+      text-shadow:
+        0 0 25px rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      text-shadow:
+        0 0 35px rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero__title--main {
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    padding: 0 var(--space-sm);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero__title--main .typewriter {
+    animation: fadeInSimple 0.8s ease-out 0.3s forwards;
+  }
+
+  @keyframes fadeInSimple {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero__title--main.revealed .typewriter {
+    animation: none;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
