@@ -188,26 +188,27 @@ const FormsManager = (function() {
     }
 
     const submitBtn = form.querySelector('[type="submit"]');
-    const originalText = submitBtn ? submitBtn.textContent : '';
 
     try {
       // Show loading state
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
+        submitBtn.classList.add('is-loading');
+        const btnText = submitBtn.querySelector('.btn__text');
+        if (btnText) btnText.textContent = 'WhatsApp açılıyor...';
       }
 
       // Collect form data
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
-      // Simulate API call (replace with actual endpoint)
-      await simulateSubmission(data);
+      // Send form data via WhatsApp
+      await sendViaWhatsApp(data);
 
       // Show success message
       const successMsg = typeof I18nManager !== 'undefined'
-        ? I18nManager.getTranslation('form.success', 'Thank you! Your message has been sent.')
-        : 'Thank you! Your message has been sent.';
+        ? I18nManager.getTranslation('form.success', 'WhatsApp açıldı! Mesajınızı göndermek için "Gönder" butonuna tıklayın.')
+        : 'WhatsApp açıldı! Mesajınızı göndermek için "Gönder" butonuna tıklayın.';
 
       showFormMessage(form, 'success', successMsg);
 
@@ -233,25 +234,66 @@ const FormsManager = (function() {
       // Restore button
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
+        submitBtn.classList.remove('is-loading');
+        const btnText = submitBtn.querySelector('.btn__text');
+        if (btnText) {
+          // Get translated text or use default
+          const defaultText = typeof I18nManager !== 'undefined'
+            ? I18nManager.getTranslation('contact.form.submit', 'Mesaj Gönder')
+            : 'Mesaj Gönder';
+          btnText.textContent = defaultText;
+        }
       }
     }
   }
 
   /**
-   * Simulate form submission (for demo purposes)
+   * Send form data via WhatsApp
+   * Formats form data into a readable message and opens WhatsApp
    */
-  function simulateSubmission(data) {
-    return new Promise((resolve, reject) => {
+  function sendViaWhatsApp(data) {
+    return new Promise((resolve) => {
+      // WhatsApp number (without + sign)
+      const phoneNumber = '905309137975';
+
+      // Service type mapping for better readability
+      const serviceLabels = {
+        'staff': 'Part Time Ekip Tedariği',
+        'event': 'Kurumsal Etkinlik Yönetimi',
+        'technical': 'Sahne - Dekor - Ses - Işık',
+        'transfer': 'Transfer Hizmeti',
+        'decoration': 'Aktivite - Süsleme',
+        'other': 'Diğer'
+      };
+
+      // Format the message
+      const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
+
+      const message = `🎯 *Yeni İletişim Formu*
+━━━━━━━━━━━━━━━━━━━━
+👤 *Ad Soyad:* ${data.name || 'Belirtilmedi'}
+📧 *E-posta:* ${data.email || 'Belirtilmedi'}
+📱 *Telefon:* ${data.phone || 'Belirtilmedi'}
+🎪 *Hizmet:* ${serviceName}
+━━━━━━━━━━━━━━━━━━━━
+💬 *Mesaj:*
+${data.message || 'Mesaj yok'}
+━━━━━━━━━━━━━━━━━━━━
+📅 _${new Date().toLocaleString('tr-TR')}_`;
+
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(message);
+
+      // Create WhatsApp URL
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+
+      // Resolve after a short delay to show success message
       setTimeout(() => {
-        console.log('Form data submitted:', data);
-        // Simulate 90% success rate
-        if (Math.random() > 0.1) {
-          resolve({ success: true });
-        } else {
-          reject(new Error('Simulated network error'));
-        }
-      }, 1500);
+        resolve({ success: true });
+      }, 500);
     });
   }
 
