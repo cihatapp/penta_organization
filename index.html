@@ -110,7 +110,15 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero__background">
-        <div class="hero__gradient"></div>
+        <div class="hero__gradient" data-parallax="0.3"></div>
+      </div>
+      <!-- Floating Particles -->
+      <div class="hero__particles" aria-hidden="true">
+        <span class="hero__particle"></span>
+        <span class="hero__particle"></span>
+        <span class="hero__particle"></span>
+        <span class="hero__particle"></span>
+        <span class="hero__particle"></span>
       </div>
       <div class="container hero__container">
         <div class="hero__content" data-animate="fade-up">
@@ -118,12 +126,12 @@
           <h1 class="hero__title">Unutulmaz Deneyimler Yaratıyoruz</h1>
           <p class="hero__subtitle">10 yılı aşkın deneyimimizle vizyonunuzu kusursuz bir gerçekliğe dönüştürüyoruz. Güven ve huzur felsefemizle yanınızdayız.</p>
           <div class="hero__actions">
-            <a href="services.html" class="btn btn--primary btn--lg">Hizmetlerimizi Keşfedin</a>
-            <a href="contact.html" class="btn btn--outline btn--lg">İletişime Geçin</a>
+            <a href="services.html" class="btn btn--primary btn--lg" data-magnetic="0.2">Hizmetlerimizi Keşfedin</a>
+            <a href="contact.html" class="btn btn--outline btn--lg" data-magnetic="0.2">İletişime Geçin</a>
           </div>
         </div>
         <div class="hero__visual" data-animate="fade-left" data-animate-delay="200">
-          <div class="hero__image-wrapper">
+          <div class="hero__image-wrapper" data-tilt="8">
             <img src="./assets/images/hero-event.svg" alt="Profesyonel etkinlik kurulumu" class="hero__image" loading="eager">
           </div>
         </div>

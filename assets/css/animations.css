@@ -555,4 +555,17 @@
     opacity: 1 !important;
     transform: none !important;
   }
+
+  /* Disable interactive effects */
+  [data-tilt],
+  [data-magnetic],
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  .hero__particle,
+  .hero__image-wrapper::before {
+    animation: none !important;
+    opacity: 0 !important;
+  }
 }

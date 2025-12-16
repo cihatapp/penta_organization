@@ -182,23 +182,76 @@
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 0;
 }
 
 .hero__particle {
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   background: var(--color-primary);
   border-radius: var(--radius-full);
-  opacity: 0.3;
-  animation: float 6s ease-in-out infinite;
+  opacity: 0;
+  animation: particleFloat 8s ease-in-out infinite;
 }
 
-.hero__particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-.hero__particle:nth-child(2) { top: 60%; left: 20%; animation-delay: 1s; }
-.hero__particle:nth-child(3) { top: 30%; left: 80%; animation-delay: 2s; }
-.hero__particle:nth-child(4) { top: 70%; left: 70%; animation-delay: 0.5s; }
-.hero__particle:nth-child(5) { top: 40%; left: 50%; animation-delay: 1.5s; }
+.hero__particle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; width: 8px; height: 8px; }
+.hero__particle:nth-child(2) { top: 65%; left: 15%; animation-delay: 1.5s; }
+.hero__particle:nth-child(3) { top: 25%; left: 85%; animation-delay: 3s; width: 10px; height: 10px; }
+.hero__particle:nth-child(4) { top: 75%; left: 75%; animation-delay: 0.8s; }
+.hero__particle:nth-child(5) { top: 45%; left: 50%; animation-delay: 2.2s; width: 5px; height: 5px; }
+
+@keyframes particleFloat {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(-30px) scale(1);
+  }
+  90% {
+    opacity: 0.6;
+  }
+}
+
+/* Hero Image Glow Effect */
+.hero__image-wrapper {
+  position: relative;
+  transition: transform 0.15s ease-out;
+}
+
+.hero__image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(var(--color-primary-rgb), 0.15) 0%, transparent 70%);
+  border-radius: var(--radius-2xl);
+  opacity: 0;
+  animation: heroGlow 4s ease-in-out infinite;
+  animation-delay: 1s;
+  z-index: -1;
+}
+
+@keyframes heroGlow {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Enhanced Hero Gradient with Parallax */
+.hero__gradient {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
 
 /* ===================
    SERVICES PREVIEW SECTION
