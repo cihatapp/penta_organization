@@ -971,7 +971,12 @@
     cursorFadeOut 0.3s ease 6.2s forwards;
 }
 
-/* Hide line 3 wrapper when empty (Turkish) */
+/* Hide line 3 for Turkish language */
+html[lang="tr"] .typewriter-line-wrapper--3 {
+  display: none !important;
+}
+
+/* Hide line 3 wrapper when empty (fallback) */
 .typewriter-line-wrapper--3:has(.typewriter-line--3:empty) {
   display: none;
 }
