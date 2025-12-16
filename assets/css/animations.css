@@ -564,8 +564,22 @@
   }
 
   .hero__particle,
-  .hero__image-wrapper::before {
+  .hero__image-wrapper::before,
+  .hero__line,
+  .text-gradient,
+  .btn--glow::before {
     animation: none !important;
     opacity: 0 !important;
+  }
+
+  .animate-on-load {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .text-gradient {
+    -webkit-text-fill-color: var(--color-primary) !important;
+    opacity: 1 !important;
   }
 }
