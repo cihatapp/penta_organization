@@ -582,9 +582,15 @@
   direction: ltr;
 }
 
-@media (max-width: 767px) {
+/* Mobile-first: Reverse order on mobile */
+.split--reverse > *:first-child {
+  order: 2;
+}
+
+/* Tablet and up: Reset order when side-by-side */
+@media (min-width: 768px) {
   .split--reverse > *:first-child {
-    order: 2;
+    order: 0;
   }
 }
 

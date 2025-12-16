@@ -746,21 +746,23 @@
   color: white;
 }
 
+/* Mobile-first: Inside container */
 .testimonials-section .carousel__nav--prev {
-  left: -60px;
+  left: 0;
 }
 
 .testimonials-section .carousel__nav--next {
-  right: -60px;
+  right: 0;
 }
 
-@media (max-width: 1100px) {
+/* Large screens: Outside container */
+@media (min-width: 1100px) {
   .testimonials-section .carousel__nav--prev {
-    left: 0;
+    left: -60px;
   }
 
   .testimonials-section .carousel__nav--next {
-    right: 0;
+    right: -60px;
   }
 }
 

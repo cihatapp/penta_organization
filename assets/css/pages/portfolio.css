@@ -224,15 +224,17 @@
   margin-left: 4px;
 }
 
+/* Mobile-first: 2 columns on mobile */
 .video-showcase__thumbnails {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
 
-@media (max-width: 640px) {
+/* Small screens and up: 4 columns */
+@media (min-width: 640px) {
   .video-showcase__thumbnails {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

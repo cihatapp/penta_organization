@@ -117,17 +117,24 @@
 /* Button Group */
 .btn-group {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--space-md);
 }
 
-@media (max-width: 480px) {
+/* Mobile-first: Full width buttons on mobile */
+.btn-group .btn {
+  width: 100%;
+}
+
+/* Small screens and up: Horizontal layout */
+@media (min-width: 640px) {
   .btn-group {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .btn-group .btn {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -1641,13 +1648,22 @@ select.input {
 /* ===================
    ENHANCED PAGE HERO
    =================== */
+/* Mobile-first base */
 .page-hero--enhanced {
   position: relative;
-  padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-2xl);
+  padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-xl);
   overflow: hidden;
-  min-height: 400px;
+  min-height: auto;
   display: flex;
   align-items: center;
+}
+
+/* Tablet and up: Larger padding */
+@media (min-width: 768px) {
+  .page-hero--enhanced {
+    padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-2xl);
+    min-height: 400px;
+  }
 }
 
 .page-hero__bg {
@@ -1724,12 +1740,4 @@ select.input {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-/* Responsive */
-@media (max-width: 767px) {
-  .page-hero--enhanced {
-    padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-xl);
-    min-height: auto;
-  }
 }
