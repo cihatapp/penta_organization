@@ -871,29 +871,103 @@
 }
 
 /* ===================
-   CINEMATIC HERO ANIMATION
+   CINEMATIC HERO ANIMATION (Mobile-First)
    =================== */
+
+/* Mobile base styles */
 .hero__title--main {
-  font-size: clamp(1.25rem, 4vw + 0.5rem, 3rem);
+  font-size: clamp(1rem, 6vw, 1.5rem);
   font-weight: 600;
   font-family: var(--font-heading);
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.5;
   overflow: visible;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-sm);
 }
 
 .hero__title--main .typewriter {
   display: inline-block;
   color: #fff;
   opacity: 0;
-  animation: cinematicReveal 2s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  animation: cinematicRevealMobile 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
   will-change: opacity, filter, transform;
 }
 
-/* Cinematic reveal - blur to sharp, bottom to center */
+/* Mobile animation - lighter for performance */
+@keyframes cinematicRevealMobile {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(25px) scale(0.96);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(5px);
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+    text-shadow:
+      0 0 25px rgba(255, 255, 255, 0.3),
+      0 0 50px rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Mobile glow pulse - lighter for performance */
+.hero__title--main.revealed .typewriter {
+  animation: softPulseMobile 5s ease-in-out infinite;
+}
+
+@keyframes softPulseMobile {
+  0%, 100% {
+    text-shadow:
+      0 0 25px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 35px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Small screens and up (640px+) */
+@media (min-width: 640px) {
+  .hero__title--main {
+    font-size: clamp(1.125rem, 5.5vw, 1.75rem);
+    padding: 0 var(--space-md);
+  }
+}
+
+/* Tablet and up (768px+) */
+@media (min-width: 768px) {
+  .hero__title--main {
+    font-size: clamp(1.25rem, 5vw, 2.25rem);
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    padding: 0 var(--space-lg);
+  }
+
+  .hero__title--main .typewriter {
+    animation: cinematicReveal 2s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  }
+
+  .hero__title--main.revealed .typewriter {
+    animation: softPulse 4s ease-in-out infinite;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .hero__title--main {
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+    padding: 0 var(--space-md);
+  }
+}
+
+/* Desktop animation - full cinematic effect */
 @keyframes cinematicReveal {
   0% {
     opacity: 0;
@@ -921,11 +995,7 @@
   }
 }
 
-/* Soft glow pulse after reveal */
-.hero__title--main.revealed .typewriter {
-  animation: softPulse 4s ease-in-out infinite;
-}
-
+/* Desktop glow pulse */
 @keyframes softPulse {
   0%, 100% {
     text-shadow:
@@ -942,83 +1012,9 @@
 /* Light theme */
 [data-theme="light"] .hero__title--main .typewriter {
   color: var(--color-primary-dark);
-}
-
-[data-theme="light"] .hero__title--main .typewriter {
   text-shadow:
     0 0 40px rgba(114, 47, 55, 0.2),
     0 0 80px rgba(114, 47, 55, 0.1);
-}
-
-/* ===================
-   MOBILE RESPONSIVE HERO
-   =================== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero__title--main {
-    font-size: clamp(1.25rem, 5vw, 2.25rem);
-    padding: 0 var(--space-lg);
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hero__title--main {
-    font-size: clamp(1.125rem, 5.5vw, 1.75rem);
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-    padding: 0 var(--space-md);
-  }
-
-  .hero__title--main .typewriter {
-    animation: cinematicRevealMobile 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
-  }
-
-  @keyframes cinematicRevealMobile {
-    0% {
-      opacity: 0;
-      filter: blur(12px);
-      transform: translateY(25px) scale(0.96);
-    }
-    50% {
-      opacity: 0.7;
-      filter: blur(5px);
-      transform: translateY(10px) scale(0.98);
-    }
-    100% {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0) scale(1);
-      text-shadow:
-        0 0 25px rgba(255, 255, 255, 0.3),
-        0 0 50px rgba(255, 255, 255, 0.15);
-    }
-  }
-
-  /* Mobile glow pulse - lighter for performance */
-  .hero__title--main.revealed .typewriter {
-    animation: softPulseMobile 5s ease-in-out infinite;
-  }
-
-  @keyframes softPulseMobile {
-    0%, 100% {
-      text-shadow:
-        0 0 25px rgba(255, 255, 255, 0.25);
-    }
-    50% {
-      text-shadow:
-        0 0 35px rgba(255, 255, 255, 0.4);
-    }
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .hero__title--main {
-    font-size: clamp(1rem, 6vw, 1.5rem);
-    padding: 0 var(--space-sm);
-  }
 }
 
 /* Reduced motion preference */
