@@ -110,6 +110,30 @@
   }
 }
 
+/* Centered Hero Content (no visual) */
+.hero__content--centered {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .hero__content--centered {
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero__content--centered .hero__cta,
+  .hero__content--centered .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__content--centered .hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .hero__visual {
   flex-shrink: 0;
 }
