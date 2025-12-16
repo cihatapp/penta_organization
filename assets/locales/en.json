@@ -102,8 +102,9 @@
   },
   "services": {
     "hero": {
-      "title": "Our Services",
-      "subtitle": "Solutions that transform your vision into perfect reality"
+      "badge": "Our Services",
+      "title": "Transform Your Vision Into Reality",
+      "subtitle": "Comprehensive solutions for flawless events"
     },
     "staff": {
       "title": "Part Time Staff Supply",
@@ -162,8 +163,9 @@
   },
   "about": {
     "hero": {
-      "title": "About Us",
-      "subtitle": "Over 10 years of experience, trust and flawless planning"
+      "badge": "About Us",
+      "title": "Over 10 Years of Experience",
+      "subtitle": "Creating unforgettable events with trust and flawless planning"
     },
     "story": {
       "badge": "Our Story",
@@ -204,7 +206,8 @@
   },
   "portfolio": {
     "hero": {
-      "title": "Our References",
+      "badge": "References",
+      "title": "Brands We Work With",
       "subtitle": "Brands we're proud to work with"
     },
     "clients": {
@@ -214,7 +217,12 @@
     },
     "trust": {
       "title": "Why Do They Trust Us?",
-      "text": "Thanks to our 10+ years of experience, attention to detail, and proactive approach, Turkey's biggest brands choose us for their organizational needs."
+      "text": "Thanks to our 10+ years of experience, attention to detail, and proactive approach, Turkey's biggest brands choose us for their organizational needs.",
+      "stats": {
+        "events": "Successful Events",
+        "experience": "Years Experience",
+        "satisfaction": "Client Satisfaction"
+      }
     },
     "cta": {
       "title": "Join Us Too",
@@ -266,45 +274,76 @@
   },
   "contact": {
     "hero": {
-      "title": "Get in Touch",
-      "subtitle": "As Penta Organization, we look forward to the beginning of a new story."
+      "badge": "Contact Us",
+      "title": "Bring Your Project to Life",
+      "subtitle": "We're here to answer your questions and plan your projects together. Reach us through the most convenient channel for you."
     },
-    "intro": {
-      "text1": "Whether you're looking for a big launch or just part-time staff support; for us, every request is an important project that needs to be handled meticulously.",
-      "text2": "We're here to clarify your needs, answer your questions, and offer you a custom solution. Just take one step, we'll plan the rest."
+    "quick": {
+      "whatsapp": "WhatsApp",
+      "whatsappValue": "Message Us",
+      "phone": "Phone",
+      "email": "Email"
     },
     "form": {
-      "title": "Send Us a Message",
+      "title": "Send a Message",
       "subtitle": "Fill out the form, we'll get back to you within 24 hours.",
-      "name": "Full Name *",
+      "responseTime": "Average response time: <strong>2 hours</strong>",
+      "name": "Full Name",
       "namePlaceholder": "Your Full Name",
-      "email": "Email *",
+      "email": "Email",
       "emailPlaceholder": "example@email.com",
       "phone": "Phone",
       "phonePlaceholder": "+90 5XX XXX XX XX",
       "service": "Service of Interest",
-      "servicePlaceholder": "Select a service",
-      "serviceOptions": {
-        "staff": "Part Time Staff Supply",
-        "event": "Corporate Event Management",
-        "technical": "Stage - Decor - Sound - Lighting",
-        "transfer": "Transfer Services",
-        "decoration": "Activities & Decoration",
-        "other": "Other"
-      },
-      "message": "Your Message *",
-      "messagePlaceholder": "Tell us about your event vision...",
+      "serviceSelect": "Select a service",
+      "serviceStaff": "Part Time Staff Supply",
+      "serviceEvent": "Corporate Event Management",
+      "serviceTechnical": "Stage - Decor - Sound - Lighting",
+      "serviceTransfer": "Transfer Services",
+      "serviceDecoration": "Activities & Decoration",
+      "serviceOther": "Other",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell us about your event vision, date, and number of participants...",
+      "messageHint": "Maximum 2000 characters",
       "submit": "Send Message"
     },
     "info": {
-      "title": "Contact Information",
+      "title": "Office Information",
       "address": "Address",
-      "addressValue": "Kültür mahallesi, 3871. Sk. Kepez/Antalya",
+      "hours": "Working Hours",
+      "hoursValue": "Monday - Saturday<br>09:00 - 18:00",
       "phone": "Phone",
-      "phoneValue": "+90 530 913 79 75",
       "email": "Email",
-      "emailValue": "info@pentaorganizasyon.com",
-      "follow": "Follow Us"
+      "whatsappBtn": "Message on WhatsApp"
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "map": {
+      "directions": "Get Directions"
+    },
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "title": "Common Questions",
+      "subtitle": "Answers to the most frequently asked questions",
+      "items": [
+        {
+          "question": "Is there a minimum event size to use your services?",
+          "answer": "No, we serve events of all sizes. From a small meeting to a large festival, every project is important to us."
+        },
+        {
+          "question": "How far in advance should I contact you before the event?",
+          "answer": "Ideally, we recommend contacting us 2-4 weeks before the event. However, we do our best for urgent requests as well."
+        },
+        {
+          "question": "How is pricing determined?",
+          "answer": "Our pricing is determined based on factors such as event type, duration, number of personnel, and technical requirements. Fill out the form or call us for a custom quote."
+        },
+        {
+          "question": "Do you provide services outside of Antalya?",
+          "answer": "Yes, we provide services throughout Turkey and abroad. Share your location details and we can offer you custom solutions."
+        }
+      ]
     }
   },
   "footer": {

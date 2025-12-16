@@ -206,7 +206,8 @@
   },
   "portfolio": {
     "hero": {
-      "title": "Referanslarımız",
+      "badge": "Referanslar",
+      "title": "Birlikte Çalıştığımız Markalar",
       "subtitle": "Birlikte çalışmaktan gurur duyduğumuz markalar"
     },
     "clients": {
@@ -216,7 +217,12 @@
     },
     "trust": {
       "title": "Neden Bize Güveniyorlar?",
-      "text": "10 yılı aşkın deneyimimiz, detaylara gösterdiğimiz özen ve proaktif yaklaşımımız sayesinde Türkiye'nin en büyük markaları organizasyonel ihtiyaçları için bizi tercih ediyor."
+      "text": "10 yılı aşkın deneyimimiz, detaylara gösterdiğimiz özen ve proaktif yaklaşımımız sayesinde Türkiye'nin en büyük markaları organizasyonel ihtiyaçları için bizi tercih ediyor.",
+      "stats": {
+        "events": "Başarılı Etkinlik",
+        "experience": "Yıllık Deneyim",
+        "satisfaction": "Müşteri Memnuniyeti"
+      }
     },
     "cta": {
       "title": "Siz de Aramıza Katılın",
