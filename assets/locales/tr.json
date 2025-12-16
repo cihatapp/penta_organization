@@ -102,8 +102,9 @@
   },
   "services": {
     "hero": {
-      "title": "Hizmetlerimiz",
-      "subtitle": "Vizyonunuzu kusursuz bir gerçekliğe dönüştüren çözümler"
+      "badge": "Hizmetlerimiz",
+      "title": "Vizyonunuzu Gerçeğe Dönüştürün",
+      "subtitle": "Kusursuz etkinlikler için kapsamlı çözümler sunuyoruz"
     },
     "staff": {
       "title": "Part Time Ekip Tedariği",
@@ -162,8 +163,9 @@
   },
   "about": {
     "hero": {
-      "title": "Hakkımızda",
-      "subtitle": "10 yılı aşkın deneyimle, güven ve kusursuz planlama"
+      "badge": "Hakkımızda",
+      "title": "10 Yılı Aşkın Deneyim",
+      "subtitle": "Güven ve kusursuz planlama ile unutulmaz etkinlikler yaratıyoruz"
     },
     "story": {
       "badge": "Hikayemiz",
@@ -266,45 +268,76 @@
   },
   "contact": {
     "hero": {
-      "title": "İletişime Geçin",
-      "subtitle": "Penta Organizasyon olarak, yeni bir hikayenin başlangıcını heyecanla bekliyoruz."
+      "badge": "Bize Ulaşın",
+      "title": "Projenizi Hayata Geçirelim",
+      "subtitle": "Sorularınızı yanıtlamak ve projelerinizi birlikte planlamak için buradayız. Size en uygun iletişim kanalından bize ulaşın."
     },
-    "intro": {
-      "text1": "İster büyük bir lansman, ister sadece part-time personel desteği arıyor olun; bizim için her talep, titizlikle ele alınması gereken önemli bir projedir.",
-      "text2": "İhtiyaçlarınızı netleştirmek, aklınızdaki soruları yanıtlamak ve size özel bir çözüm sunmak için buradayız. Sadece bir adım atın, gerisini biz planlayalım."
+    "quick": {
+      "whatsapp": "WhatsApp",
+      "whatsappValue": "Hemen Yazın",
+      "phone": "Telefon",
+      "email": "E-posta"
     },
     "form": {
-      "title": "Bize Mesaj Gönderin",
+      "title": "Mesaj Gönderin",
       "subtitle": "Formu doldurun, 24 saat içinde size dönüş yapalım.",
-      "name": "Ad Soyad *",
+      "responseTime": "Ortalama yanıt süresi: <strong>2 saat</strong>",
+      "name": "Ad Soyad",
       "namePlaceholder": "Adınız Soyadınız",
-      "email": "E-posta *",
+      "email": "E-posta",
       "emailPlaceholder": "ornek@email.com",
       "phone": "Telefon",
       "phonePlaceholder": "+90 5XX XXX XX XX",
       "service": "İlgilendiğiniz Hizmet",
-      "servicePlaceholder": "Hizmet seçin",
-      "serviceOptions": {
-        "staff": "Part Time Ekip Tedariği",
-        "event": "Kurumsal Etkinlik Yönetimi",
-        "technical": "Sahne - Dekor - Ses - Işık",
-        "transfer": "Transfer Hizmeti",
-        "decoration": "Aktivite - Süsleme",
-        "other": "Diğer"
-      },
-      "message": "Mesajınız *",
-      "messagePlaceholder": "Etkinlik vizyonunuz hakkında bize bilgi verin...",
+      "serviceSelect": "Hizmet seçin",
+      "serviceStaff": "Part Time Ekip Tedariği",
+      "serviceEvent": "Kurumsal Etkinlik Yönetimi",
+      "serviceTechnical": "Sahne - Dekor - Ses - Işık",
+      "serviceTransfer": "Transfer Hizmeti",
+      "serviceDecoration": "Aktivite - Süsleme",
+      "serviceOther": "Diğer",
+      "message": "Mesajınız",
+      "messagePlaceholder": "Etkinlik vizyonunuz, tarih ve katılımcı sayısı hakkında bilgi verin...",
+      "messageHint": "Maksimum 2000 karakter",
       "submit": "Mesaj Gönder"
     },
     "info": {
-      "title": "İletişim Bilgileri",
+      "title": "Ofis Bilgileri",
       "address": "Adres",
-      "addressValue": "Kültür mahallesi, 3871. Sk. Kepez/Antalya",
+      "hours": "Çalışma Saatleri",
+      "hoursValue": "Pazartesi - Cumartesi<br>09:00 - 18:00",
       "phone": "Telefon",
-      "phoneValue": "+90 530 913 79 75",
       "email": "E-posta",
-      "emailValue": "info@pentaorganizasyon.com",
-      "follow": "Bizi Takip Edin"
+      "whatsappBtn": "WhatsApp ile Yazın"
+    },
+    "social": {
+      "title": "Bizi Takip Edin"
+    },
+    "map": {
+      "directions": "Yol Tarifi Al"
+    },
+    "faq": {
+      "badge": "Sıkça Sorulan Sorular",
+      "title": "Merak Edilenler",
+      "subtitle": "En çok sorulan soruların yanıtları",
+      "items": [
+        {
+          "question": "Hizmet almak için minimum etkinlik büyüklüğü var mı?",
+          "answer": "Hayır, her ölçekte etkinliğe hizmet veriyoruz. Küçük bir toplantıdan büyük bir festival organizasyonuna kadar her proje bizim için önemlidir."
+        },
+        {
+          "question": "Etkinlik tarihinden ne kadar önce iletişime geçmeliyim?",
+          "answer": "İdeal olarak etkinlikten 2-4 hafta önce iletişime geçmenizi öneririz. Ancak acil talepler için de elimizden geleni yapıyoruz."
+        },
+        {
+          "question": "Fiyatlandırma nasıl belirleniyor?",
+          "answer": "Fiyatlandırmamız etkinlik türü, süre, personel sayısı ve teknik gereksinimler gibi faktörlere göre belirlenir. Size özel teklif için formu doldurun veya bizi arayın."
+        },
+        {
+          "question": "Antalya dışında hizmet veriyor musunuz?",
+          "answer": "Evet, Türkiye genelinde ve yurt dışında hizmet veriyoruz. Lokasyon detaylarını paylaşarak size özel çözümler sunabiliriz."
+        }
+      ]
     }
   },
   "footer": {

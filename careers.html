@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Penta Organizasyon kariyer fırsatları - Ekibimize katılın ve unutulmaz etkinlikler yaratın.">
 
-  <title>Kariyer - Penta Organizasyon</title>
+  <title data-i18n="meta.careersTitle">Kariyer - Penta Organizasyon</title>
 
   <link rel="icon" type="image/png" href="./assets/images/logo.png">
   <link rel="apple-touch-icon" href="./assets/images/logo.png">
@@ -43,8 +43,8 @@
 
       <div class="header__actions">
         <div class="toggle toggle--lang" role="group" aria-label="Language selection">
-          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="en">EN</button>
-          <button class="toggle__btn" data-lang-toggle data-lang="tr">TR</button>
+          <button class="toggle__btn" data-lang-toggle data-lang="en">EN</button>
+          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="tr">TR</button>
         </div>
 
         <button class="btn btn--icon" data-theme-toggle aria-label="Toggle theme">
@@ -77,18 +77,17 @@
   </header>
 
   <main>
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- Enhanced Page Hero -->
+    <section class="page-hero page-hero--enhanced">
+      <div class="page-hero__bg">
+        <div class="page-hero__gradient"></div>
+        <div class="page-hero__pattern"></div>
+      </div>
       <div class="container">
         <div class="page-hero__content" data-animate="fade-up">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-              <li><a href="index.html">Ana Sayfa</a></li>
-              <li><span>Kariyer</span></li>
-            </ol>
-          </nav>
-          <h1 class="page-hero__title">Ekibimize Katılın</h1>
-          <p class="page-hero__subtitle">Esnek çalışma, değerli deneyimler ve sektörün en iyi etkinliklerinin parçası olma fırsatı</p>
+          <span class="section__badge badge badge--primary" data-i18n="careers.hero.badge">Kariyer</span>
+          <h1 class="page-hero__title" data-i18n="careers.hero.title">Ekibimize<br><span class="text-gradient">Katılın</span></h1>
+          <p class="page-hero__subtitle" data-i18n="careers.hero.subtitle">Esnek çalışma, değerli deneyimler ve sektörün en iyi etkinliklerinin parçası olma fırsatı</p>
         </div>
       </div>
     </section>
@@ -97,14 +96,14 @@
     <section class="section benefits-section">
       <div class="container">
         <div class="section__header text-center" data-animate="fade-up">
-          <span class="section__badge badge">Neden Penta?</span>
-          <h2 class="section__title">Bizimle Çalışmak</h2>
-          <p class="section__subtitle">Biliyoruz ki hayat yoğun. Belki öğrenci, belki yeni mezunsun; belki de sadece esnek ve güvenilir bir ek iş arıyorsun. İşte tam bu noktada, Penta Organizasyon devreye giriyor!</p>
+          <span class="section__badge badge" data-i18n="careers.benefits.badge">Neden Penta?</span>
+          <h2 class="section__title" data-i18n="careers.benefits.title">Bizimle Çalışmak</h2>
+          <p class="section__subtitle" data-i18n="careers.intro.text1">Biliyoruz ki hayat yoğun. Belki öğrenci, belki yeni mezunsun; belki de sadece esnek ve güvenilir bir ek iş arıyorsun. İşte tam bu noktada, Penta Organizasyon devreye giriyor!</p>
         </div>
 
         <div class="career-intro" data-animate="fade-up">
-          <p>Biz, etkinlik dünyasının arka planındaki o enerjik, çözüm odaklı aileyiz. Bizimle çalışmak, sadece para kazanmak değil; her projede yeni insanlarla tanışmak, farklı kurumsal kültürleri deneyimlemek ve özgeçmişini paha biçilmez tecrübelerle doldurmak demek.</p>
-          <p><strong>Eğer titizliğe, zaman yönetimine ve en önemlisi marka temsiliyeti bilincine sahipseniz;</strong> Penta, size sadece bir iş değil, sürekli gelişim ve organizasyonel mükemmelliğin bir parçası olma fırsatını sunar.</p>
+          <p data-i18n="careers.intro.text2">Biz, etkinlik dünyasının arka planındaki o enerjik, çözüm odaklı aileyiz. Bizimle çalışmak, sadece para kazanmak değil; her projede yeni insanlarla tanışmak, farklı kurumsal kültürleri deneyimlemek ve özgeçmişini paha biçilmez tecrübelerle doldurmak demek.</p>
+          <p data-i18n="careers.intro.text3"><strong>Eğer titizliğe, zaman yönetimine ve en önemlisi marka temsiliyeti bilincine sahipseniz;</strong> Penta, size sadece bir iş değil, sürekli gelişim ve organizasyonel mükemmelliğin bir parçası olma fırsatını sunar.</p>
         </div>
 
         <div class="benefits-grid" data-stagger="100">
@@ -114,8 +113,8 @@
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
             </div>
-            <h3 class="benefit-card__title">Esnek Çalışma</h3>
-            <p class="benefit-card__text">Kendi programınıza uygun esnek çalışma saatleri ve proje bazlı görevler.</p>
+            <h3 class="benefit-card__title" data-i18n="careers.benefits.items.0.title">Esnek Çalışma</h3>
+            <p class="benefit-card__text" data-i18n="careers.benefits.items.0.text">Kendi programınıza uygun esnek çalışma saatleri ve proje bazlı görevler.</p>
           </div>
 
           <div class="benefit-card" data-animate="fade-up">
@@ -124,8 +123,8 @@
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <h3 class="benefit-card__title">Yeni İnsanlar</h3>
-            <p class="benefit-card__text">Her projede farklı insanlarla tanışma ve networking fırsatları.</p>
+            <h3 class="benefit-card__title" data-i18n="careers.benefits.items.1.title">Yeni İnsanlar</h3>
+            <p class="benefit-card__text" data-i18n="careers.benefits.items.1.text">Her projede farklı insanlarla tanışma ve networking fırsatları.</p>
           </div>
 
           <div class="benefit-card" data-animate="fade-up">
@@ -134,8 +133,8 @@
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
               </svg>
             </div>
-            <h3 class="benefit-card__title">Değerli Deneyim</h3>
-            <p class="benefit-card__text">Özgeçmişinizi paha biçilmez kurumsal etkinlik tecrübeleriyle doldurun.</p>
+            <h3 class="benefit-card__title" data-i18n="careers.benefits.items.2.title">Değerli Deneyim</h3>
+            <p class="benefit-card__text" data-i18n="careers.benefits.items.2.text">Özgeçmişinizi paha biçilmez kurumsal etkinlik tecrübeleriyle doldurun.</p>
           </div>
 
           <div class="benefit-card" data-animate="fade-up">
@@ -144,8 +143,8 @@
                 <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
               </svg>
             </div>
-            <h3 class="benefit-card__title">Ek Gelir</h3>
-            <p class="benefit-card__text">Deneyiminizi nakde çevirin ve esnek bir düzende çalışın.</p>
+            <h3 class="benefit-card__title" data-i18n="careers.benefits.items.3.title">Ek Gelir</h3>
+            <p class="benefit-card__text" data-i18n="careers.benefits.items.3.text">Deneyiminizi nakde çevirin ve esnek bir düzende çalışın.</p>
           </div>
         </div>
       </div>
@@ -155,39 +154,39 @@
     <section class="section application-section" id="apply">
       <div class="container">
         <div class="section__header text-center" data-animate="fade-up">
-          <span class="section__badge badge">Başvuru</span>
-          <h2 class="section__title">Bize Katılın</h2>
-          <p class="section__subtitle">Başvurunuzu dikkatle değerlendirmeyi sabırsızlıkla bekliyoruz.</p>
+          <span class="section__badge badge" data-i18n="careers.apply.badge">Başvuru</span>
+          <h2 class="section__title" data-i18n="careers.apply.title">Bize Katılın</h2>
+          <p class="section__subtitle" data-i18n="careers.apply.subtitle">Başvurunuzu dikkatle değerlendirmeyi sabırsızlıkla bekliyoruz.</p>
         </div>
 
         <div class="application-form-wrapper" data-animate="fade-up">
           <form class="form application-form" data-form>
             <div class="form__row">
               <div class="form__group">
-                <label for="fullName" class="form__label">İsim *</label>
-                <input type="text" id="fullName" name="fullName" class="form__input" required placeholder="Adınız">
+                <label for="fullName" class="form__label" data-i18n="careers.apply.form.name">İsim *</label>
+                <input type="text" id="fullName" name="fullName" class="form__input" required placeholder="Adınız" data-i18n-placeholder="careers.apply.form.namePlaceholder">
               </div>
 
               <div class="form__group">
-                <label for="surname" class="form__label">Soyisim *</label>
-                <input type="text" id="surname" name="surname" class="form__input" required placeholder="Soyadınız">
+                <label for="surname" class="form__label" data-i18n="careers.apply.form.surname">Soyisim *</label>
+                <input type="text" id="surname" name="surname" class="form__input" required placeholder="Soyadınız" data-i18n-placeholder="careers.apply.form.surnamePlaceholder">
               </div>
             </div>
 
             <div class="form__row">
               <div class="form__group">
-                <label for="phone" class="form__label">Telefon *</label>
-                <input type="tel" id="phone" name="phone" class="form__input" required placeholder="+90 5XX XXX XX XX">
+                <label for="phone" class="form__label" data-i18n="careers.apply.form.phone">Telefon *</label>
+                <input type="tel" id="phone" name="phone" class="form__input" required placeholder="+90 5XX XXX XX XX" data-i18n-placeholder="careers.apply.form.phonePlaceholder">
               </div>
 
               <div class="form__group">
-                <label for="email" class="form__label">E-posta *</label>
-                <input type="email" id="email" name="email" class="form__input" required placeholder="ornek@email.com">
+                <label for="email" class="form__label" data-i18n="careers.apply.form.email">E-posta *</label>
+                <input type="email" id="email" name="email" class="form__input" required placeholder="ornek@email.com" data-i18n-placeholder="careers.apply.form.emailPlaceholder">
               </div>
             </div>
 
             <div class="form__group">
-              <label for="resume" class="form__label">CV *</label>
+              <label for="resume" class="form__label" data-i18n="careers.apply.form.resume">CV *</label>
               <div class="file-upload">
                 <input type="file" id="resume" name="resume" class="file-upload__input" accept=".pdf,.doc,.docx" required>
                 <label for="resume" class="file-upload__label">
@@ -196,8 +195,8 @@
                     <polyline points="17 8 12 3 7 8"/>
                     <line x1="12" y1="3" x2="12" y2="15"/>
                   </svg>
-                  <span class="file-upload__name">Yüklemek için tıklayın veya sürükleyin</span>
-                  <span class="file-upload__hint">PDF, DOC, DOCX (Maks 5MB)</span>
+                  <span class="file-upload__name" data-i18n="careers.apply.form.uploadText">Yüklemek için tıklayın veya sürükleyin</span>
+                  <span class="file-upload__hint" data-i18n="careers.apply.form.uploadHint">PDF, DOC, DOCX (Maks 5MB)</span>
                 </label>
               </div>
             </div>
@@ -206,11 +205,11 @@
               <label class="checkbox">
                 <input type="checkbox" name="privacy" required>
                 <span class="checkbox__mark"></span>
-                <span class="checkbox__label">Kişisel verilerimin işlenmesini kabul ediyorum *</span>
+                <span class="checkbox__label" data-i18n="careers.apply.form.privacy">Kişisel verilerimin işlenmesini kabul ediyorum *</span>
               </label>
             </div>
 
-            <button type="submit" class="btn btn--primary btn--lg btn--full">Başvuruyu Gönder</button>
+            <button type="submit" class="btn btn--primary btn--lg btn--full" data-i18n="careers.apply.form.submit">Başvuruyu Gönder</button>
           </form>
         </div>
       </div>
@@ -226,7 +225,7 @@
             <img src="./assets/images/logo.png" alt="Penta Organizasyon" class="footer__logo-img footer__logo-img--light">
             <img src="./assets/images/logo_dark.png" alt="Penta Organizasyon" class="footer__logo-img footer__logo-img--dark">
           </a>
-          <p class="footer__tagline">Mükemmel anlar, kusursuz bağlarla başlar.</p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Mükemmel anlar, kusursuz bağlarla başlar.</p>
           <div class="footer__social">
             <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="https://instagram.com/pentaorganizasyon" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -234,25 +233,25 @@
           </div>
         </div>
         <div class="footer__column">
-          <h4 class="footer__title">Hızlı Bağlantılar</h4>
+          <h4 class="footer__title" data-i18n="footer.quickLinks">Hızlı Bağlantılar</h4>
           <ul class="footer__links">
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="services.html">Hizmetlerimiz</a></li>
-            <li><a href="about.html">Hakkımızda</a></li>
-            <li><a href="portfolio.html">Referanslar</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Ana Sayfa</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Hizmetlerimiz</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Hakkımızda</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Referanslar</a></li>
           </ul>
         </div>
         <div class="footer__column">
-          <h4 class="footer__title">Hizmetlerimiz</h4>
+          <h4 class="footer__title" data-i18n="footer.services">Hizmetlerimiz</h4>
           <ul class="footer__links">
-            <li><a href="services.html#staff">Part Time Ekip</a></li>
-            <li><a href="services.html#event">Kurumsal Etkinlik</a></li>
-            <li><a href="services.html#technical">Sahne & Dekor</a></li>
-            <li><a href="services.html#transfer">Transfer Hizmeti</a></li>
+            <li><a href="services.html#staff" data-i18n="services.staff.title">Part Time Ekip</a></li>
+            <li><a href="services.html#event" data-i18n="services.event.title">Kurumsal Etkinlik</a></li>
+            <li><a href="services.html#technical" data-i18n="services.technical.title">Sahne & Dekor</a></li>
+            <li><a href="services.html#transfer" data-i18n="services.transfer.title">Transfer Hizmeti</a></li>
           </ul>
         </div>
         <div class="footer__column">
-          <h4 class="footer__title">İletişim</h4>
+          <h4 class="footer__title" data-i18n="footer.contact">İletişim</h4>
           <ul class="footer__contact">
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kültür mahallesi, 3871. Sk. Kepez/Antalya</span></li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+905309137975">+90 530 913 79 75</a></li>
@@ -261,10 +260,10 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; <span data-current-year></span> Penta Organizasyon. <span>Tüm hakları saklıdır.</span></p>
+        <p class="footer__copyright">&copy; <span data-current-year></span> Penta Organizasyon. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
         <div class="footer__legal">
-          <a href="#">Gizlilik Politikası</a>
-          <a href="#">Kullanım Koşulları</a>
+          <a href="#" data-i18n="footer.privacy">Gizlilik Politikası</a>
+          <a href="#" data-i18n="footer.terms">Kullanım Koşulları</a>
         </div>
       </div>
     </div>
