@@ -370,5 +370,30 @@
       "maxLength": "{field} must be no more than {param} characters",
       "pattern": "Please enter a valid {field}"
     }
+  },
+  "game": {
+    "badge": "Interactive",
+    "title": "Memory Game",
+    "subtitle": "Match event-themed cards!",
+    "moves": "Moves",
+    "time": "Time",
+    "matches": "Matches",
+    "startGame": "Start Game",
+    "resetGame": "Reset",
+    "congrats": "Congratulations!",
+    "winMessage": "You matched all cards!",
+    "playAgain": "Play Again",
+    "backHome": "Back to Home",
+    "placeholder": "Click the button to start the game",
+    "cards": {
+      "theater": "Theater",
+      "tent": "Festival",
+      "music": "Concert",
+      "wedding": "Wedding",
+      "microphone": "Conference",
+      "art": "Decoration",
+      "film": "Production",
+      "target": "Corporate"
+    }
   }
 }

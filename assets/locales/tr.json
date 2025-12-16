@@ -370,5 +370,30 @@
       "maxLength": "{field} en fazla {param} karakter olmalıdır",
       "pattern": "Lütfen geçerli bir {field} girin"
     }
+  },
+  "game": {
+    "badge": "İnteraktif",
+    "title": "Hafıza Oyunu",
+    "subtitle": "Etkinlik temalı kartları eşleştirin!",
+    "moves": "Hamle",
+    "time": "Süre",
+    "matches": "Eşleşme",
+    "startGame": "Oyunu Başlat",
+    "resetGame": "Sıfırla",
+    "congrats": "Tebrikler!",
+    "winMessage": "Tüm kartları eşleştirdiniz!",
+    "playAgain": "Tekrar Oyna",
+    "backHome": "Ana Sayfaya Dön",
+    "placeholder": "Oyunu başlatmak için butona tıklayın",
+    "cards": {
+      "theater": "Tiyatro",
+      "tent": "Festival",
+      "music": "Konser",
+      "wedding": "Düğün",
+      "microphone": "Konferans",
+      "art": "Dekorasyon",
+      "film": "Prodüksiyon",
+      "target": "Kurumsal"
+    }
   }
 }

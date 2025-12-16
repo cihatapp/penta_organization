@@ -9,14 +9,20 @@ const SnowEffect = (function() {
 
   // Configuration
   const CONFIG = {
-    maxSnowflakes: 50,        // Maximum kar tanesi sayısı
-    mobileMaxSnowflakes: 25,  // Mobil için azaltılmış
-    minSize: 3,               // Minimum boyut (px)
-    maxSize: 8,               // Maximum boyut (px)
-    minDuration: 8,           // Minimum düşme süresi (s)
-    maxDuration: 15,          // Maximum düşme süresi (s)
-    spawnInterval: 300,       // Yeni kar tanesi oluşturma aralığı (ms)
+    maxSnowflakes: 45,        // Maximum kar tanesi sayısı
+    mobileMaxSnowflakes: 20,  // Mobil için azaltılmış
+    minSize: 10,              // Minimum boyut (px) - font-size
+    maxSize: 24,              // Maximum boyut (px) - font-size
+    minDuration: 10,          // Minimum düşme süresi (s)
+    maxDuration: 20,          // Maximum düşme süresi (s)
+    spawnInterval: 400,       // Yeni kar tanesi oluşturma aralığı (ms)
   };
+
+  // Kar tanesi tipleri
+  const SNOWFLAKE_TYPES = ['crystal', 'star', 'flake', 'dot'];
+
+  // Animasyon varyantları
+  const ANIMATION_VARIANTS = ['', 'float', 'drift'];
 
   // State
   let container = null;
@@ -30,6 +36,13 @@ const SnowEffect = (function() {
    */
   function random(min, max) {
     return Math.random() * (max - min) + min;
+  }
+
+  /**
+   * Rastgele dizi elemanı seç
+   */
+  function randomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
   }
 
   /**
@@ -54,21 +67,30 @@ const SnowEffect = (function() {
     if (snowflakes.length >= getMaxSnowflakes()) return;
 
     const snowflake = document.createElement('div');
-    snowflake.className = 'snowflake';
+
+    // Rastgele tip seç
+    const type = randomItem(SNOWFLAKE_TYPES);
+    const animation = randomItem(ANIMATION_VARIANTS);
+
+    // Class'ları ekle
+    let classes = `snowflake snowflake--${type}`;
+    if (animation) {
+      classes += ` snowflake--${animation}`;
+    }
+    snowflake.className = classes;
 
     // Rastgele özellikler
     const size = random(CONFIG.minSize, CONFIG.maxSize);
     const startX = random(0, 100);
     const duration = random(CONFIG.minDuration, CONFIG.maxDuration);
-    const delay = random(0, 2);
+    const delay = random(0, 3);
 
     // Stiller
-    snowflake.style.width = `${size}px`;
-    snowflake.style.height = `${size}px`;
+    snowflake.style.fontSize = `${size}px`;
     snowflake.style.left = `${startX}%`;
     snowflake.style.animationDuration = `${duration}s`;
     snowflake.style.animationDelay = `${delay}s`;
-    snowflake.style.opacity = random(0.4, 1).toFixed(2);
+    snowflake.style.opacity = random(0.5, 1).toFixed(2);
 
     // Container'a ekle
     container.appendChild(snowflake);
@@ -79,7 +101,7 @@ const SnowEffect = (function() {
       removeSnowflake(snowflake);
     });
 
-    // Güvenlik: 20 saniye sonra zorla kaldır
+    // Güvenlik: belirli süre sonra zorla kaldır
     setTimeout(() => {
       removeSnowflake(snowflake);
     }, (duration + delay + 2) * 1000);
@@ -119,7 +141,7 @@ const SnowEffect = (function() {
     // İlk batch kar taneleri
     const initialCount = Math.floor(getMaxSnowflakes() / 3);
     for (let i = 0; i < initialCount; i++) {
-      setTimeout(createSnowflake, i * 100);
+      setTimeout(createSnowflake, i * 150);
     }
 
     // Sürekli kar tanesi oluştur
