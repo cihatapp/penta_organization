@@ -26,6 +26,10 @@
   "home": {
     "hero": {
       "badge": "10+ Years Experience",
+      "title": {
+        "line1": "Perfect moments",
+        "line2": "begin with flawless connections."
+      },
       "subtitle": "Perfect moments begin with flawless connections.",
       "cta": {
         "primary": "Explore Services",

@@ -871,156 +871,226 @@
 }
 
 /* ===================
-   CINEMATIC HERO ANIMATION (Mobile-First)
+   TYPEWRITER HERO ANIMATION (Mobile-First)
    =================== */
 
 /* Mobile base styles */
 .hero__title--main {
-  font-size: clamp(1rem, 6vw, 1.5rem);
+  font-size: clamp(1.25rem, 7vw, 1.75rem);
   font-weight: 600;
   font-family: var(--font-heading);
   color: #fff;
   margin-bottom: 1.5rem;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.4;
   overflow: visible;
   padding: 0 var(--space-sm);
+  text-align: center;
 }
 
-.hero__title--main .typewriter {
+/* Typewriter Container */
+.typewriter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+}
+
+/* Line wrapper - holds text and cursor */
+.typewriter-line-wrapper {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Each line of text */
+.typewriter-line {
   display: inline-block;
   color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
   opacity: 0;
-  animation: cinematicRevealMobile 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
-  will-change: opacity, filter, transform;
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2);
 }
 
-/* Mobile animation - lighter for performance */
-@keyframes cinematicRevealMobile {
+/* Line 1 animation */
+.typewriter-line--1 {
+  animation:
+    typewriterReveal 1.5s steps(16, end) 0.5s forwards,
+    glowPulse 3s ease-in-out 2s infinite;
+}
+
+/* Line 2 animation - starts after line 1 */
+.typewriter-line--2 {
+  animation:
+    typewriterReveal 2s steps(26, end) 2.2s forwards,
+    glowPulse 3s ease-in-out 4.2s infinite;
+}
+
+/* Base cursor styles */
+.typewriter-cursor {
+  display: inline-block;
+  color: #fff;
+  font-weight: 300;
+  opacity: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  margin-left: 2px;
+}
+
+/* Cursor 1 - appears at start, hides when line 1 ends */
+.typewriter-cursor--1 {
+  animation:
+    cursorAppear 0.1s ease 0.5s forwards,
+    cursorBlink 0.8s step-end 0.5s infinite,
+    cursorFadeOut 0.3s ease 2s forwards;
+}
+
+/* Cursor 2 - appears when line 2 starts, hides at end */
+.typewriter-cursor--2 {
+  animation:
+    cursorAppear 0.1s ease 2.2s forwards,
+    cursorBlink 0.8s step-end 2.2s infinite,
+    cursorFadeOut 0.3s ease 4.5s forwards;
+}
+
+/* Typewriter reveal animation */
+@keyframes typewriterReveal {
   0% {
-    opacity: 0;
-    filter: blur(12px);
-    transform: translateY(25px) scale(0.96);
-  }
-  50% {
-    opacity: 0.7;
-    filter: blur(5px);
-    transform: translateY(10px) scale(0.98);
+    width: 0;
+    opacity: 1;
   }
   100% {
+    width: 100%;
     opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) scale(1);
-    text-shadow:
-      0 0 25px rgba(255, 255, 255, 0.3),
-      0 0 50px rgba(255, 255, 255, 0.15);
   }
 }
 
-/* Mobile glow pulse - lighter for performance */
-.hero__title--main.revealed .typewriter {
-  animation: softPulseMobile 5s ease-in-out infinite;
+/* Cursor animations */
+@keyframes cursorAppear {
+  to { opacity: 1; }
 }
 
-@keyframes softPulseMobile {
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes cursorFadeOut {
+  to { opacity: 0; }
+}
+
+/* Soft glow pulse after typing */
+@keyframes glowPulse {
   0%, 100% {
     text-shadow:
-      0 0 25px rgba(255, 255, 255, 0.25);
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2);
   }
   50% {
     text-shadow:
-      0 0 35px rgba(255, 255, 255, 0.4);
+      0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0.3),
+      0 0 80px rgba(255, 255, 255, 0.15);
   }
 }
 
 /* Small screens and up (640px+) */
 @media (min-width: 640px) {
   .hero__title--main {
-    font-size: clamp(1.125rem, 5.5vw, 1.75rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
     padding: 0 var(--space-md);
+  }
+
+  .typewriter-container {
+    gap: 0.3em;
   }
 }
 
 /* Tablet and up (768px+) */
 @media (min-width: 768px) {
   .hero__title--main {
-    font-size: clamp(1.25rem, 5vw, 2.25rem);
-    line-height: 1.4;
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+    line-height: 1.3;
     margin-bottom: 2rem;
     padding: 0 var(--space-lg);
   }
 
-  .hero__title--main .typewriter {
-    animation: cinematicReveal 2s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  .typewriter-container {
+    gap: 0.35em;
   }
 
-  .hero__title--main.revealed .typewriter {
-    animation: softPulse 4s ease-in-out infinite;
+  .typewriter-line {
+    text-shadow:
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 60px rgba(255, 255, 255, 0.25);
   }
 }
 
 /* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .hero__title--main {
-    font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     padding: 0 var(--space-md);
   }
-}
 
-/* Desktop animation - full cinematic effect */
-@keyframes cinematicReveal {
-  0% {
-    opacity: 0;
-    filter: blur(20px);
-    transform: translateY(40px) scale(0.95);
-    text-shadow: none;
+  .typewriter-container {
+    gap: 0.4em;
   }
-  40% {
-    opacity: 0.6;
-    filter: blur(10px);
-    transform: translateY(20px) scale(0.97);
-  }
-  70% {
-    opacity: 0.9;
-    filter: blur(3px);
-    transform: translateY(5px) scale(0.99);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) scale(1);
-    text-shadow:
-      0 0 40px rgba(255, 255, 255, 0.3),
-      0 0 80px rgba(255, 255, 255, 0.15);
-  }
-}
 
-/* Desktop glow pulse */
-@keyframes softPulse {
-  0%, 100% {
+  .typewriter-line {
     text-shadow:
-      0 0 40px rgba(255, 255, 255, 0.3),
-      0 0 80px rgba(255, 255, 255, 0.15);
+      0 0 40px rgba(255, 255, 255, 0.5),
+      0 0 80px rgba(255, 255, 255, 0.3);
   }
-  50% {
-    text-shadow:
-      0 0 60px rgba(255, 255, 255, 0.5),
-      0 0 100px rgba(255, 255, 255, 0.25);
+
+  @keyframes glowPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 40px rgba(255, 255, 255, 0.5),
+        0 0 80px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      text-shadow:
+        0 0 60px rgba(255, 255, 255, 0.7),
+        0 0 100px rgba(255, 255, 255, 0.4),
+        0 0 120px rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
 /* Light theme */
-[data-theme="light"] .hero__title--main .typewriter {
+[data-theme="light"] .typewriter-line {
   color: var(--color-primary-dark);
   text-shadow:
-    0 0 40px rgba(114, 47, 55, 0.2),
-    0 0 80px rgba(114, 47, 55, 0.1);
+    0 0 30px rgba(114, 47, 55, 0.3),
+    0 0 60px rgba(114, 47, 55, 0.15);
+}
+
+[data-theme="light"] .typewriter-cursor {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(114, 47, 55, 0.5);
 }
 
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-  .hero__title--main .typewriter {
-    animation: fadeInSimple 0.8s ease-out 0.3s forwards;
+  .typewriter-line {
+    animation: fadeInSimple 1s ease-out forwards !important;
+    width: 100%;
+  }
+
+  .typewriter-line--1 {
+    animation-delay: 0.3s !important;
+  }
+
+  .typewriter-line--2 {
+    animation-delay: 0.6s !important;
+  }
+
+  .typewriter-cursor {
+    display: none;
   }
 
   @keyframes fadeInSimple {
@@ -1032,10 +1102,5 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  .hero__title--main.revealed .typewriter {
-    animation: none;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
