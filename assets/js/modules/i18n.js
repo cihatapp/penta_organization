@@ -147,6 +147,19 @@ const I18nManager = (function() {
       }
     });
 
+    // Translate HTML content (for elements with inline tags like <strong>, <em>)
+    // Only allows safe inline formatting tags from trusted translation files
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const key = element.dataset.i18nHtml;
+      const translation = getTranslation(key);
+      if (translation !== key) {
+        // Sanitize: only allow <strong>, <em>, <b>, <i>, <br>, <span>
+        const sanitized = translation
+          .replace(/<(?!\/?(strong|em|b|i|br|span)(\s|>|\/))([^>]*)>/gi, '');
+        element.innerHTML = sanitized;
+      }
+    });
+
     // Update HTML lang attribute
     document.documentElement.lang = currentLang;
 

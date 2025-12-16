@@ -179,6 +179,9 @@
   <link rel="stylesheet" href="./assets/css/pages/portfolio.css">
 </head>
 <body>
+  <!-- Theme Transition Overlay -->
+  <div class="theme-transition-overlay" aria-hidden="true"></div>
+
   <!-- Header -->
   <header class="header">
     <div class="container header__container">
@@ -209,7 +212,7 @@
         </div>
 
         <!-- Theme Toggle -->
-        <button class="btn btn--icon" data-theme-toggle aria-label="Toggle theme">
+        <button class="btn btn--icon toggle-theme" data-theme-toggle aria-label="Toggle theme">
           <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"/>
             <line x1="12" y1="1" x2="12" y2="3"/>
@@ -221,7 +224,7 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
-          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
@@ -525,6 +528,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Game FAB -->
+  <a href="game.html" class="game-fab" aria-label="Hafıza Oyunu">
+    <span class="game-fab__icon">🎮</span>
+    <span class="game-fab__tooltip" data-i18n="game.title">Hafıza Oyunu</span>
+  </a>
 
   <!-- Back to Top Button -->
   <button class="back-to-top" data-back-to-top aria-label="Back to top">

@@ -90,24 +90,36 @@ const ThemeManager = (function() {
 
   /**
    * Update toggle button state/icon
+   * Note: Icon visibility is now controlled by CSS using opacity/transform
+   * based on [data-theme] attribute on html element
    */
   function updateToggleButton() {
     if (!toggleButton) return;
 
     const isDark = currentTheme === THEME_DARK;
-    const sunIcon = toggleButton.querySelector('.icon-sun');
-    const moonIcon = toggleButton.querySelector('.icon-moon');
-
-    if (sunIcon && moonIcon) {
-      // In dark mode, show sun (to switch to light)
-      // In light mode, show moon (to switch to dark)
-      sunIcon.style.display = isDark ? 'block' : 'none';
-      moonIcon.style.display = isDark ? 'none' : 'block';
-    }
 
     toggleButton.setAttribute('aria-label',
       isDark ? 'Switch to light mode' : 'Switch to dark mode'
     );
+  }
+
+  /**
+   * Trigger overlay flash animation
+   */
+  function triggerTransitionOverlay() {
+    const overlay = document.querySelector('.theme-transition-overlay');
+    if (!overlay) return;
+
+    // Remove and re-add the class to restart animation
+    overlay.classList.remove('active');
+    // Force reflow to restart animation
+    void overlay.offsetWidth;
+    overlay.classList.add('active');
+
+    // Clean up after animation
+    setTimeout(() => {
+      overlay.classList.remove('active');
+    }, 400);
   }
 
   /**
@@ -129,6 +141,10 @@ const ThemeManager = (function() {
    */
   function toggleTheme() {
     const newTheme = currentTheme === THEME_DARK ? THEME_LIGHT : THEME_DARK;
+
+    // Trigger transition overlay animation
+    triggerTransitionOverlay();
+
     saveTheme(newTheme);
     applyTheme(newTheme);
 

@@ -241,6 +241,7 @@ const GameManager = (function() {
    */
   function flipCard(cardElement) {
     cardElement.classList.add('game-card--flipped');
+    cardElement.setAttribute('aria-pressed', 'true');
 
     const cardId = cardElement.dataset.cardId;
     const pairId = cardElement.dataset.pairId;
@@ -283,6 +284,8 @@ const GameManager = (function() {
   function handleMatch(card1, card2) {
     card1.classList.add('game-card--matched');
     card2.classList.add('game-card--matched');
+    card1.setAttribute('aria-disabled', 'true');
+    card2.setAttribute('aria-disabled', 'true');
 
     matchedPairs++;
     updateMatchesDisplay();
@@ -311,6 +314,8 @@ const GameManager = (function() {
     setTimeout(() => {
       card1.classList.remove('game-card--flipped', 'game-card--wrong');
       card2.classList.remove('game-card--flipped', 'game-card--wrong');
+      card1.setAttribute('aria-pressed', 'false');
+      card2.setAttribute('aria-pressed', 'false');
 
       flippedCards = [];
       isLocked = false;
@@ -454,9 +459,6 @@ const GameManager = (function() {
 
     // Hide modal if open
     hideModal();
-
-    // Bind card events
-    bindCardEvents();
   }
 
   /**
@@ -525,12 +527,18 @@ const GameManager = (function() {
       modalCloseElement.addEventListener('click', hideModal);
     }
 
-    // ESC key to close modal
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modalElement && modalElement.getAttribute('aria-hidden') === 'false') {
-        hideModal();
-      }
-    });
+    // ESC key to close modal (stored for cleanup)
+    document.addEventListener('keydown', handleEscKey);
+  }
+
+  /**
+   * Handle ESC key to close modal
+   * @param {KeyboardEvent} e
+   */
+  function handleEscKey(e) {
+    if (e.key === 'Escape' && modalElement && modalElement.getAttribute('aria-hidden') === 'false') {
+      hideModal();
+    }
   }
 
   // ===================
@@ -547,6 +555,7 @@ const GameManager = (function() {
 
     cacheElements();
     bindControlEvents();
+    bindCardEvents();
 
     console.log('GameManager initialized');
   }
@@ -560,6 +569,7 @@ const GameManager = (function() {
       boardElement.removeEventListener('click', handleCardClick);
       boardElement.removeEventListener('keydown', handleKeyDown);
     }
+    document.removeEventListener('keydown', handleEscKey);
   }
 
   // ===================

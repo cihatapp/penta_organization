@@ -467,6 +467,7 @@
   font-size: var(--text-lg);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
+  background: transparent;
   border-radius: var(--radius-lg);
 
   /* Initial state - hidden and offset */
@@ -552,6 +553,38 @@
   }
 }
 
+/* Light Theme - Mobile Navigation */
+[data-theme="light"] .nav-mobile {
+  background: var(--color-bg-primary);
+  border-left: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xl);
+}
+
+[data-theme="light"] .nav-mobile::before {
+  background: rgba(26, 20, 22, 0.4);
+}
+
+[data-theme="light"] .nav-mobile__list,
+[data-theme="light"] .nav-mobile__list > li {
+  background: transparent !important;
+}
+
+[data-theme="light"] .nav-mobile__link {
+  color: var(--color-text-primary) !important;
+  background: transparent !important;
+}
+
+[data-theme="light"] .nav-mobile__link:hover,
+[data-theme="light"] .nav-mobile__link--active {
+  background: var(--color-bg-tertiary) !important;
+  color: var(--color-primary) !important;
+}
+
+/* Light Theme - Hamburger */
+[data-theme="light"] .hamburger__line {
+  background: var(--color-text-primary);
+}
+
 /* ===================
    TOGGLE SWITCHES
    =================== */
@@ -608,6 +641,94 @@
 .toggle-theme svg {
   width: 20px;
   height: 20px;
+  position: absolute;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+              opacity 0.3s ease;
+}
+
+/* Sun icon - visible in dark mode */
+.toggle-theme .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Moon icon - hidden in dark mode */
+.toggle-theme .icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+/* Light mode - swap icons */
+[data-theme="light"] .toggle-theme .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+[data-theme="light"] .toggle-theme .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Hover effect on toggle button */
+.toggle-theme:hover svg {
+  filter: drop-shadow(0 0 4px var(--color-primary));
+}
+
+/* Active click animation */
+.toggle-theme:active svg {
+  transform: scale(0.85);
+}
+
+/* Theme transition overlay - creates subtle flash effect */
+.theme-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 9999;
+  transition: opacity 0.15s ease;
+}
+
+.theme-transition-overlay.active {
+  animation: theme-flash 0.4s ease-out;
+}
+
+@keyframes theme-flash {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.08;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Smooth theme color transitions for main elements */
+body,
+.header,
+.section,
+.card,
+.footer {
+  transition: background-color var(--transition-theme),
+              color var(--transition-theme),
+              border-color var(--transition-theme);
+}
+
+/* Reduced motion preference - disable animations */
+@media (prefers-reduced-motion: reduce) {
+  .toggle-theme svg {
+    transition: none;
+  }
+
+  .theme-transition-overlay.active {
+    animation: none;
+  }
 }
 
 /* ===================
@@ -1503,6 +1624,97 @@ select.input {
 .back-to-top svg {
   width: 24px;
   height: 24px;
+}
+
+/* ===================
+   GAME FAB
+   =================== */
+.game-fab {
+  position: fixed;
+  bottom: calc(var(--space-xl) + 60px);
+  right: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  z-index: var(--z-fixed);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  animation: fabPulse 2s ease-in-out infinite;
+}
+
+.game-fab:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-glow);
+  animation: none;
+}
+
+.game-fab:active {
+  transform: scale(0.95);
+}
+
+.game-fab__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.game-fab__tooltip {
+  position: absolute;
+  right: calc(100% + var(--space-sm));
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.game-fab:hover .game-fab__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@keyframes fabPulse {
+  0%, 100% {
+    box-shadow: var(--shadow-lg), 0 0 0 0 rgba(155, 58, 72, 0.4);
+  }
+  50% {
+    box-shadow: var(--shadow-lg), 0 0 0 10px rgba(155, 58, 72, 0);
+  }
+}
+
+/* Hide on game page */
+.game-section ~ .game-fab,
+body:has(.game-section) .game-fab {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .game-fab {
+    width: 46px;
+    height: 46px;
+    bottom: calc(var(--space-lg) + 54px);
+    right: var(--space-md);
+  }
+
+  .game-fab__tooltip {
+    display: none;
+  }
 }
 
 /* ===================

@@ -16,7 +16,8 @@ const FormsManager = (function() {
   // Validation patterns
   const patterns = {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+    // Turkish phone: supports formats like 545 551 72 50, +90 5XX XXX XX XX, 05XXXXXXXXX
+    phone: /^[\+]?[0]?[9]?[0]?[\s\-]?[0-9]{3}[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{2}[\s\-\.]?[0-9]{2}$|^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
     name: /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s'-]{2,50}$/
   };
 
@@ -49,13 +50,13 @@ const FormsManager = (function() {
       isValid = false;
       errorMessage = getErrorMessage('phone', field);
     }
-    // Min length check
-    else if (minLength && value.length < minLength) {
+    // Min length check (minLength returns -1 if not set)
+    else if (minLength > 0 && value.length < minLength) {
       isValid = false;
       errorMessage = getErrorMessage('minLength', field, minLength);
     }
-    // Max length check
-    else if (maxLength && value.length > maxLength) {
+    // Max length check (maxLength returns -1 if not set)
+    else if (maxLength > 0 && value.length > maxLength) {
       isValid = false;
       errorMessage = getErrorMessage('maxLength', field, maxLength);
     }
@@ -266,20 +267,20 @@ const FormsManager = (function() {
         'other': 'Diğer'
       };
 
-      // Format the message
+      // Format the message (using text symbols instead of emojis for better compatibility)
       const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
 
-      const message = `🎯 *Yeni İletişim Formu*
-━━━━━━━━━━━━━━━━━━━━
-👤 *Ad Soyad:* ${data.name || 'Belirtilmedi'}
-📧 *E-posta:* ${data.email || 'Belirtilmedi'}
-📱 *Telefon:* ${data.phone || 'Belirtilmedi'}
-🎪 *Hizmet:* ${serviceName}
-━━━━━━━━━━━━━━━━━━━━
-💬 *Mesaj:*
+      const message = `*YENI ILETISIM FORMU*
+------------------------
+> *Ad Soyad:* ${data.name || 'Belirtilmedi'}
+> *E-posta:* ${data.email || 'Belirtilmedi'}
+> *Telefon:* ${data.phone || 'Belirtilmedi'}
+> *Hizmet:* ${serviceName}
+------------------------
+*Mesaj:*
 ${data.message || 'Mesaj yok'}
-━━━━━━━━━━━━━━━━━━━━
-📅 _${new Date().toLocaleString('tr-TR')}_`;
+------------------------
+_${new Date().toLocaleString('tr-TR')}_`;
 
       // Encode message for URL
       const encodedMessage = encodeURIComponent(message);
