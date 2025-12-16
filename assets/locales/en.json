@@ -299,7 +299,7 @@
     "info": {
       "title": "Contact Information",
       "address": "Address",
-      "addressValue": "Istanbul, Turkey",
+      "addressValue": "Kültür mahallesi, 3871. Sk. Kepez/Antalya",
       "phone": "Phone",
       "phoneValue": "+90 530 913 79 75",
       "email": "Email",
@@ -308,7 +308,7 @@
     }
   },
   "footer": {
-    "tagline": "Creating unforgettable events with over 10 years of experience.",
+    "tagline": "Perfect moments begin with flawless connections.",
     "quickLinks": "Quick Links",
     "services": "Our Services",
     "contact": "Contact",

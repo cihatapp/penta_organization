@@ -135,7 +135,7 @@
       "description": "Mekânın Ruhunu Yansıtan Süslemeler: Etkinliğin temasına ve ruhuna uygun, yüksek estetik değere sahip çiçek düzenlemeleri, masa dekorasyonları ve genel mekân giydirmeleri ile atmosferi sıradanlıktan uzaklaştırırız. Her köşenin bir iletişim noktası ve her aktivitenin bir anı olmasını sağlıyoruz.",
       "features": ["Çiçek Düzenlemeleri", "Masa Dekorasyonları", "Oyunlaştırma Aktiviteleri", "Sosyal Medya Yarışmaları"]
     },
-    "cta": "Teklif Alın",
+    "cta": "İletişim",
     "process": {
       "badge": "Nasıl Çalışıyoruz",
       "title": "Sürecimiz",
@@ -299,7 +299,7 @@
     "info": {
       "title": "İletişim Bilgileri",
       "address": "Adres",
-      "addressValue": "İstanbul, Türkiye",
+      "addressValue": "Kültür mahallesi, 3871. Sk. Kepez/Antalya",
       "phone": "Telefon",
       "phoneValue": "+90 530 913 79 75",
       "email": "E-posta",
@@ -308,7 +308,7 @@
     }
   },
   "footer": {
-    "tagline": "10 yılı aşkın deneyimle unutulmaz etkinlikler yaratıyoruz.",
+    "tagline": "Mükemmel anlar, kusursuz bağlarla başlar.",
     "quickLinks": "Hızlı Bağlantılar",
     "services": "Hizmetlerimiz",
     "contact": "İletişim",
