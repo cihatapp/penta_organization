@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Penta Organization - Learn about our story, mission, and the team behind exceptional events.">
+
+  <title data-i18n="meta.aboutTitle">About Us - Penta Organization</title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/typography.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/pages/about.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">
+        <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img">
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link" data-i18n="nav.home">Home</a></li>
+          <li><a href="services.html" class="nav__link" data-i18n="nav.services">Services</a></li>
+          <li><a href="about.html" class="nav__link nav__link--active" data-i18n="nav.about">About</a></li>
+          <li><a href="portfolio.html" class="nav__link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="careers.html" class="nav__link" data-i18n="nav.careers">Careers</a></li>
+          <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="toggle toggle--lang" role="group" aria-label="Language selection">
+          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="en">EN</button>
+          <button class="toggle__btn" data-lang-toggle data-lang="tr">TR</button>
+        </div>
+
+        <button class="btn btn--icon" data-theme-toggle aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="hamburger" data-mobile-toggle aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <ul class="nav-mobile__list">
+        <li><a href="index.html" class="nav-mobile__link" data-i18n="nav.home">Home</a></li>
+        <li><a href="services.html" class="nav-mobile__link" data-i18n="nav.services">Services</a></li>
+        <li><a href="about.html" class="nav-mobile__link nav-mobile__link--active" data-i18n="nav.about">About</a></li>
+        <li><a href="portfolio.html" class="nav-mobile__link" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="careers.html" class="nav-mobile__link" data-i18n="nav.careers">Careers</a></li>
+        <li><a href="contact.html" class="nav-mobile__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__content" data-animate="fade-up">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+              <li><span data-i18n="nav.about">About</span></li>
+            </ol>
+          </nav>
+          <h1 class="page-hero__title">Hakkımızda</h1>
+          <p class="page-hero__subtitle">Kusursuz etkinlikler yaratma tutkumuzun arkasındaki hikaye</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section story-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content" data-animate="fade-right">
+            <span class="section__badge badge">Hikayemiz</span>
+            <h2 class="story-title">10 Yılı Aşkın Deneyim</h2>
+            <p class="story-text">Biz, Penta Organizasyon olarak, bu sektörde 10 yılı aşkın süredir sahada, en büyük etkinliklerin kalbindeyiz. Bu uzun soluklu yolculuk bize şunu öğretti: En ihtişamlı organizasyonların bile arkasında, yalnızca güven ve kusursuz planlama yatar.</p>
+            <p class="story-text">On yıl boyunca sayısız karmaşayı yönettik, binlerce detayı çözdük ve bu tecrübemizden yola çıkarak kendi huzur felsefemizi yarattık.</p>
+            <p class="story-text">Kendimizi sadece bir organizasyon firması olarak görmüyoruz; biz, vizyonunuzu kusursuz bir gerçekliğe dönüştüren çözüm ortağınız, en kritik anlarda yanınızda duran güvenilir dostunuzuz. İşimizi profesyonel ciddiyetle yürütürken, size ve misafirlerinize yaklaşımımızda her zaman sıcak ve samimiyiz.</p>
+            <p class="story-text"><strong>Çünkü biliyoruz ki, en iyi iş birliği, deneyim ve güvene dayalı ilişkilerle kurulur.</strong></p>
+          </div>
+          <div class="story-image" data-animate="fade-left">
+            <img src="./assets/images/about/story.svg" alt="Penta Organization ekibi" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Penta Philosophy Section -->
+    <section class="section philosophy-section">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge">Felsefemiz</span>
+          <h2 class="section__title">Penta'nın Beş Boyutlu Mükemmelliği</h2>
+          <p class="section__subtitle">Adımız olan "Penta" (Yunancada "beş"), operasyonel başarımızın temelini oluşturan beş ana unsurdan gelir.</p>
+        </div>
+
+        <div class="mission-grid mission-grid--five" data-stagger="100">
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Planlama</h3>
+            <p class="mission-card__text">Detaylı ve proaktif ön hazırlıkla, sürprizlere yer bırakmayız.</p>
+          </div>
+
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Personel</h3>
+            <p class="mission-card__text">En iyi eğitimi almış, güler yüzlü ve sorumluluk sahibi kadromuz.</p>
+          </div>
+
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Performans</h3>
+            <p class="mission-card__text">Taahhüt edilen sonucun beklentilerin ötesinde eksiksiz teslimi sözü.</p>
+          </div>
+
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Proaktivite</h3>
+            <p class="mission-card__text">Olası sorunları, siz fark etmeden çözme yeteneği.</p>
+          </div>
+
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Pürüzsüzlük</h3>
+            <p class="mission-card__text">Konukların hissettiği kesintisiz, akıcı ve keyifli deneyim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="section mission-section">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge">Hedeflerimiz</span>
+          <h2 class="section__title">Vizyon ve Misyonumuz</h2>
+        </div>
+
+        <div class="mission-grid" data-stagger="150">
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Vizyonumuz</h3>
+            <p class="mission-card__text">Türkiye'nin en çok güvenilen, samimi ve yenilikçi organizasyon çözüm ortağı olmak.</p>
+          </div>
+
+          <div class="mission-card" data-animate="fade-up">
+            <div class="mission-card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <h3 class="mission-card__title">Misyonumuz</h3>
+            <p class="mission-card__text">Müşterilerimizin yükünü tamamen alarak, organizasyonel süreçleri bir stres kaynağı olmaktan çıkarıp, bir keyif ve başarı hikayesine dönüştürmek.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge" data-i18n="about.team.badge">Our Team</span>
+          <h2 class="section__title" data-i18n="about.team.title">Meet the Experts</h2>
+          <p class="section__subtitle" data-i18n="about.team.subtitle">The passionate professionals behind every successful event</p>
+        </div>
+
+        <div class="team-grid" data-stagger="100">
+          <div class="team-card" data-animate="fade-up">
+            <div class="team-card__image">
+              <img src="./assets/images/team/member-1.svg" alt="Ayşe Demir" loading="lazy">
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Ayşe Demir</h3>
+              <p class="team-card__role" data-i18n="about.team.members.0.role">Founder & CEO</p>
+            </div>
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up">
+            <div class="team-card__image">
+              <img src="./assets/images/team/member-2.svg" alt="Murat Yıldız" loading="lazy">
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Murat Yıldız</h3>
+              <p class="team-card__role" data-i18n="about.team.members.1.role">Creative Director</p>
+            </div>
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up">
+            <div class="team-card__image">
+              <img src="./assets/images/team/member-3.svg" alt="Zeynep Kaya" loading="lazy">
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Zeynep Kaya</h3>
+              <p class="team-card__role" data-i18n="about.team.members.2.role">Event Manager</p>
+            </div>
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="team-card" data-animate="fade-up">
+            <div class="team-card__image">
+              <img src="./assets/images/team/member-4.svg" alt="Emre Aydın" loading="lazy">
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Emre Aydın</h3>
+              <p class="team-card__role" data-i18n="about.team.members.3.role">Technical Director</p>
+            </div>
+            <div class="team-card__social">
+              <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section class="section history-section">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge" data-i18n="about.history.badge">Our Journey</span>
+          <h2 class="section__title" data-i18n="about.history.title">Milestones</h2>
+        </div>
+
+        <div class="timeline" data-animate="fade-up">
+          <div class="timeline__item">
+            <div class="timeline__year">2009</div>
+            <div class="timeline__content">
+              <h3 class="timeline__title" data-i18n="about.history.events.0.title">Founded</h3>
+              <p class="timeline__text" data-i18n="about.history.events.0.text">Penta Organization was established with a vision to transform event management in Turkey.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__year">2012</div>
+            <div class="timeline__content">
+              <h3 class="timeline__title" data-i18n="about.history.events.1.title">100th Event</h3>
+              <p class="timeline__text" data-i18n="about.history.events.1.text">Celebrated our 100th successful event and expanded our team to 20 professionals.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__year">2016</div>
+            <div class="timeline__content">
+              <h3 class="timeline__title" data-i18n="about.history.events.2.title">International Expansion</h3>
+              <p class="timeline__text" data-i18n="about.history.events.2.text">Started organizing events across Europe and the Middle East.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__year">2020</div>
+            <div class="timeline__content">
+              <h3 class="timeline__title" data-i18n="about.history.events.3.title">Digital Innovation</h3>
+              <p class="timeline__text" data-i18n="about.history.events.3.text">Pioneered hybrid event solutions, combining in-person and virtual experiences.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__year">2024</div>
+            <div class="timeline__content">
+              <h3 class="timeline__title" data-i18n="about.history.events.4.title">500+ Events</h3>
+              <p class="timeline__text" data-i18n="about.history.events.4.text">Reached 500 successful events with a team of 50+ dedicated professionals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta" data-animate="fade-up">
+          <div class="cta__content">
+            <h2 class="cta__title" data-i18n="about.cta.title">Want to Work With Us?</h2>
+            <p class="cta__text" data-i18n="about.cta.subtitle">Let's create something amazing together.</p>
+          </div>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg" data-i18n="about.cta.button">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img">
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Creating unforgettable experiences since 2009.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title" data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title" data-i18n="footer.services">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#corporate" data-i18n="services.corporate.title">Corporate Events</a></li>
+            <li><a href="services.html#wedding" data-i18n="services.wedding.title">Weddings</a></li>
+            <li><a href="services.html#special" data-i18n="services.special.title">Special Events</a></li>
+            <li><a href="services.html#concert" data-i18n="services.concert.title">Concerts</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__contact">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Istanbul, Turkey</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+902121234567">+90 212 123 45 67</a></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@pentaorganization.com">info@pentaorganization.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span data-current-year></span> Penta Organization. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <div class="footer__legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" data-back-to-top aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="./assets/js/modules/theme.js"></script>
+  <script src="./assets/js/modules/i18n.js"></script>
+  <script src="./assets/js/modules/navigation.js"></script>
+  <script src="./assets/js/modules/animations.js"></script>
+  <script src="./assets/js/modules/forms.js"></script>
+  <script src="./assets/js/modules/portfolio.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

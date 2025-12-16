@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Penta Organization services - Corporate events, weddings, special occasions, concerts, and comprehensive event management solutions.">
+
+  <title data-i18n="meta.servicesTitle">Services - Penta Organization</title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/typography.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/pages/services.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">
+        <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img">
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link" data-i18n="nav.home">Home</a></li>
+          <li><a href="services.html" class="nav__link nav__link--active" data-i18n="nav.services">Services</a></li>
+          <li><a href="about.html" class="nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="portfolio.html" class="nav__link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="careers.html" class="nav__link" data-i18n="nav.careers">Careers</a></li>
+          <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="toggle toggle--lang" role="group" aria-label="Language selection">
+          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="en">EN</button>
+          <button class="toggle__btn" data-lang-toggle data-lang="tr">TR</button>
+        </div>
+
+        <button class="btn btn--icon" data-theme-toggle aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="hamburger" data-mobile-toggle aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <ul class="nav-mobile__list">
+        <li><a href="index.html" class="nav-mobile__link" data-i18n="nav.home">Home</a></li>
+        <li><a href="services.html" class="nav-mobile__link nav-mobile__link--active" data-i18n="nav.services">Services</a></li>
+        <li><a href="about.html" class="nav-mobile__link" data-i18n="nav.about">About</a></li>
+        <li><a href="portfolio.html" class="nav-mobile__link" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="careers.html" class="nav-mobile__link" data-i18n="nav.careers">Careers</a></li>
+        <li><a href="contact.html" class="nav-mobile__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__content" data-animate="fade-up">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+              <li><span data-i18n="nav.services">Services</span></li>
+            </ol>
+          </nav>
+          <h1 class="page-hero__title">Hizmetlerimiz</h1>
+          <p class="page-hero__subtitle">Vizyonunuzu gerçeğe dönüştürmek için kapsamlı etkinlik çözümleri</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section">
+      <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" data-animate="fade-up">
+          <button class="filter-tab filter-tab--active" data-filter="all">Tüm Hizmetler</button>
+          <button class="filter-tab" data-filter="staff">Personel</button>
+          <button class="filter-tab" data-filter="event">Etkinlik</button>
+          <button class="filter-tab" data-filter="technical">Teknik</button>
+          <button class="filter-tab" data-filter="logistics">Lojistik</button>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid" data-stagger="100">
+          <!-- Part Time Ekip Tedariği -->
+          <article class="service-card" id="staff" data-category="staff" data-animate="fade-up">
+            <div class="service-card__image">
+              <img src="./assets/images/services/staff.svg" alt="Part Time Ekip Tedariği" loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <div class="service-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Part Time Ekip Tedariği</h3>
+              <p class="service-card__subtitle">Markanızın Güler Yüzü</p>
+              <p class="service-card__description">Etkinliğinizin karakterini ve kurumsal kimliğinizi yansıtacak, en önemlisi sorumluluk sahibi, eğitimli ve güler yüzlü ekip arkadaşları seçip organize ediyoruz. Ekibimiz, markanızın sahnedeki uzantısıdır.</p>
+              <ul class="service-card__features">
+                <li>Nitelikli ve Güvenilir Kadro</li>
+                <li>Eğitimli Personel</li>
+                <li>Marka Temsili Bilinci</li>
+                <li>Esnek Çalışma Modeli</li>
+              </ul>
+              <a href="contact.html?service=staff" class="btn btn--primary">Teklif Alın</a>
+            </div>
+          </article>
+
+          <!-- Kurumsal Etkinlik Yönetimi -->
+          <article class="service-card" id="event" data-category="event" data-animate="fade-up">
+            <div class="service-card__image">
+              <img src="./assets/images/services/corporate.svg" alt="Kurumsal Etkinlik Yönetimi" loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <div class="service-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Kurumsal Etkinlik Yönetimi</h3>
+              <p class="service-card__subtitle">Vizyonunuzun Gerçeğe Dönüşümü</p>
+              <p class="service-card__description">Etkinliğinizin hedeflerine ulaşması için yaratıcı ve amaca yönelik konseptler geliştiririz. Mekân seçimi, bütçeleme ve zaman çizelgesi dahil tüm planlama süreçlerini şeffaflıkla yönetiriz.</p>
+              <ul class="service-card__features">
+                <li>Stratejik Konsept Geliştirme</li>
+                <li>Detaylı Planlama</li>
+                <li>Mekân Seçimi</li>
+                <li>Bütçe Yönetimi</li>
+              </ul>
+              <a href="contact.html?service=event" class="btn btn--primary">Teklif Alın</a>
+            </div>
+          </article>
+
+          <!-- Sahne - Dekor - Ses - Işık -->
+          <article class="service-card" id="technical" data-category="technical" data-animate="fade-up">
+            <div class="service-card__image">
+              <img src="./assets/images/services/concert.svg" alt="Sahne - Dekor - Ses - Işık" loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <div class="service-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Sahne - Dekor - Ses - Işık</h3>
+              <p class="service-card__subtitle">Teknik ve Estetik Kusursuzluk</p>
+              <p class="service-card__description">Konuşmacıları ve mesajları öne çıkaran, markanızın ruhunu yansıtan etkileyici sahne tasarımları hazırlarız. Görsel estetik, teknik işlevsellikle buluşur.</p>
+              <ul class="service-card__features">
+                <li>Etki Odaklı Sahne Tasarımı</li>
+                <li>Profesyonel Dekor</li>
+                <li>Ses Sistemleri</li>
+                <li>Işık Tasarımı</li>
+              </ul>
+              <a href="contact.html?service=technical" class="btn btn--primary">Teklif Alın</a>
+            </div>
+          </article>
+
+          <!-- Transfer Hizmeti ve Planlama -->
+          <article class="service-card" id="transfer" data-category="logistics" data-animate="fade-up">
+            <div class="service-card__image">
+              <img src="./assets/images/services/transfer.svg" alt="Transfer Hizmeti" loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <div class="service-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Transfer Hizmeti ve Planlama</h3>
+              <p class="service-card__subtitle">Zamanında ve Konforlu Akış</p>
+              <p class="service-card__description">Misafirleriniz için havaalanı, otel ve etkinlik noktası arasındaki transferleri dakik ve konforlu araçlarla organize ederiz.</p>
+              <ul class="service-card__features">
+                <li>VIP Transfer Çözümleri</li>
+                <li>Havaalanı Transferi</li>
+                <li>Grup Taşımacılığı</li>
+                <li>Dakik Planlama</li>
+              </ul>
+              <a href="contact.html?service=transfer" class="btn btn--primary">Teklif Alın</a>
+            </div>
+          </article>
+
+          <!-- Aktivite - Süsleme Hizmetleri -->
+          <article class="service-card" id="decoration" data-category="event" data-animate="fade-up">
+            <div class="service-card__image">
+              <img src="./assets/images/services/special.svg" alt="Aktivite - Süsleme Hizmetleri" loading="lazy">
+            </div>
+            <div class="service-card__content">
+              <div class="service-card__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Aktivite - Süsleme Hizmetleri</h3>
+              <p class="service-card__subtitle">Detaylarda Saklı Büyü</p>
+              <p class="service-card__description">Etkinliğin temasına ve ruhuna uygun, yüksek estetik değere sahip çiçek düzenlemeleri, masa dekorasyonları ve genel mekân giydirmeleri ile atmosferi sıradanlıktan uzaklaştırırız.</p>
+              <ul class="service-card__features">
+                <li>Mekân Giydirme</li>
+                <li>Etkileşimli Aktivite Tasarımı</li>
+                <li>Oyunlaştırma (Gamification)</li>
+                <li>Sosyal Medya Aktivasyonları</li>
+              </ul>
+              <a href="contact.html?service=decoration" class="btn btn--primary">Teklif Alın</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge" data-i18n="services.process.badge">How We Work</span>
+          <h2 class="section__title" data-i18n="services.process.title">Our Process</h2>
+          <p class="section__subtitle" data-i18n="services.process.subtitle">A proven approach to creating exceptional events</p>
+        </div>
+
+        <div class="process-timeline" data-animate="fade-up">
+          <div class="process-step">
+            <div class="process-step__number">01</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title" data-i18n="services.process.steps.0.title">Consultation</h3>
+              <p class="process-step__text" data-i18n="services.process.steps.0.description">We start by understanding your vision, goals, and requirements through detailed discussions.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step__number">02</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title" data-i18n="services.process.steps.1.title">Planning</h3>
+              <p class="process-step__text" data-i18n="services.process.steps.1.description">Our team creates a comprehensive plan covering every aspect of your event.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step__number">03</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title" data-i18n="services.process.steps.2.title">Coordination</h3>
+              <p class="process-step__text" data-i18n="services.process.steps.2.description">We manage all vendors, logistics, and details to ensure seamless execution.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step__number">04</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title" data-i18n="services.process.steps.3.title">Execution</h3>
+              <p class="process-step__text" data-i18n="services.process.steps.3.description">On the day, our experienced team handles everything for a flawless event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta" data-animate="fade-up">
+          <div class="cta__content">
+            <h2 class="cta__title">Etkinliğinizi Planlamaya Hazır mısınız?</h2>
+            <p class="cta__text">Ücretsiz danışmanlık ve teklif için bugün bize ulaşın.</p>
+          </div>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">İletişime Geçin</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img">
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Creating unforgettable experiences since 2009.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title" data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title" data-i18n="footer.services">Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#corporate" data-i18n="services.corporate.title">Corporate Events</a></li>
+            <li><a href="services.html#wedding" data-i18n="services.wedding.title">Weddings</a></li>
+            <li><a href="services.html#special" data-i18n="services.special.title">Special Events</a></li>
+            <li><a href="services.html#concert" data-i18n="services.concert.title">Concerts</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__contact">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Istanbul, Turkey</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+902121234567">+90 212 123 45 67</a></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@pentaorganization.com">info@pentaorganization.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span data-current-year></span> Penta Organization. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <div class="footer__legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" data-back-to-top aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="./assets/js/modules/theme.js"></script>
+  <script src="./assets/js/modules/i18n.js"></script>
+  <script src="./assets/js/modules/navigation.js"></script>
+  <script src="./assets/js/modules/animations.js"></script>
+  <script src="./assets/js/modules/forms.js"></script>
+  <script src="./assets/js/modules/portfolio.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

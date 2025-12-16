@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Penta Organizasyon ile iletişime geçin - Etkinlik soruları, teklif ve danışmanlık için bize ulaşın.">
+
+  <title>İletişim - Penta Organizasyon</title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/typography.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/pages/contact.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">
+        <img src="./assets/images/logo.png" alt="Penta Organizasyon" class="header__logo-img">
+      </a>
+
+      <nav class="nav" aria-label="Ana navigasyon">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Ana Sayfa</a></li>
+          <li><a href="services.html" class="nav__link">Hizmetlerimiz</a></li>
+          <li><a href="about.html" class="nav__link">Hakkımızda</a></li>
+          <li><a href="portfolio.html" class="nav__link">Referanslar</a></li>
+          <li><a href="careers.html" class="nav__link">Kariyer</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="toggle toggle--lang" role="group" aria-label="Dil seçimi">
+          <button class="toggle__btn" data-lang-toggle data-lang="en">EN</button>
+          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="tr">TR</button>
+        </div>
+
+        <button class="btn btn--icon" data-theme-toggle aria-label="Tema değiştir">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="hamburger" data-mobile-toggle aria-label="Mobil menüyü aç" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" aria-label="Mobil navigasyon">
+      <ul class="nav-mobile__list">
+        <li><a href="index.html" class="nav-mobile__link">Ana Sayfa</a></li>
+        <li><a href="services.html" class="nav-mobile__link">Hizmetlerimiz</a></li>
+        <li><a href="about.html" class="nav-mobile__link">Hakkımızda</a></li>
+        <li><a href="portfolio.html" class="nav-mobile__link">Referanslar</a></li>
+        <li><a href="careers.html" class="nav-mobile__link">Kariyer</a></li>
+        <li><a href="contact.html" class="nav-mobile__link nav-mobile__link--active">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__content" data-animate="fade-up">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><span>İletişim</span></li>
+            </ol>
+          </nav>
+          <h1 class="page-hero__title">İletişime Geçin</h1>
+          <p class="page-hero__subtitle">Penta Organizasyon olarak, yeni bir hikayenin başlangıcını heyecanla bekliyoruz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+      <div class="container">
+        <div class="contact-intro text-center" data-animate="fade-up">
+          <p>İster büyük bir lansman, ister sadece part-time personel desteği arıyor olun; bizim için her talep, titizlikle ele alınması gereken önemli bir projedir. İhtiyaçlarınızı netleştirmek, aklınızdaki soruları yanıtlamak ve size özel bir çözüm sunmak için buradayız.</p>
+          <p><strong>Sadece bir adım atın, gerisini biz planlayalım.</strong></p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper" data-animate="fade-right">
+            <h2 class="contact-form__title">Bize Mesaj Gönderin</h2>
+            <p class="contact-form__subtitle">Formu doldurun, 24 saat içinde size dönüş yapalım.</p>
+
+            <form class="form contact-form" data-form>
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="name" class="form__label">Ad Soyad *</label>
+                  <input type="text" id="name" name="name" class="form__input" required placeholder="Adınız Soyadınız">
+                </div>
+
+                <div class="form__group">
+                  <label for="email" class="form__label">E-posta *</label>
+                  <input type="email" id="email" name="email" class="form__input" required placeholder="ornek@email.com">
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="phone" class="form__label">Telefon</label>
+                  <input type="tel" id="phone" name="phone" class="form__input" placeholder="+90 5XX XXX XX XX">
+                </div>
+
+                <div class="form__group">
+                  <label for="service" class="form__label">İlgilendiğiniz Hizmet</label>
+                  <select id="service" name="service" class="form__select">
+                    <option value="">Hizmet seçin</option>
+                    <option value="staff">Part Time Ekip Tedariği</option>
+                    <option value="event">Kurumsal Etkinlik Yönetimi</option>
+                    <option value="technical">Sahne - Dekor - Ses - Işık</option>
+                    <option value="transfer">Transfer Hizmeti</option>
+                    <option value="decoration">Aktivite - Süsleme</option>
+                    <option value="other">Diğer</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="message" class="form__label">Mesajınız *</label>
+                <textarea id="message" name="message" class="form__textarea" rows="5" required maxlength="2000" placeholder="Etkinlik vizyonunuz hakkında bize bilgi verin..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--full">Mesaj Gönder</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info" data-animate="fade-left">
+            <div class="contact-info__card">
+              <h3 class="contact-info__title">İletişim Bilgileri</h3>
+
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-info__content">
+                  <h4>Adres</h4>
+                  <p>İstanbul, Türkiye</p>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-info__content">
+                  <h4>Telefon</h4>
+                  <p><a href="tel:+905309137975">+90 530 913 79 75</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact-info__content">
+                  <h4>E-posta</h4>
+                  <p><a href="mailto:info@pentaorganizasyon.com">info@pentaorganizasyon.com</a></p>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-info__social">
+                <h4>Bizi Takip Edin</h4>
+                <div class="social-links">
+                  <a href="#" class="social-link" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  </a>
+                  <a href="#" class="social-link" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  </a>
+                  <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img src="./assets/images/logo.png" alt="Penta Organizasyon" class="header__logo-img">
+          </a>
+          <p class="footer__tagline">10 yılı aşkın deneyimle unutulmaz etkinlikler yaratıyoruz.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title">Hızlı Bağlantılar</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="services.html">Hizmetlerimiz</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="portfolio.html">Referanslar</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title">Hizmetlerimiz</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#staff">Part Time Ekip</a></li>
+            <li><a href="services.html#event">Kurumsal Etkinlik</a></li>
+            <li><a href="services.html#technical">Sahne & Dekor</a></li>
+            <li><a href="services.html#transfer">Transfer Hizmeti</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4 class="footer__title">İletişim</h4>
+          <ul class="footer__contact">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>İstanbul, Türkiye</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+905309137975">+90 530 913 79 75</a></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@pentaorganizasyon.com">info@pentaorganizasyon.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; <span data-current-year></span> Penta Organizasyon. <span>Tüm hakları saklıdır.</span></p>
+        <div class="footer__legal">
+          <a href="#">Gizlilik Politikası</a>
+          <a href="#">Kullanım Koşulları</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" data-back-to-top aria-label="Yukarı çık">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="./assets/js/modules/theme.js"></script>
+  <script src="./assets/js/modules/i18n.js"></script>
+  <script src="./assets/js/modules/navigation.js"></script>
+  <script src="./assets/js/modules/animations.js"></script>
+  <script src="./assets/js/modules/forms.js"></script>
+  <script src="./assets/js/modules/portfolio.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

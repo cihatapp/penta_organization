@@ -1,0 +1,255 @@
+/* ============================================
+   CSS CUSTOM PROPERTIES - DESIGN TOKENS
+   Penta Organization - Event Management
+   ============================================ */
+
+:root {
+  /* ===================
+     SPACING SYSTEM (8px base)
+     =================== */
+  --space-xxs: 0.25rem;   /* 4px */
+  --space-xs: 0.5rem;     /* 8px */
+  --space-sm: 0.75rem;    /* 12px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  --space-4xl: 6rem;      /* 96px */
+
+  /* ===================
+     TYPOGRAPHY
+     =================== */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.25rem;    /* 36px */
+  --text-5xl: 3rem;       /* 48px */
+  --text-6xl: 3.75rem;    /* 60px */
+  --text-7xl: 4.5rem;     /* 72px */
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* ===================
+     BORDER RADIUS
+     =================== */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+
+  /* ===================
+     TRANSITIONS
+     =================== */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-theme: 400ms ease-in-out;
+
+  /* ===================
+     Z-INDEX SCALE
+     =================== */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+  --z-max: 9999;
+
+  /* ===================
+     LAYOUT
+     =================== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-max: 1440px;
+  --header-height: 80px;
+  --header-height-mobile: 64px;
+}
+
+/* ============================================
+   DARK THEME (DEFAULT)
+   Penta Organizasyon - Bordo/Wine Renk Paleti
+   ============================================ */
+[data-theme="dark"] {
+  /* Brand Colors - Bordo/Wine (Logo Rengi) */
+  --color-primary: #9B3A48;         /* Bordo - Ana Marka Rengi */
+  --color-primary-light: #B84D5C;
+  --color-primary-dark: #722F37;
+  --color-primary-rgb: 155, 58, 72;
+
+  --color-secondary: #C9A227;       /* Altın/Gold - Lüks ve Elegans */
+  --color-secondary-light: #D4B445;
+  --color-secondary-dark: #A68620;
+
+  --color-accent: #D4A574;          /* Sıcak Krem/Tan */
+  --color-accent-light: #E0B88A;
+  --color-accent-dark: #C08850;
+
+  /* Background Colors */
+  --color-bg-primary: #0D0A0B;      /* Koyu bordo ton - near black */
+  --color-bg-secondary: #1A1416;    /* Cards, sections */
+  --color-bg-tertiary: #2A2224;     /* Elevated surfaces */
+  --color-bg-inverse: #fafafa;
+
+  /* Surface Colors */
+  --color-surface-1: #1A1416;
+  --color-surface-2: #2A2224;
+  --color-surface-3: #3D3537;
+
+  /* Text Colors */
+  --color-text-primary: #FAF8F8;    /* Main text */
+  --color-text-secondary: #B8A8AA;  /* Secondary text */
+  --color-text-muted: #7A6E70;      /* Muted text */
+  --color-text-inverse: #0D0A0B;
+
+  /* Border Colors */
+  --color-border: #2A2224;
+  --color-border-light: #3D3537;
+  --color-border-focus: var(--color-primary);
+
+  /* Status Colors */
+  --color-success: #22c55e;
+  --color-success-light: #4ade80;
+  --color-warning: #f59e0b;
+  --color-warning-light: #fbbf24;
+  --color-error: #ef4444;
+  --color-error-light: #f87171;
+  --color-info: #3b82f6;
+  --color-info-light: #60a5fa;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(26, 20, 22, 0.85);
+  --glass-bg-heavy: rgba(26, 20, 22, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(12px);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --gradient-primary-vertical: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --gradient-dark: linear-gradient(180deg, #0D0A0B 0%, #1A1416 100%);
+  --gradient-radial: radial-gradient(ellipse at center, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  --gradient-hero: linear-gradient(180deg, transparent 0%, var(--color-bg-primary) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(var(--color-primary-rgb), 0.35);
+  --shadow-glow-lg: 0 0 60px rgba(var(--color-primary-rgb), 0.25);
+
+  /* Overlay */
+  --overlay-light: rgba(0, 0, 0, 0.3);
+  --overlay-medium: rgba(0, 0, 0, 0.5);
+  --overlay-heavy: rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   LIGHT THEME
+   Penta Organizasyon - Bordo/Wine Renk Paleti
+   ============================================ */
+[data-theme="light"] {
+  /* Brand Colors - Bordo/Wine (Logo Rengi) */
+  --color-primary: #722F37;         /* Bordo - Ana Marka Rengi (koyu tonlu light mode için) */
+  --color-primary-light: #9B3A48;
+  --color-primary-dark: #5A252C;
+  --color-primary-rgb: 114, 47, 55;
+
+  --color-secondary: #A68620;       /* Altın/Gold - Lüks ve Elegans */
+  --color-secondary-light: #C9A227;
+  --color-secondary-dark: #856B1A;
+
+  --color-accent: #C08850;          /* Sıcak Krem/Tan */
+  --color-accent-light: #D4A574;
+  --color-accent-dark: #A67040;
+
+  /* Background Colors */
+  --color-bg-primary: #FEFCFC;      /* Hafif sıcak beyaz */
+  --color-bg-secondary: #FAF7F7;    /* Cards, sections */
+  --color-bg-tertiary: #F5F0F0;     /* Elevated surfaces */
+  --color-bg-inverse: #1A1416;
+
+  /* Surface Colors */
+  --color-surface-1: #FEFCFC;
+  --color-surface-2: #FAF7F7;
+  --color-surface-3: #F5F0F0;
+
+  /* Text Colors */
+  --color-text-primary: #1A1416;    /* Main text - koyu bordo ton */
+  --color-text-secondary: #5C4F51;  /* Secondary text */
+  --color-text-muted: #9A8B8D;      /* Muted text */
+  --color-text-inverse: #FAF8F8;
+
+  /* Border Colors */
+  --color-border: #E8E0E1;
+  --color-border-light: #F5F0F0;
+  --color-border-focus: var(--color-primary);
+
+  /* Status Colors */
+  --color-success: #16a34a;
+  --color-success-light: #22c55e;
+  --color-warning: #d97706;
+  --color-warning-light: #f59e0b;
+  --color-error: #dc2626;
+  --color-error-light: #ef4444;
+  --color-info: #2563eb;
+  --color-info-light: #3b82f6;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(254, 252, 252, 0.85);
+  --glass-bg-heavy: rgba(254, 252, 252, 0.95);
+  --glass-border: rgba(114, 47, 55, 0.1);
+  --glass-blur: blur(12px);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --gradient-primary-vertical: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --gradient-light: linear-gradient(180deg, #FEFCFC 0%, #FAF7F7 100%);
+  --gradient-radial: radial-gradient(ellipse at center, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  --gradient-hero: linear-gradient(180deg, transparent 0%, var(--color-bg-primary) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(114, 47, 55, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(114, 47, 55, 0.08), 0 2px 4px -2px rgba(114, 47, 55, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(114, 47, 55, 0.08), 0 4px 6px -4px rgba(114, 47, 55, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(114, 47, 55, 0.08), 0 8px 10px -6px rgba(114, 47, 55, 0.06);
+  --shadow-2xl: 0 25px 50px -12px rgba(114, 47, 55, 0.15);
+  --shadow-glow: 0 0 30px rgba(var(--color-primary-rgb), 0.15);
+  --shadow-glow-lg: 0 0 60px rgba(var(--color-primary-rgb), 0.12);
+
+  /* Overlay */
+  --overlay-light: rgba(254, 252, 252, 0.3);
+  --overlay-medium: rgba(254, 252, 252, 0.5);
+  --overlay-heavy: rgba(254, 252, 252, 0.7);
+}

@@ -1,0 +1,20 @@
+/* ============================================
+   MAIN STYLESHEET
+   Penta Organization - Event Management
+   ============================================ */
+
+/* Core Styles */
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('./typography.css');
+@import url('./layout.css');
+@import url('./components.css');
+@import url('./animations.css');
+
+/* Page Specific Styles */
+@import url('./pages/home.css');
+@import url('./pages/services.css');
+@import url('./pages/about.css');
+@import url('./pages/portfolio.css');
+@import url('./pages/careers.css');
+@import url('./pages/contact.css');

@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "title": "Penta Organization - Premium Event Management",
+    "servicesTitle": "Services - Penta Organization",
+    "aboutTitle": "About Us - Penta Organization",
+    "portfolioTitle": "References - Penta Organization",
+    "careersTitle": "Careers - Penta Organization",
+    "contactTitle": "Contact - Penta Organization"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "portfolio": "References",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!"
+  },
+  "home": {
+    "hero": {
+      "badge": "10+ Years Experience",
+      "title": "Your Peace of Mind is Our Business",
+      "subtitle": "From corporate events to part-time staff supply, we transform organizational processes from a source of stress into a journey of joy and success.",
+      "cta": {
+        "primary": "Explore Services",
+        "secondary": "Get in Touch"
+      }
+    },
+    "services": {
+      "badge": "What We Do",
+      "title": "Our Services",
+      "subtitle": "Professional event solutions that bring your vision to life",
+      "staff": {
+        "title": "Part Time Staff Supply",
+        "subtitle": "The Friendly Face of Your Brand",
+        "description": "We select and organize responsible, trained, and friendly team members who reflect your event's character and corporate identity."
+      },
+      "event": {
+        "title": "Corporate Event Management",
+        "subtitle": "Turning Your Vision into Reality",
+        "description": "We develop creative concepts for your event to reach its goals. We transparently manage all planning processes including venue selection, budgeting, and scheduling."
+      },
+      "technical": {
+        "title": "Stage - Decor - Sound - Lighting",
+        "subtitle": "Technical and Aesthetic Excellence",
+        "description": "We prepare impressive stage designs that highlight speakers and messages while reflecting your brand's spirit. Visual aesthetics meet technical functionality."
+      },
+      "transfer": {
+        "title": "Transfer Services",
+        "subtitle": "Timely and Comfortable Flow",
+        "description": "We organize punctual and comfortable transfers between airports, hotels, and event venues for your guests."
+      },
+      "decoration": {
+        "title": "Activities & Decoration Services",
+        "subtitle": "Magic in the Details",
+        "description": "We elevate the atmosphere with floral arrangements, table decorations, and interactive activities that match the event's theme."
+      },
+      "viewAll": "View All Services"
+    },
+    "stats": {
+      "events": "Successful Events",
+      "experience": "Years Experience",
+      "satisfaction": "Client Satisfaction",
+      "team": "Team Members"
+    },
+    "portfolio": {
+      "badge": "Trusted Brands",
+      "title": "Our References",
+      "subtitle": "Brands we're proud to work with",
+      "viewAll": "View All References"
+    },
+    "testimonials": {
+      "badge": "Client Reviews",
+      "title": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "Penta Organization transformed our corporate event into an unforgettable experience. Their attention to detail and professionalism exceeded all expectations.",
+          "role": "Marketing Director"
+        },
+        {
+          "quote": "Thanks to their 10+ years of experience and proactive approach, our events always go flawlessly. A true solution partner!",
+          "role": "Event Coordinator"
+        },
+        {
+          "quote": "Our most trusted business partner for part-time staff supply. Their personnel are always professional and friendly.",
+          "role": "HR Manager"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Create Something Amazing?",
+      "subtitle": "Just take one step, we'll plan the rest.",
+      "button": "Start Your Project"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Solutions that transform your vision into perfect reality"
+    },
+    "staff": {
+      "title": "Part Time Staff Supply",
+      "subtitle": "The Friendly Face of Your Brand",
+      "description": "We select and organize responsible, trained, and most importantly friendly team members who reflect your event's character and corporate identity. Our team is an extension of your brand on stage.",
+      "features": ["Qualified and Reliable Staff", "Brand Representation Awareness", "Trained Personnel", "Flexible Working Model"]
+    },
+    "event": {
+      "title": "Corporate Event Management",
+      "subtitle": "Turning Your Vision into Reality",
+      "description": "We develop creative and purposeful concepts for your event to reach its goals. We transparently manage all planning processes including venue selection, budgeting, and scheduling.",
+      "features": ["Strategic Concept & Planning", "Venue Selection", "Budget Management", "Timeline Planning"]
+    },
+    "technical": {
+      "title": "Stage - Decor - Sound - Lighting",
+      "subtitle": "Technical and Aesthetic Excellence",
+      "description": "We prepare impressive stage designs that highlight speakers and messages while reflecting your brand's spirit. Visual aesthetics meet technical functionality.",
+      "features": ["Impact-Focused Stage Design", "Professional Sound Systems", "Atmospheric Lighting", "Brand-Aligned Decor"]
+    },
+    "transfer": {
+      "title": "Transfer Services & Planning",
+      "subtitle": "Timely and Comfortable Flow",
+      "description": "We organize punctual and comfortable transfers between airports, hotels, and event venues for your guests.",
+      "features": ["Airport Transfers", "Hotel Transfers", "VIP Vehicle Services", "Group Transfers"]
+    },
+    "decoration": {
+      "title": "Activities & Decoration Services",
+      "subtitle": "Magic in the Details",
+      "description": "Decorations that reflect the venue's spirit: With floral arrangements, table decorations, and overall venue styling that match the event's theme and spirit, we elevate the atmosphere beyond ordinary. We ensure every corner is a communication point and every activity becomes a memory.",
+      "features": ["Floral Arrangements", "Table Decorations", "Gamification Activities", "Social Media Contests"]
+    },
+    "cta": "Get a Quote",
+    "process": {
+      "badge": "How We Work",
+      "title": "Our Process",
+      "subtitle": "Penta's five-dimensional excellence approach",
+      "steps": [
+        {
+          "title": "Planning",
+          "description": "With detailed and proactive preparation, we leave no room for surprises."
+        },
+        {
+          "title": "Personnel",
+          "description": "Our team of best-trained, friendly, and responsible professionals."
+        },
+        {
+          "title": "Performance",
+          "description": "A promise of complete delivery beyond expectations."
+        },
+        {
+          "title": "Execution",
+          "description": "Our experienced team delivers a flawless experience on event day."
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Over 10 years of experience, trust and flawless planning"
+    },
+    "story": {
+      "badge": "Our Story",
+      "title": "Over 10 Years in the Field",
+      "text1": "As Penta Organization, we've been in the field for over 10 years, at the heart of the biggest events. This long journey taught us: Behind even the most magnificent organizations lies only trust and flawless planning.",
+      "text2": "For ten years, we've managed countless complexities, solved thousands of details, and from this experience, we've created our own philosophy of peace.",
+      "text3": "We don't see ourselves as just an organization company; we are your solution partner who transforms your vision into perfect reality, your trusted friend who stands by you in the most critical moments."
+    },
+    "philosophy": {
+      "badge": "Our Philosophy",
+      "title": "Penta's Five-Dimensional Excellence",
+      "subtitle": "Our name 'Penta' (Greek for 'five') comes from the five main elements that form the foundation of our operational success.",
+      "items": [
+        { "title": "Planning", "letter": "P", "text": "With detailed and proactive preparation, we leave no room for surprises." },
+        { "title": "Personnel", "letter": "P", "text": "Our team of best-trained, friendly, and responsible professionals." },
+        { "title": "Performance", "letter": "P", "text": "A promise of complete delivery beyond expectations." },
+        { "title": "Proactivity", "letter": "P", "text": "The ability to solve potential problems before you notice them." },
+        { "title": "Perfection", "letter": "P", "text": "The seamless, flowing, and enjoyable experience guests feel." }
+      ]
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "By completely taking the burden off our clients, we transform organizational processes from a source of stress into a story of joy and success."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be Turkey's most trusted, friendly, and innovative organization solution partner."
+    },
+    "values": {
+      "title": "Our Values",
+      "text": "While we conduct our business with professional seriousness, we are always warm and sincere in our approach to you and your guests. Because we know that the best collaboration is built on relationships based on experience and trust."
+    },
+    "cta": {
+      "title": "Want to Work With Us?",
+      "subtitle": "Just take one step, we'll plan the rest.",
+      "button": "Get in Touch"
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title": "Our References",
+      "subtitle": "Brands we're proud to work with"
+    },
+    "clients": {
+      "badge": "Trusted Brands",
+      "title": "Our Partners",
+      "subtitle": "Leading brands from Turkey and around the world work with us"
+    },
+    "trust": {
+      "title": "Why Do They Trust Us?",
+      "text": "Thanks to our 10+ years of experience, attention to detail, and proactive approach, Turkey's biggest brands choose us for their organizational needs."
+    },
+    "cta": {
+      "title": "Join Us Too",
+      "subtitle": "Contact us for events that will represent your brand in the best way.",
+      "button": "Get in Touch"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Join Our Team",
+      "subtitle": "Flexible work, valuable experiences, and the opportunity to be part of the industry's best events"
+    },
+    "intro": {
+      "text1": "We know life is busy. Maybe you're a student, maybe you're newly graduated; or maybe you're just looking for a flexible and reliable side job. That's exactly where Penta Organization comes in!",
+      "text2": "We are the energetic, solution-oriented family behind the event world. Working with us means not just earning money; it means meeting new people in every project, experiencing different corporate cultures, and filling your resume with invaluable experiences.",
+      "text3": "If you value meticulousness, time management, and most importantly, brand representation awareness; Penta offers you not just a job, but an opportunity to be part of continuous growth and organizational excellence."
+    },
+    "benefits": {
+      "badge": "Why Penta?",
+      "title": "Working With Us",
+      "subtitle": "Turn your experience into cash, work on a flexible schedule, and be part of the industry's best events.",
+      "items": [
+        { "title": "Flexible Work", "text": "Flexible working hours and project-based tasks that fit your schedule." },
+        { "title": "New People", "text": "Opportunities to meet different people and network in every project." },
+        { "title": "Valuable Experience", "text": "Fill your resume with invaluable corporate event experiences." },
+        { "title": "Extra Income", "text": "Turn your experience into cash and work on a flexible schedule." }
+      ]
+    },
+    "apply": {
+      "badge": "Apply",
+      "title": "Join Us",
+      "subtitle": "We look forward to carefully reviewing your application.",
+      "form": {
+        "name": "First Name *",
+        "namePlaceholder": "Your first name",
+        "surname": "Last Name *",
+        "surnamePlaceholder": "Your last name",
+        "email": "Email *",
+        "emailPlaceholder": "example@email.com",
+        "phone": "Phone *",
+        "phonePlaceholder": "+90 5XX XXX XX XX",
+        "resume": "CV *",
+        "uploadText": "Click to upload or drag and drop",
+        "uploadHint": "PDF, DOC, DOCX (Max 5MB)",
+        "privacy": "I agree to the processing of my personal data *",
+        "submit": "Submit Application"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "As Penta Organization, we look forward to the beginning of a new story."
+    },
+    "intro": {
+      "text1": "Whether you're looking for a big launch or just part-time staff support; for us, every request is an important project that needs to be handled meticulously.",
+      "text2": "We're here to clarify your needs, answer your questions, and offer you a custom solution. Just take one step, we'll plan the rest."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form, we'll get back to you within 24 hours.",
+      "name": "Full Name *",
+      "namePlaceholder": "Your Full Name",
+      "email": "Email *",
+      "emailPlaceholder": "example@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+90 5XX XXX XX XX",
+      "service": "Service of Interest",
+      "servicePlaceholder": "Select a service",
+      "serviceOptions": {
+        "staff": "Part Time Staff Supply",
+        "event": "Corporate Event Management",
+        "technical": "Stage - Decor - Sound - Lighting",
+        "transfer": "Transfer Services",
+        "decoration": "Activities & Decoration",
+        "other": "Other"
+      },
+      "message": "Your Message *",
+      "messagePlaceholder": "Tell us about your event vision...",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressValue": "Istanbul, Turkey",
+      "phone": "Phone",
+      "phoneValue": "+90 530 913 79 75",
+      "email": "Email",
+      "emailValue": "info@pentaorganizasyon.com",
+      "follow": "Follow Us"
+    }
+  },
+  "footer": {
+    "tagline": "Creating unforgettable events with over 10 years of experience.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "form": {
+    "success": "Thank you! Your message has been sent.",
+    "error": "Something went wrong. Please try again.",
+    "errors": {
+      "required": "{field} is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number",
+      "minLength": "{field} must be at least {param} characters",
+      "maxLength": "{field} must be no more than {param} characters",
+      "pattern": "Please enter a valid {field}"
+    }
+  }
+}

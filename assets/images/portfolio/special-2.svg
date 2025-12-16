@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="specGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#specGrad2)"/>
+  <rect x="150" y="350" width="500" height="200" rx="5" fill="#4f46e5" opacity="0.2"/>
+  <circle cx="250" cy="250" r="60" fill="#818cf8" opacity="0.3"/>
+  <circle cx="400" cy="200" r="80" fill="#a855f7" opacity="0.25"/>
+  <circle cx="550" cy="250" r="60" fill="#818cf8" opacity="0.3"/>
+  <text x="400" y="550" text-anchor="middle" font-family="system-ui" font-size="24" fill="#ffffff" opacity="0.5">CHARITY GALA</text>
+</svg>

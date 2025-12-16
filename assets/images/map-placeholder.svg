@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb"/>
+      <stop offset="100%" style="stop-color:#d1d5db"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#mapGrad)"/>
+  <rect x="50" y="50" width="200" height="150" rx="5" fill="#9ca3af" opacity="0.3"/>
+  <rect x="300" y="100" width="150" height="200" rx="5" fill="#9ca3af" opacity="0.3"/>
+  <rect x="500" y="50" width="250" height="100" rx="5" fill="#9ca3af" opacity="0.3"/>
+  <rect x="550" y="200" width="200" height="150" rx="5" fill="#9ca3af" opacity="0.3"/>
+  <circle cx="400" cy="200" r="15" fill="#7c2d12" opacity="0.9"/>
+  <path d="M400,185 L400,160 M400,160 L390,175 M400,160 L410,175" stroke="#7c2d12" stroke-width="3" fill="none"/>
+  <text x="400" y="380" text-anchor="middle" font-family="system-ui" font-size="16" fill="#6b7280">Istanbul, Turkey</text>
+</svg>

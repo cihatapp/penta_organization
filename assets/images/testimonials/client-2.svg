@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="avatarGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="50" fill="url(#avatarGrad2)"/>
+  <circle cx="50" cy="40" r="18" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="50" cy="85" rx="28" ry="25" fill="#ffffff" opacity="0.9"/>
+</svg>

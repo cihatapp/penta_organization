@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Penta Organizasyon - Kurumsal etkinlikler, part-time personel tedariği, sahne-dekor-ses-ışık ve transfer hizmetleri için profesyonel organizasyon çözümleri.">
+  <meta name="keywords" content="organizasyon, etkinlik yönetimi, kurumsal etkinlik, part-time personel, sahne dekor, transfer hizmeti, İstanbul">
+  <meta name="author" content="Penta Organizasyon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Penta Organizasyon - Profesyonel Etkinlik Yönetimi">
+  <meta property="og:description" content="10 yılı aşkın deneyimle unutulmaz etkinlikler yaratıyoruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pentaorganizasyon.com">
+
+  <title>Penta Organizasyon - Profesyonel Etkinlik Yönetimi</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/typography.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/pages/home.css">
+  <link rel="stylesheet" href="./assets/css/pages/portfolio.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__container">
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <img
+          src="./assets/images/logo.png"
+          alt="Penta Organization"
+          class="header__logo-img"
+        >
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" aria-label="Ana navigasyon">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">Ana Sayfa</a></li>
+          <li><a href="services.html" class="nav__link">Hizmetlerimiz</a></li>
+          <li><a href="about.html" class="nav__link">Hakkımızda</a></li>
+          <li><a href="portfolio.html" class="nav__link">Referanslar</a></li>
+          <li><a href="careers.html" class="nav__link">Kariyer</a></li>
+          <li><a href="contact.html" class="nav__link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header__actions">
+        <!-- Language Toggle -->
+        <div class="toggle toggle--lang" role="group" aria-label="Language selection">
+          <button class="toggle__btn toggle__btn--active" data-lang-toggle data-lang="en">EN</button>
+          <button class="toggle__btn" data-lang-toggle data-lang="tr">TR</button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="btn btn--icon" data-theme-toggle aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button class="hamburger" data-mobile-toggle aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" aria-label="Mobil navigasyon">
+      <ul class="nav-mobile__list">
+        <li><a href="index.html" class="nav-mobile__link nav-mobile__link--active">Ana Sayfa</a></li>
+        <li><a href="services.html" class="nav-mobile__link">Hizmetlerimiz</a></li>
+        <li><a href="about.html" class="nav-mobile__link">Hakkımızda</a></li>
+        <li><a href="portfolio.html" class="nav-mobile__link">Referanslar</a></li>
+        <li><a href="careers.html" class="nav-mobile__link">Kariyer</a></li>
+        <li><a href="contact.html" class="nav-mobile__link">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__background">
+        <div class="hero__gradient"></div>
+      </div>
+      <div class="container hero__container">
+        <div class="hero__content" data-animate="fade-up">
+          <span class="hero__badge badge badge--primary">Profesyonel Etkinlik Yönetimi</span>
+          <h1 class="hero__title">Unutulmaz Deneyimler Yaratıyoruz</h1>
+          <p class="hero__subtitle">10 yılı aşkın deneyimimizle vizyonunuzu kusursuz bir gerçekliğe dönüştürüyoruz. Güven ve huzur felsefemizle yanınızdayız.</p>
+          <div class="hero__actions">
+            <a href="services.html" class="btn btn--primary btn--lg">Hizmetlerimizi Keşfedin</a>
+            <a href="contact.html" class="btn btn--outline btn--lg">İletişime Geçin</a>
+          </div>
+        </div>
+        <div class="hero__visual" data-animate="fade-left" data-animate-delay="200">
+          <div class="hero__image-wrapper">
+            <img src="./assets/images/hero-event.svg" alt="Profesyonel etkinlik kurulumu" class="hero__image" loading="eager">
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <a href="#services-preview" class="scroll-indicator" aria-label="Hizmetlere kaydır">
+          <span class="scroll-indicator__mouse">
+            <span class="scroll-indicator__wheel"></span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="section services-preview" id="services-preview">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge">Neler Yapıyoruz</span>
+          <h2 class="section__title">Hizmetlerimiz</h2>
+          <p class="section__subtitle">İhtiyaçlarınıza özel kapsamlı etkinlik çözümleri</p>
+        </div>
+
+        <div class="services-preview__grid" data-stagger="100">
+          <!-- Part Time Ekip -->
+          <div class="card card--service" data-animate="fade-up">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Part Time Ekip Tedariği</h3>
+            <p class="card__text">Markanızın güler yüzü olacak, eğitimli ve sorumluluk sahibi ekip arkadaşları.</p>
+            <a href="services.html#staff" class="card__link">Detaylı Bilgi</a>
+          </div>
+
+          <!-- Kurumsal Etkinlik -->
+          <div class="card card--service" data-animate="fade-up">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Kurumsal Etkinlik Yönetimi</h3>
+            <p class="card__text">Vizyonunuzu gerçeğe dönüştüren stratejik konsept ve planlama hizmetleri.</p>
+            <a href="services.html#event" class="card__link">Detaylı Bilgi</a>
+          </div>
+
+          <!-- Sahne Dekor -->
+          <div class="card card--service" data-animate="fade-up">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Sahne - Dekor - Ses - Işık</h3>
+            <p class="card__text">Teknik ve estetik kusursuzluk ile etkileyici sahne tasarımları.</p>
+            <a href="services.html#technical" class="card__link">Detaylı Bilgi</a>
+          </div>
+
+          <!-- Transfer -->
+          <div class="card card--service" data-animate="fade-up">
+            <div class="card__icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Transfer Hizmeti</h3>
+            <p class="card__text">Zamanında ve konforlu ulaşım için profesyonel transfer çözümleri.</p>
+            <a href="services.html#transfer" class="card__link">Detaylı Bilgi</a>
+          </div>
+        </div>
+
+        <div class="text-center mt-lg" data-animate="fade-up">
+          <a href="services.html" class="btn btn--primary">Tüm Hizmetleri Görüntüle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+      <div class="container">
+        <div class="stats-grid" data-animate="fade-up">
+          <div class="stat">
+            <span class="stat__number" data-counter="500" data-counter-suffix="+">0</span>
+            <span class="stat__label">Başarılı Etkinlik</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-counter="10" data-counter-suffix="+">0</span>
+            <span class="stat__label">Yıllık Deneyim</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-counter="98" data-counter-suffix="%">0</span>
+            <span class="stat__label">Müşteri Memnuniyeti</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-counter="50" data-counter-suffix="+">0</span>
+            <span class="stat__label">Ekip Üyesi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referanslar Section -->
+    <section class="section portfolio-preview">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge">Referanslarımız</span>
+          <h2 class="section__title">Güvenilir Markalar</h2>
+          <p class="section__subtitle">Birlikte çalışmaktan gurur duyduğumuz markalar</p>
+        </div>
+
+        <div class="clients-grid" data-animate="fade-up">
+          <div class="client-logo">
+            <img src="./assets/images/clients/peugeot.svg" alt="Peugeot" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="./assets/images/clients/thy.svg" alt="Türk Hava Yolları" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="./assets/images/clients/koc.svg" alt="Koç Holding" loading="lazy">
+          </div>
+          <div class="client-logo">
+            <img src="./assets/images/clients/meta.svg" alt="Meta" loading="lazy">
+          </div>
+        </div>
+
+        <div class="text-center mt-lg" data-animate="fade-up">
+          <a href="portfolio.html" class="btn btn--outline">Tüm Referansları Görüntüle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section__header text-center" data-animate="fade-up">
+          <span class="section__badge badge">Müşteri Yorumları</span>
+          <h2 class="section__title">Müşterilerimiz Ne Diyor?</h2>
+        </div>
+
+        <div class="carousel" data-testimonials data-animate="fade-up">
+          <div class="carousel__track">
+            <!-- Testimonial 1 -->
+            <div class="testimonial carousel__slide--active" aria-hidden="false">
+              <div class="testimonial__content">
+                <div class="testimonial__rating">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial__quote">"Penta Organizasyon, kurumsal etkinliğimizi unutulmaz bir deneyime dönüştürdü. Detaylara gösterdikleri özen ve profesyonellikleri tüm beklentilerimizi aştı."</blockquote>
+                <div class="testimonial__author">
+                  <img src="./assets/images/testimonials/client-1.svg" alt="Ahmet Yılmaz" class="testimonial__avatar">
+                  <div class="testimonial__info">
+                    <cite class="testimonial__name">Ahmet Yılmaz</cite>
+                    <span class="testimonial__role">CEO, Tech Solutions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial" aria-hidden="true">
+              <div class="testimonial__content">
+                <div class="testimonial__rating">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial__quote">"Penta ile çalışmak müthiş bir deneyimdi. Her detayı düşünmüşlerdi ve etkinliğimiz kusursuz geçti. Kesinlikle tavsiye ediyorum!"</blockquote>
+                <div class="testimonial__author">
+                  <img src="./assets/images/testimonials/client-2.svg" alt="Elif Demir" class="testimonial__avatar">
+                  <div class="testimonial__info">
+                    <cite class="testimonial__name">Elif Demir</cite>
+                    <span class="testimonial__role">Pazarlama Müdürü, Global Corp</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial" aria-hidden="true">
+              <div class="testimonial__content">
+                <div class="testimonial__rating">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial__quote">"Yıllık galalarımız için Penta ile çalışmak işimizi kolaylaştırdı. Her şeyi kusursuz bir şekilde yönettiler ve misafirlerimiz çok etkilendi."</blockquote>
+                <div class="testimonial__author">
+                  <img src="./assets/images/testimonials/client-3.svg" alt="Mehmet Kaya" class="testimonial__avatar">
+                  <div class="testimonial__info">
+                    <cite class="testimonial__name">Mehmet Kaya</cite>
+                    <span class="testimonial__role">Genel Müdür, ABC Şirketi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel__nav carousel__nav--prev" data-carousel-prev aria-label="Önceki yorum">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button class="carousel__nav carousel__nav--next" data-carousel-next aria-label="Sonraki yorum">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+
+          <!-- Carousel Dots -->
+          <div class="carousel__dots" role="tablist">
+            <button class="carousel__dot carousel__dot--active" role="tab" aria-selected="true" aria-label="Slayt 1"></button>
+            <button class="carousel__dot" role="tab" aria-selected="false" aria-label="Slayt 2"></button>
+            <button class="carousel__dot" role="tab" aria-selected="false" aria-label="Slayt 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta" data-animate="fade-up">
+          <div class="cta__content">
+            <h2 class="cta__title">Yeni Bir Hikayenin Başlangıcı</h2>
+            <p class="cta__text">İster büyük bir lansman, ister part-time personel desteği arıyor olun; her talep bizim için titizlikle ele alınması gereken önemli bir projedir.</p>
+          </div>
+          <div class="cta__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">Projenizi Başlatın</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <img
+              src="./assets/images/logo.png"
+              alt="Penta Organizasyon"
+              class="footer__logo-img"
+            >
+          </a>
+          <p class="footer__tagline">10 yılı aşkın deneyimle unutulmaz etkinlikler yaratıyoruz.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__column">
+          <h4 class="footer__title">Hızlı Bağlantılar</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="services.html">Hizmetlerimiz</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="portfolio.html">Referanslar</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer__column">
+          <h4 class="footer__title">Hizmetlerimiz</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#staff">Part Time Ekip</a></li>
+            <li><a href="services.html#event">Kurumsal Etkinlik</a></li>
+            <li><a href="services.html#technical">Sahne & Dekor</a></li>
+            <li><a href="services.html#transfer">Transfer Hizmeti</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer__column">
+          <h4 class="footer__title">İletişim</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>İstanbul, Türkiye</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+905309137975">+90 530 913 79 75</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:info@pentaorganizasyon.com">info@pentaorganizasyon.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; <span data-current-year></span> Penta Organizasyon.
+          <span>Tüm hakları saklıdır.</span>
+        </p>
+        <div class="footer__legal">
+          <a href="#">Gizlilik Politikası</a>
+          <a href="#">Kullanım Koşulları</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" data-back-to-top aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="./assets/js/modules/theme.js"></script>
+  <script src="./assets/js/modules/i18n.js"></script>
+  <script src="./assets/js/modules/navigation.js"></script>
+  <script src="./assets/js/modules/animations.js"></script>
+  <script src="./assets/js/modules/forms.js"></script>
+  <script src="./assets/js/modules/portfolio.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

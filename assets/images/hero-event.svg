@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#heroGradient)"/>
+  <!-- Decorative circles -->
+  <circle cx="200" cy="200" r="300" fill="#a855f7" opacity="0.05"/>
+  <circle cx="1700" cy="800" r="400" fill="#6366f1" opacity="0.05"/>
+  <circle cx="960" cy="540" r="200" fill="#a855f7" opacity="0.03"/>
+  <!-- Stage lights effect -->
+  <ellipse cx="400" cy="0" rx="200" ry="600" fill="#a855f7" opacity="0.08" transform="rotate(15 400 0)"/>
+  <ellipse cx="1520" cy="0" rx="200" ry="600" fill="#6366f1" opacity="0.08" transform="rotate(-15 1520 0)"/>
+  <!-- Spotlight beams -->
+  <polygon points="300,0 500,0 700,1080 100,1080" fill="url(#accentGradient)" opacity="0.03"/>
+  <polygon points="1420,0 1620,0 1820,1080 1220,1080" fill="url(#accentGradient)" opacity="0.03"/>
+  <!-- Center stage element -->
+  <rect x="660" y="800" width="600" height="20" rx="10" fill="url(#accentGradient)" opacity="0.3"/>
+  <rect x="560" y="850" width="800" height="10" rx="5" fill="url(#accentGradient)" opacity="0.2"/>
+  <!-- Abstract event elements -->
+  <circle cx="960" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="900" cy="450" r="3" fill="#ffffff" opacity="0.4"/>
+  <circle cx="1020" cy="470" r="4" fill="#ffffff" opacity="0.5"/>
+  <circle cx="880" cy="520" r="3" fill="#ffffff" opacity="0.3"/>
+  <circle cx="1040" cy="510" r="3" fill="#ffffff" opacity="0.4"/>
+  <!-- Floating particles -->
+  <circle cx="200" cy="400" r="2" fill="#a855f7" opacity="0.6"/>
+  <circle cx="350" cy="600" r="3" fill="#6366f1" opacity="0.5"/>
+  <circle cx="1600" cy="300" r="2" fill="#a855f7" opacity="0.6"/>
+  <circle cx="1750" cy="500" r="3" fill="#6366f1" opacity="0.5"/>
+  <circle cx="500" cy="800" r="2" fill="#a855f7" opacity="0.4"/>
+  <circle cx="1400" cy="700" r="2" fill="#6366f1" opacity="0.4"/>
+</svg>
