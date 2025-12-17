@@ -10,7 +10,8 @@ const FormsManager = (function() {
   const config = {
     errorClass: 'form__field--error',
     successClass: 'form__field--success',
-    messageClass: 'form__message'
+    messageClass: 'form__message',
+    web3formsApiKey: 'edbe25f9-466d-4a4d-b014-3c4812e2e5d9'
   };
 
   // Validation patterns
@@ -196,20 +197,20 @@ const FormsManager = (function() {
         submitBtn.disabled = true;
         submitBtn.classList.add('is-loading');
         const btnText = submitBtn.querySelector('.btn__text');
-        if (btnText) btnText.textContent = 'WhatsApp açılıyor...';
+        if (btnText) btnText.textContent = 'Gönderiliyor...';
       }
 
       // Collect form data
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
-      // Send form data via WhatsApp
-      await sendViaWhatsApp(data);
+      // Send form data via Email
+      await sendViaEmail(data);
 
       // Show success message
       const successMsg = typeof I18nManager !== 'undefined'
-        ? I18nManager.getTranslation('form.success', 'WhatsApp açıldı! Mesajınızı göndermek için "Gönder" butonuna tıklayın.')
-        : 'WhatsApp açıldı! Mesajınızı göndermek için "Gönder" butonuna tıklayın.';
+        ? I18nManager.getTranslation('form.success', 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.')
+        : 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.';
 
       showFormMessage(form, 'success', successMsg);
 
@@ -249,6 +250,54 @@ const FormsManager = (function() {
   }
 
   /**
+   * Service type mapping for better readability
+   */
+  const serviceLabels = {
+    'staff': 'Part Time Ekip Tedariği',
+    'event': 'Kurumsal Etkinlik Yönetimi',
+    'technical': 'Sahne - Dekor - Ses - Işık',
+    'transfer': 'Transfer Hizmeti',
+    'decoration': 'Aktivite - Süsleme',
+    'other': 'Diğer'
+  };
+
+  /**
+   * Send form data via Email using Web3Forms
+   * Sends form data to the configured email address
+   */
+  async function sendViaEmail(data) {
+    const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
+
+    const formData = {
+      access_key: config.web3formsApiKey,
+      subject: `Yeni İletişim Formu - ${data.name}`,
+      from_name: 'Penta Organizasyon Web Sitesi',
+      name: data.name || 'Belirtilmedi',
+      email: data.email || 'Belirtilmedi',
+      phone: data.phone || 'Belirtilmedi',
+      service: serviceName,
+      message: data.message || 'Mesaj yok'
+    };
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      throw new Error(result.message || 'E-posta gönderilemedi');
+    }
+
+    return result;
+  }
+
+  /**
    * Send form data via WhatsApp
    * Formats form data into a readable message and opens WhatsApp
    */
@@ -256,16 +305,6 @@ const FormsManager = (function() {
     return new Promise((resolve) => {
       // WhatsApp number (without + sign)
       const phoneNumber = '905309137975';
-
-      // Service type mapping for better readability
-      const serviceLabels = {
-        'staff': 'Part Time Ekip Tedariği',
-        'event': 'Kurumsal Etkinlik Yönetimi',
-        'technical': 'Sahne - Dekor - Ses - Işık',
-        'transfer': 'Transfer Hizmeti',
-        'decoration': 'Aktivite - Süsleme',
-        'other': 'Diğer'
-      };
 
       // Format the message (using text symbols instead of emojis for better compatibility)
       const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
