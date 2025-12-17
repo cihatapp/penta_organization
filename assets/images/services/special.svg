@@ -1,14 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <defs>
-    <linearGradient id="svcSpec" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#581c87"/>
-      <stop offset="100%" style="stop-color:#7e22ce"/>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFAFA"/>
+      <stop offset="100%" style="stop-color:#F5F5F5"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B3A48"/>
+      <stop offset="100%" style="stop-color:#722F37"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A227"/>
+      <stop offset="100%" style="stop-color:#A68620"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="400" fill="url(#svcSpec)"/>
-  <circle cx="200" cy="100" r="20" fill="#fbbf24" opacity="0.6"/>
-  <circle cx="300" cy="80" r="15" fill="#f472b6" opacity="0.6"/>
-  <circle cx="400" cy="100" r="20" fill="#fbbf24" opacity="0.6"/>
-  <circle cx="300" cy="220" r="80" fill="#a855f7" opacity="0.3"/>
-  <circle cx="300" cy="220" r="50" fill="#c084fc" opacity="0.3"/>
+
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <g stroke="#E0E0E0" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="75" x2="400" y2="75"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="225" x2="400" y2="225"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+  </g>
+
+  <!-- Elegant table setup -->
+  <g transform="translate(100, 130)">
+    <!-- Table -->
+    <ellipse cx="100" cy="100" rx="90" ry="25" fill="#E8E8E8"/>
+    <rect x="10" y="75" width="180" height="25" fill="#D0D0D0"/>
+    <ellipse cx="100" cy="75" rx="90" ry="25" fill="#E0E0E0"/>
+
+    <!-- Tablecloth accent -->
+    <ellipse cx="100" cy="75" rx="85" ry="22" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+
+  <!-- Centerpiece arrangement -->
+  <g transform="translate(165, 80)">
+    <!-- Vase -->
+    <path d="M25 70 L30 50 Q35 40 35 30 L35 25 L45 25 L45 30 Q45 40 50 50 L55 70 Z" fill="url(#primary)" opacity="0.8"/>
+    <ellipse cx="40" cy="70" rx="15" ry="4" fill="url(#primary)"/>
+
+    <!-- Elegant stems -->
+    <line x1="40" y1="25" x2="35" y2="5" stroke="#9B3A48" stroke-width="1.5"/>
+    <line x1="40" y1="25" x2="40" y2="0" stroke="#9B3A48" stroke-width="1.5"/>
+    <line x1="40" y1="25" x2="45" y2="5" stroke="#9B3A48" stroke-width="1.5"/>
+
+    <!-- Minimal flower shapes -->
+    <circle cx="35" cy="3" r="6" fill="url(#gold)" opacity="0.8"/>
+    <circle cx="40" cy="-2" r="7" fill="url(#primary)" opacity="0.6"/>
+    <circle cx="45" cy="3" r="6" fill="url(#gold)" opacity="0.8"/>
+  </g>
+
+  <!-- Place settings - Left -->
+  <g transform="translate(120, 155)">
+    <ellipse cx="20" cy="10" rx="18" ry="8" fill="#FFF" stroke="#D0D0D0" stroke-width="1"/>
+    <ellipse cx="20" cy="10" rx="12" ry="5" fill="none" stroke="url(#gold)" stroke-width="0.5"/>
+    <rect x="42" y="5" width="2" height="15" rx="1" fill="#C0C0C0"/>
+    <rect x="47" y="5" width="2" height="15" rx="1" fill="#C0C0C0"/>
+  </g>
+
+  <!-- Place settings - Right -->
+  <g transform="translate(230, 155)">
+    <ellipse cx="20" cy="10" rx="18" ry="8" fill="#FFF" stroke="#D0D0D0" stroke-width="1"/>
+    <ellipse cx="20" cy="10" rx="12" ry="5" fill="none" stroke="url(#gold)" stroke-width="0.5"/>
+    <rect x="-8" y="5" width="2" height="15" rx="1" fill="#C0C0C0"/>
+    <rect x="-13" y="5" width="2" height="15" rx="1" fill="#C0C0C0"/>
+  </g>
+
+  <!-- Wine glasses -->
+  <g transform="translate(155, 135)">
+    <ellipse cx="8" cy="5" rx="6" ry="3" fill="none" stroke="#C0C0C0" stroke-width="1"/>
+    <line x1="8" y1="8" x2="8" y2="20" stroke="#C0C0C0" stroke-width="1"/>
+    <ellipse cx="8" cy="21" rx="5" ry="2" fill="none" stroke="#C0C0C0" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(230, 135)">
+    <ellipse cx="8" cy="5" rx="6" ry="3" fill="none" stroke="#C0C0C0" stroke-width="1"/>
+    <line x1="8" y1="8" x2="8" y2="20" stroke="#C0C0C0" stroke-width="1"/>
+    <ellipse cx="8" cy="21" rx="5" ry="2" fill="none" stroke="#C0C0C0" stroke-width="1"/>
+  </g>
+
+  <!-- Elegant candles -->
+  <g transform="translate(135, 100)">
+    <rect x="0" y="10" width="6" height="25" fill="#F5F5F0"/>
+    <ellipse cx="3" cy="8" rx="4" ry="6" fill="url(#gold)" opacity="0.6"/>
+  </g>
+
+  <g transform="translate(255, 100)">
+    <rect x="0" y="10" width="6" height="25" fill="#F5F5F0"/>
+    <ellipse cx="3" cy="8" rx="4" ry="6" fill="url(#gold)" opacity="0.6"/>
+  </g>
+
+  <!-- Napkin fold accents -->
+  <g transform="translate(70, 170)">
+    <path d="M0 0 L15 0 L15 25 L0 25 Z" fill="url(#primary)" opacity="0.3"/>
+    <path d="M0 0 L15 12 L0 25 Z" fill="url(#primary)" opacity="0.5"/>
+  </g>
+
+  <g transform="translate(310, 170)">
+    <path d="M0 0 L15 0 L15 25 L0 25 Z" fill="url(#primary)" opacity="0.3"/>
+    <path d="M15 0 L0 12 L15 25 Z" fill="url(#primary)" opacity="0.5"/>
+  </g>
+
+  <!-- Bottom accent -->
+  <rect x="100" y="260" width="200" height="3" rx="1.5" fill="url(#gold)"/>
+
+  <!-- Corner accents -->
+  <path d="M0 0 L60 0 L0 60 Z" fill="url(#primary)" opacity="0.08"/>
+  <path d="M400 300 L340 300 L400 240 Z" fill="url(#primary)" opacity="0.08"/>
 </svg>

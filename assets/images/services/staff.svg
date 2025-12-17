@@ -1,8 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="40" cy="35" r="12"/>
-  <circle cx="80" cy="35" r="12"/>
-  <path d="M25 85v-8a15 15 0 0 1 15-15h0a15 15 0 0 1 15 15v8"/>
-  <path d="M65 85v-8a15 15 0 0 1 15-15h0a15 15 0 0 1 15 15v8"/>
-  <circle cx="60" cy="55" r="10"/>
-  <path d="M47 100v-7a13 13 0 0 1 13-13h0a13 13 0 0 1 13 13v7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAFAFA"/>
+      <stop offset="100%" style="stop-color:#F5F5F5"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B3A48"/>
+      <stop offset="100%" style="stop-color:#722F37"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A227"/>
+      <stop offset="100%" style="stop-color:#A68620"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <g stroke="#E0E0E0" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="75" x2="400" y2="75"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="225" x2="400" y2="225"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+  </g>
+
+  <!-- Person 1 - Professional silhouette -->
+  <g transform="translate(70, 80)">
+    <circle cx="30" cy="30" r="25" fill="#E8E8E8"/>
+    <circle cx="30" cy="28" r="20" fill="#D0D0D0"/>
+    <rect x="5" y="60" width="50" height="70" rx="4" fill="url(#primary)"/>
+    <rect x="20" y="65" width="20" height="6" rx="2" fill="url(#gold)"/>
+  </g>
+
+  <!-- Person 2 - Center, highlighted -->
+  <g transform="translate(160, 60)">
+    <circle cx="40" cy="35" r="30" fill="#E8E8E8"/>
+    <circle cx="40" cy="33" r="25" fill="#D0D0D0"/>
+    <rect x="10" y="70" width="60" height="85" rx="5" fill="url(#gold)"/>
+    <rect x="25" y="78" width="30" height="8" rx="2" fill="#722F37"/>
+    <!-- Clipboard -->
+    <g transform="translate(55, 95)">
+      <rect x="0" y="0" width="25" height="35" rx="2" fill="#FFF" stroke="#C9A227" stroke-width="1.5"/>
+      <line x1="5" y1="10" x2="20" y2="10" stroke="#DDD" stroke-width="2"/>
+      <line x1="5" y1="17" x2="18" y2="17" stroke="#DDD" stroke-width="2"/>
+      <line x1="5" y1="24" x2="15" y2="24" stroke="#DDD" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Person 3 -->
+  <g transform="translate(270, 80)">
+    <circle cx="30" cy="30" r="25" fill="#E8E8E8"/>
+    <circle cx="30" cy="28" r="20" fill="#D0D0D0"/>
+    <rect x="5" y="60" width="50" height="70" rx="4" fill="url(#primary)"/>
+    <rect x="20" y="65" width="20" height="6" rx="2" fill="url(#gold)"/>
+  </g>
+
+  <!-- Connection lines -->
+  <g stroke="#C9A227" stroke-width="1" opacity="0.4">
+    <line x1="125" y1="130" x2="170" y2="115"/>
+    <line x1="275" y1="130" x2="230" y2="115"/>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="100" y="260" width="200" height="3" rx="1.5" fill="url(#gold)"/>
+
+  <!-- Corner accent -->
+  <path d="M0 0 L60 0 L0 60 Z" fill="url(#primary)" opacity="0.08"/>
+  <path d="M400 300 L340 300 L400 240 Z" fill="url(#primary)" opacity="0.08"/>
 </svg>

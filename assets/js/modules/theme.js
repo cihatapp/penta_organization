@@ -1,7 +1,7 @@
 /**
  * Theme Management Module
  * Handles dark/light theme switching with localStorage persistence
- * Default: Dark theme
+ * Default: Light theme
  */
 
 const ThemeManager = (function() {
@@ -18,7 +18,7 @@ const ThemeManager = (function() {
   let htmlElement = null;
 
   // Current theme state
-  let currentTheme = THEME_DARK;
+  let currentTheme = THEME_LIGHT;
 
   /**
    * Get theme from localStorage
@@ -46,15 +46,15 @@ const ThemeManager = (function() {
   /**
    * Calculate initial theme based on preference cascade:
    * 1. localStorage value
-   * 2. Default (dark)
+   * 2. Default (light)
    */
   function calculateInitialTheme() {
     const storedTheme = getStoredTheme();
     if (storedTheme && (storedTheme === THEME_DARK || storedTheme === THEME_LIGHT)) {
       return storedTheme;
     }
-    // Default is dark
-    return THEME_DARK;
+    // Default is light
+    return THEME_LIGHT;
   }
 
   /**
