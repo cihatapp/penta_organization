@@ -136,17 +136,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Model Viewer for 3D Icons -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- Model Viewer for 3D Icons - with SRI for security -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"
+    integrity="sha384-Ftcjj/GNLxPvzNDftO/oryXB9aGxsGZY9JGqsXG0uUKgQDl9RfDgsx9NJ/4IVNPe"
+    crossorigin="anonymous"></script>
 
+  <!-- Critical Styles -->
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/typography.css">
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/components.css">
-  <link rel="stylesheet" href="./assets/css/animations.css">
-  <link rel="stylesheet" href="./assets/css/snow.css">
-  <link rel="stylesheet" href="./assets/css/pages/contact.css">
+
+  <!-- Non-Critical Styles (async loading) -->
+  <link rel="stylesheet" href="./assets/css/animations.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/snow.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/pages/contact.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/snow.css">
+    <link rel="stylesheet" href="./assets/css/pages/contact.css">
+  </noscript>
 </head>
 <body>
   <!-- Header -->
@@ -291,6 +302,12 @@
             </div>
 
             <form class="contact-form" data-form>
+              <!-- Honeypot field for spam protection - hidden from users -->
+              <div class="form__group" style="position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden;" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
               <div class="form__row">
                 <div class="form__group">
                   <label for="name" class="form__label">
@@ -607,13 +624,14 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script src="./assets/js/modules/theme.js"></script>
-  <script src="./assets/js/modules/snow.js"></script>
-  <script src="./assets/js/modules/i18n.js"></script>
-  <script src="./assets/js/modules/navigation.js"></script>
-  <script src="./assets/js/modules/animations.js"></script>
-  <script src="./assets/js/modules/forms.js"></script>
-  <script src="./assets/js/modules/portfolio.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <!-- Scripts (defer for non-blocking parse) -->
+  <script src="./assets/js/modules/theme.js" defer></script>
+  <script src="./assets/js/modules/snow.js" defer></script>
+  <script src="./assets/js/modules/i18n.js" defer></script>
+  <script src="./assets/js/modules/navigation.js" defer></script>
+  <script src="./assets/js/modules/animations.js" defer></script>
+  <script src="./assets/js/modules/forms.js" defer></script>
+  <script src="./assets/js/modules/portfolio.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
 </body>
 </html>

@@ -189,6 +189,21 @@ const FormsManager = (function() {
       return;
     }
 
+    // Collect form data early for honeypot check
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Honeypot spam protection - if hidden field is filled, silently reject
+    // Show fake success to not alert bots they've been detected
+    if (data.website && data.website.trim() !== '') {
+      const successMsg = typeof I18nManager !== 'undefined'
+        ? I18nManager.getTranslation('form.success', 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.')
+        : 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.';
+      showFormMessage(form, 'success', successMsg);
+      form.reset();
+      return; // Silently exit without sending
+    }
+
     const submitBtn = form.querySelector('[type="submit"]');
 
     try {
@@ -200,9 +215,7 @@ const FormsManager = (function() {
         if (btnText) btnText.textContent = 'Gönderiliyor...';
       }
 
-      // Collect form data
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+      // Form data already collected above
 
       // Send form data via Email
       await sendViaEmail(data);

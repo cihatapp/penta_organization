@@ -173,8 +173,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Model Viewer for 3D Icons -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- Model Viewer for 3D Icons - with SRI for security -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"
+    integrity="sha384-Ftcjj/GNLxPvzNDftO/oryXB9aGxsGZY9JGqsXG0uUKgQDl9RfDgsx9NJ/4IVNPe"
+    crossorigin="anonymous"></script>
 
   <!-- Ultra-early 3D Model Preloading - starts before DOM is ready -->
   <script>
@@ -187,16 +190,25 @@
   })();
   </script>
 
-  <!-- Styles -->
+  <!-- Critical Styles (above-the-fold) -->
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/typography.css">
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/components.css">
-  <link rel="stylesheet" href="./assets/css/animations.css">
-  <link rel="stylesheet" href="./assets/css/snow.css">
-  <link rel="stylesheet" href="./assets/css/pages/home.css">
-  <link rel="stylesheet" href="./assets/css/pages/portfolio.css">
+
+  <!-- Non-Critical Styles (loaded async for faster render) -->
+  <link rel="stylesheet" href="./assets/css/animations.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/snow.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/pages/home.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/css/pages/portfolio.css" media="print" onload="this.media='all'">
+  <!-- Fallback for browsers with JS disabled -->
+  <noscript>
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/snow.css">
+    <link rel="stylesheet" href="./assets/css/pages/home.css">
+    <link rel="stylesheet" href="./assets/css/pages/portfolio.css">
+  </noscript>
 </head>
 <body>
   <!-- Theme Transition Overlay -->
@@ -360,6 +372,7 @@
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
+                loading="lazy"
               ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.staff.title">Part Time Ekip Tedariği</h3>
@@ -380,6 +393,7 @@
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
+                loading="lazy"
               ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.event.title">Kurumsal Etkinlik Yönetimi</h3>
@@ -400,6 +414,7 @@
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
+                loading="lazy"
               ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.technical.title">Sahne - Dekor - Ses - Işık</h3>
@@ -420,6 +435,7 @@
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
+                loading="lazy"
               ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.transfer.title">Transfer Hizmeti</h3>
@@ -513,6 +529,7 @@
               disable-zoom
               shadow-intensity="0"
               class="footer__logo-3d"
+              loading="lazy"
             ></model-viewer>
             <img src="./assets/images/logo_3d_just_text.png" alt="Penta Organization" class="footer__logo-img footer__logo-img--light">
             <img src="./assets/images/logo_dark_3d_just_text.png" alt="Penta Organization" class="footer__logo-img footer__logo-img--dark">
@@ -617,14 +634,14 @@
     </svg>
   </button>
 
-  <!-- Scripts -->
-  <script src="./assets/js/modules/theme.js"></script>
-  <script src="./assets/js/modules/snow.js"></script>
-  <script src="./assets/js/modules/i18n.js"></script>
-  <script src="./assets/js/modules/navigation.js"></script>
-  <script src="./assets/js/modules/animations.js"></script>
-  <script src="./assets/js/modules/forms.js"></script>
-  <script src="./assets/js/modules/portfolio.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <!-- Scripts (defer for non-blocking parse) -->
+  <script src="./assets/js/modules/theme.js" defer></script>
+  <script src="./assets/js/modules/snow.js" defer></script>
+  <script src="./assets/js/modules/i18n.js" defer></script>
+  <script src="./assets/js/modules/navigation.js" defer></script>
+  <script src="./assets/js/modules/animations.js" defer></script>
+  <script src="./assets/js/modules/forms.js" defer></script>
+  <script src="./assets/js/modules/portfolio.js" defer></script>
+  <script src="./assets/js/main.js" defer></script>
 </body>
 </html>
