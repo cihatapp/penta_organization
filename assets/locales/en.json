@@ -40,31 +40,31 @@
     "services": {
       "badge": "What We Do",
       "title": "Our Services",
-      "subtitle": "Professional event solutions that bring your vision to life",
+      "subtitle": "Professional event solutions",
       "staff": {
         "title": "Part Time Staff Supply",
-        "subtitle": "The Friendly Face of Your Brand",
-        "description": "We select and organize responsible, trained, and friendly team members who reflect your event's character and corporate identity."
+        "subtitle": "Your Brand's Friendly Face",
+        "description": "Trained, friendly, and responsible team members for your events."
       },
       "event": {
         "title": "Corporate Event Management",
-        "subtitle": "Turning Your Vision into Reality",
-        "description": "We develop creative concepts for your event to reach its goals. We transparently manage all planning processes including venue selection, budgeting, and scheduling."
+        "subtitle": "Your Vision, Our Job",
+        "description": "From venue selection to budget, we manage all planning processes."
       },
       "technical": {
         "title": "Stage - Decor - Sound - Lighting",
-        "subtitle": "Technical and Aesthetic Excellence",
-        "description": "We prepare impressive stage designs that highlight speakers and messages while reflecting your brand's spirit. Visual aesthetics meet technical functionality."
+        "subtitle": "Technical Excellence",
+        "description": "Stage designs and technical infrastructure that highlight your brand."
       },
       "transfer": {
         "title": "Transfer Services",
-        "subtitle": "Timely and Comfortable Flow",
-        "description": "We organize punctual and comfortable transfers between airports, hotels, and event venues for your guests."
+        "subtitle": "Comfortable Transport",
+        "description": "Airport, hotel, and event transfers for your guests."
       },
       "decoration": {
-        "title": "Activities & Decoration Services",
-        "subtitle": "Magic in the Details",
-        "description": "We elevate the atmosphere with floral arrangements, table decorations, and interactive activities that match the event's theme."
+        "title": "Activities & Decoration",
+        "subtitle": "Details Matter",
+        "description": "Flowers, decor, and activities that add color to your event."
       },
       "viewAll": "View All Services"
     },
@@ -81,19 +81,19 @@
       "viewAll": "View All References"
     },
     "testimonials": {
-      "badge": "Client Reviews",
+      "badge": "Reviews",
       "title": "What Our Clients Say",
       "items": [
         {
-          "quote": "Penta Organization transformed our corporate event into an unforgettable experience. Their attention to detail and professionalism exceeded all expectations.",
+          "quote": "Their attention to detail and professionalism exceeded our expectations.",
           "role": "Marketing Director"
         },
         {
-          "quote": "Thanks to their 10+ years of experience and proactive approach, our events always go flawlessly. A true solution partner!",
+          "quote": "Our events always go flawlessly. A true solution partner!",
           "role": "Event Coordinator"
         },
         {
-          "quote": "Our most trusted business partner for part-time staff supply. Their personnel are always professional and friendly.",
+          "quote": "Our most trusted partner for part-time staff.",
           "role": "HR Manager"
         }
       ]
@@ -107,38 +107,38 @@
   "services": {
     "hero": {
       "badge": "Our Services",
-      "title": "Transform Your Vision Into Reality",
+      "title": "Transform Your Vision<br><span class=\"text-gradient\">Into Reality</span>",
       "subtitle": "Comprehensive solutions for flawless events"
     },
     "staff": {
       "title": "Part Time Staff Supply",
       "subtitle": "The Friendly Face of Your Brand",
-      "description": "We select and organize responsible, trained, and most importantly friendly team members who reflect your event's character and corporate identity. Our team is an extension of your brand on stage.",
-      "features": ["Qualified and Reliable Staff", "Brand Representation Awareness", "Trained Personnel", "Flexible Working Model"]
+      "description": "Trained, friendly, and responsible team members for your events.",
+      "features": ["Qualified Staff", "Brand Awareness", "Trained Personnel", "Flexible Model"]
     },
     "event": {
       "title": "Corporate Event Management",
       "subtitle": "Turning Your Vision into Reality",
-      "description": "We develop creative and purposeful concepts for your event to reach its goals. We transparently manage all planning processes including venue selection, budgeting, and scheduling.",
-      "features": ["Strategic Concept & Planning", "Venue Selection", "Budget Management", "Timeline Planning"]
+      "description": "Venue selection, budgeting, and complete planning management.",
+      "features": ["Concept & Planning", "Venue Selection", "Budget Management", "Timeline Planning"]
     },
     "technical": {
       "title": "Stage - Decor - Sound - Lighting",
       "subtitle": "Technical and Aesthetic Excellence",
-      "description": "We prepare impressive stage designs that highlight speakers and messages while reflecting your brand's spirit. Visual aesthetics meet technical functionality.",
-      "features": ["Impact-Focused Stage Design", "Professional Sound Systems", "Atmospheric Lighting", "Brand-Aligned Decor"]
+      "description": "Stage designs and technical infrastructure that highlight your brand.",
+      "features": ["Stage Design", "Sound Systems", "Lighting", "Brand-Aligned Decor"]
     },
     "transfer": {
       "title": "Transfer Services & Planning",
       "subtitle": "Timely and Comfortable Flow",
-      "description": "We organize punctual and comfortable transfers between airports, hotels, and event venues for your guests.",
-      "features": ["Airport Transfers", "Hotel Transfers", "VIP Vehicle Services", "Group Transfers"]
+      "description": "Airport, hotel, and venue transfers for your guests.",
+      "features": ["Airport Transfers", "Hotel Transfers", "VIP Services", "Group Transfers"]
     },
     "decoration": {
       "title": "Activities & Decoration Services",
       "subtitle": "Magic in the Details",
-      "description": "Decorations that reflect the venue's spirit: With floral arrangements, table decorations, and overall venue styling that match the event's theme and spirit, we elevate the atmosphere beyond ordinary. We ensure every corner is a communication point and every activity becomes a memory.",
-      "features": ["Floral Arrangements", "Table Decorations", "Gamification Activities", "Social Media Contests"]
+      "description": "Flowers, decor, and activities that add color to your event.",
+      "features": ["Floral Arrangements", "Table Decorations", "Gamification", "Social Media Contests"]
     },
     "cta": "Contact",
     "process": {
@@ -168,39 +168,39 @@
   "about": {
     "hero": {
       "badge": "About Us",
-      "title": "A Young Brand, An Experienced Team",
-      "subtitle": "Creating unforgettable events with trust and flawless planning"
+      "title": "10+ Years of<br><span class=\"text-gradient\">Experience</span>",
+      "subtitle": "Trust and flawless planning"
     },
     "story": {
       "badge": "Our Story",
       "title": "New But Experienced",
-      "text1": "As Penta Organization, we are like a newborn brand. However, our team's strength comes from over 10 years of individual experience accumulated in the industry. Each of us has been part of the biggest events in the event world, and we've united these experiences under the Penta umbrella.",
-      "text2": "Our team members have managed countless complexities and solved thousands of details throughout their ten-year careers. From this rich experience, we've created our own philosophy of peace.",
-      "text3": "We don't see ourselves as just an organization company; we are your solution partner who transforms your vision into perfect reality, your trusted friend who stands by you in the most critical moments."
+      "text1": "Our team has over 10 years of individual experience in the industry.",
+      "text2": "From this rich experience, we've created our own philosophy of peace.",
+      "text3": "We are your solution partner who transforms your vision into perfect reality."
     },
     "philosophy": {
       "badge": "Our Philosophy",
-      "title": "Penta's Five-Dimensional Excellence",
-      "subtitle": "Our name 'Penta' (Greek for 'five') comes from the five main elements that form the foundation of our operational success.",
+      "title": "Penta's 5P's",
+      "subtitle": "'Penta' (Greek for 'five') represents our five main elements.",
       "items": [
-        { "title": "Planning", "letter": "P", "text": "With detailed and proactive preparation, we leave no room for surprises." },
-        { "title": "Personnel", "letter": "P", "text": "Our team of best-trained, friendly, and responsible professionals." },
-        { "title": "Performance", "letter": "P", "text": "A promise of complete delivery beyond expectations." },
-        { "title": "Proactivity", "letter": "P", "text": "The ability to solve potential problems before you notice them." },
-        { "title": "Perfection", "letter": "P", "text": "The seamless, flowing, and enjoyable experience guests feel." }
+        { "title": "Planning", "letter": "P", "text": "Detailed preparation, no surprises." },
+        { "title": "Personnel", "letter": "P", "text": "Best-trained professionals." },
+        { "title": "Performance", "letter": "P", "text": "Delivery beyond expectations." },
+        { "title": "Proactivity", "letter": "P", "text": "Solving problems before they arise." },
+        { "title": "Perfection", "letter": "P", "text": "Seamless guest experience." }
       ]
     },
     "mission": {
       "title": "Our Mission",
-      "text": "By completely taking the burden off our clients, we transform organizational processes from a source of stress into a story of joy and success."
+      "text": "Taking the burden off and transforming stress into success."
     },
     "vision": {
       "title": "Our Vision",
-      "text": "To be Turkey's most trusted, friendly, and innovative organization solution partner."
+      "text": "Turkey's most trusted event partner."
     },
     "values": {
       "title": "Our Values",
-      "text": "While we conduct our business with professional seriousness, we are always warm and sincere in our approach to you and your guests. Because we know that the best collaboration is built on relationships based on experience and trust."
+      "text": "Professional yet warm approach built on experience and trust."
     },
     "cta": {
       "title": "Want to Work With Us?",
@@ -211,17 +211,17 @@
   "portfolio": {
     "hero": {
       "badge": "References",
-      "title": "Brands We Work With",
+      "title": "Brands We<br><span class=\"text-gradient\">Work With</span>",
       "subtitle": "Brands we're proud to work with"
     },
     "clients": {
       "badge": "Trusted Brands",
       "title": "Our Partners",
-      "subtitle": "Leading brands from Turkey and around the world work with us"
+      "subtitle": "Leading brands from Turkey and around the world"
     },
     "trust": {
       "title": "Why Do They Trust Us?",
-      "text": "Thanks to our team's 10+ years of individual experience, attention to detail, and proactive approach, Turkey's biggest brands choose us for their organizational needs.",
+      "text": "10+ years of experience, attention to detail, and proactive approach.",
       "stats": {
         "events": "Successful Events",
         "experience": "Years Experience",
@@ -230,29 +230,29 @@
     },
     "cta": {
       "title": "Join Us Too",
-      "subtitle": "Contact us for events that will represent your brand in the best way.",
+      "subtitle": "Contact us for events that will represent your brand.",
       "button": "Get in Touch"
     }
   },
   "careers": {
     "hero": {
-      "title": "Join Our Team",
-      "subtitle": "Flexible work, valuable experiences, and the opportunity to be part of the industry's best events"
+      "title": "Join Our<br><span class=\"text-gradient\">Team</span>",
+      "subtitle": "Flexible work and valuable experiences"
     },
     "intro": {
-      "text1": "We know life is busy. Maybe you're a student, maybe you're newly graduated; or maybe you're just looking for a flexible and reliable side job. That's exactly where Penta Organization comes in!",
-      "text2": "We are the energetic, solution-oriented family behind the event world. Working with us means not just earning money; it means meeting new people in every project, experiencing different corporate cultures, and filling your resume with invaluable experiences.",
-      "text3": "If you value meticulousness, time management, and most importantly, brand representation awareness; Penta offers you not just a job, but an opportunity to be part of continuous growth and organizational excellence."
+      "text1": "Looking for a flexible and reliable side job? That's exactly where Penta comes in!",
+      "text2": "Meet new people, experience different corporate cultures, and fill your resume with invaluable experiences.",
+      "text3": "Penta offers you an opportunity to be part of continuous growth and organizational excellence."
     },
     "benefits": {
       "badge": "Why Penta?",
       "title": "Working With Us",
-      "subtitle": "Turn your experience into cash, work on a flexible schedule, and be part of the industry's best events.",
+      "subtitle": "Flexible schedule and valuable experiences.",
       "items": [
-        { "title": "Flexible Work", "text": "Flexible working hours and project-based tasks that fit your schedule." },
-        { "title": "New People", "text": "Opportunities to meet different people and network in every project." },
-        { "title": "Valuable Experience", "text": "Fill your resume with invaluable corporate event experiences." },
-        { "title": "Extra Income", "text": "Turn your experience into cash and work on a flexible schedule." }
+        { "title": "Flexible Work", "text": "Working hours that fit your schedule." },
+        { "title": "New People", "text": "Meet different people in every project." },
+        { "title": "Valuable Experience", "text": "Corporate event experiences for your resume." },
+        { "title": "Extra Income", "text": "Turn your experience into cash." }
       ]
     },
     "apply": {
@@ -279,8 +279,8 @@
   "contact": {
     "hero": {
       "badge": "Contact Us",
-      "title": "Bring Your Project to Life",
-      "subtitle": "We're here to answer your questions and plan your projects together. Reach us through the most convenient channel for you."
+      "title": "Bring Your Project<br><span class=\"text-gradient\">to Life</span>",
+      "subtitle": "Reach us through the most convenient channel for you."
     },
     "quick": {
       "whatsapp": "WhatsApp",
@@ -329,23 +329,23 @@
     "faq": {
       "badge": "Frequently Asked Questions",
       "title": "Common Questions",
-      "subtitle": "Answers to the most frequently asked questions",
+      "subtitle": "Quick answers to common questions",
       "items": [
         {
-          "question": "Is there a minimum event size to use your services?",
-          "answer": "No, we serve events of all sizes. From a small meeting to a large festival, every project is important to us."
+          "question": "Is there a minimum event size?",
+          "answer": "No, we serve events of all sizes."
         },
         {
-          "question": "How far in advance should I contact you before the event?",
-          "answer": "Ideally, we recommend contacting us 2-4 weeks before the event. However, we do our best for urgent requests as well."
+          "question": "How far in advance should I contact you?",
+          "answer": "Ideally 2-4 weeks before the event. We also handle urgent requests."
         },
         {
           "question": "How is pricing determined?",
-          "answer": "Our pricing is determined based on factors such as event type, duration, number of personnel, and technical requirements. Fill out the form or call us for a custom quote."
+          "answer": "Based on event type, duration, personnel, and technical needs. Contact us for a quote."
         },
         {
-          "question": "Do you provide services outside of Antalya?",
-          "answer": "Yes, we provide services throughout Turkey and abroad. Share your location details and we can offer you custom solutions."
+          "question": "Do you provide services outside Antalya?",
+          "answer": "Yes, throughout Turkey and abroad."
         }
       ]
     }

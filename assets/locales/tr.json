@@ -40,31 +40,31 @@
     "services": {
       "badge": "Ne Yapıyoruz",
       "title": "Hizmetlerimiz",
-      "subtitle": "Vizyonunuzu gerçeğe dönüştüren profesyonel etkinlik çözümleri",
+      "subtitle": "Profesyonel etkinlik çözümleri",
       "staff": {
         "title": "Part Time Ekip Tedariği",
         "subtitle": "Markanızın Güler Yüzü",
-        "description": "Etkinliğinizin karakterini ve kurumsal kimliğinizi yansıtacak, sorumluluk sahibi, eğitimli ve güler yüzlü ekip arkadaşları seçip organize ediyoruz."
+        "description": "Eğitimli, güler yüzlü ve sorumluluk sahibi ekip arkadaşları organize ediyoruz."
       },
       "event": {
         "title": "Kurumsal Etkinlik Yönetimi",
-        "subtitle": "Vizyonunuzun Gerçeğe Dönüşümü",
-        "description": "Etkinliğinizin hedeflerine ulaşması için yaratıcı konseptler geliştiririz. Mekân seçimi, bütçeleme ve zaman çizelgesi dahil tüm planlama süreçlerini şeffaflıkla yönetiriz."
+        "subtitle": "Vizyonunuz, Bizim İşimiz",
+        "description": "Mekân seçiminden bütçeye, tüm planlama süreçlerini yönetiyoruz."
       },
       "technical": {
         "title": "Sahne - Dekor - Ses - Işık",
-        "subtitle": "Teknik ve Estetik Kusursuzluk",
-        "description": "Konuşmacıları ve mesajları öne çıkaran, markanızın ruhunu yansıtan etkileyici sahne tasarımları hazırlarız. Görsel estetik, teknik işlevsellikle buluşur."
+        "subtitle": "Teknik Mükemmellik",
+        "description": "Markanızı öne çıkaran sahne tasarımları ve teknik altyapı sağlıyoruz."
       },
       "transfer": {
         "title": "Transfer Hizmeti",
-        "subtitle": "Zamanında ve Konforlu Akış",
-        "description": "Misafirleriniz için havaalanı, otel ve etkinlik noktası arasındaki transferleri dakik ve konforlu araçlarla organize ederiz."
+        "subtitle": "Konforlu Ulaşım",
+        "description": "Havaalanı, otel ve etkinlik arası transferleri organize ediyoruz."
       },
       "decoration": {
-        "title": "Aktivite - Süsleme Hizmetleri",
-        "subtitle": "Detaylarda Saklı Büyü",
-        "description": "Etkinliğin temasına uygun çiçek düzenlemeleri, masa dekorasyonları ve etkileşimli aktiviteler ile atmosferi sıradanlıktan uzaklaştırırız."
+        "title": "Aktivite - Süsleme",
+        "subtitle": "Detaylarda Fark",
+        "description": "Çiçek, dekor ve aktivitelerle etkinliğinize renk katıyoruz."
       },
       "viewAll": "Tüm Hizmetleri Gör"
     },
@@ -81,19 +81,19 @@
       "viewAll": "Tüm Referansları Gör"
     },
     "testimonials": {
-      "badge": "Müşteri Yorumları",
+      "badge": "Yorumlar",
       "title": "Müşterilerimiz Ne Diyor",
       "items": [
         {
-          "quote": "Penta Organizasyon kurumsal etkinliğimizi unutulmaz bir deneyime dönüştürdü. Detaylara gösterdikleri özen ve profesyonellik tüm beklentilerimizi aştı.",
+          "quote": "Detaylara gösterdikleri özen ve profesyonellik beklentilerimizi aştı.",
           "role": "Pazarlama Direktörü"
         },
         {
-          "quote": "10 yılı aşkın deneyimleri ve proaktif yaklaşımları sayesinde etkinliklerimiz her zaman kusursuz geçiyor. Gerçek bir çözüm ortağı!",
+          "quote": "Etkinliklerimiz her zaman kusursuz geçiyor. Gerçek bir çözüm ortağı!",
           "role": "Etkinlik Koordinatörü"
         },
         {
-          "quote": "Part-time ekip tedariği konusunda en güvenilir iş ortağımız. Personelleri her zaman profesyonel ve güler yüzlü.",
+          "quote": "Part-time ekip konusunda en güvenilir iş ortağımız.",
           "role": "İK Müdürü"
         }
       ]
@@ -107,60 +107,60 @@
   "services": {
     "hero": {
       "badge": "Hizmetlerimiz",
-      "title": "Vizyonunuzu Gerçeğe Dönüştürün",
-      "subtitle": "Kusursuz etkinlikler için kapsamlı çözümler sunuyoruz"
+      "title": "Vizyonunuzu<br><span class=\"text-gradient\">Gerçeğe Dönüştürün</span>",
+      "subtitle": "Kusursuz etkinlikler için kapsamlı çözümler"
     },
     "staff": {
       "title": "Part Time Ekip Tedariği",
       "subtitle": "Markanızın Güler Yüzü",
-      "description": "Etkinliğinizin karakterini ve kurumsal kimliğinizi yansıtacak, en önemlisi sorumluluk sahibi, eğitimli ve güler yüzlü ekip arkadaşları seçip organize ediyoruz. Ekibimiz, markanızın sahnedeki uzantısıdır.",
-      "features": ["Nitelikli ve Güvenilir Kadro", "Marka Temsiliyeti Bilinci", "Eğitimli Personel", "Esnek Çalışma Modeli"]
+      "description": "Eğitimli, güler yüzlü ve sorumluluk sahibi ekip arkadaşları organize ediyoruz.",
+      "features": ["Güvenilir Kadro", "Marka Bilinci", "Eğitimli Personel", "Esnek Çalışma"]
     },
     "event": {
       "title": "Kurumsal Etkinlik Yönetimi",
-      "subtitle": "Vizyonunuzun Gerçeğe Dönüşümü",
-      "description": "Etkinliğinizin hedeflerine ulaşması için yaratıcı ve amaca yönelik konseptler geliştiririz. Mekân seçimi, bütçeleme ve zaman çizelgesi dahil tüm planlama süreçlerini şeffaflıkla yönetiriz.",
-      "features": ["Stratejik Konsept ve Planlama", "Mekân Seçimi", "Bütçe Yönetimi", "Zaman Çizelgesi Planlaması"]
+      "subtitle": "Vizyonunuz, Bizim İşimiz",
+      "description": "Mekân seçiminden bütçeye, tüm planlama süreçlerini yönetiyoruz.",
+      "features": ["Konsept Planlama", "Mekân Seçimi", "Bütçe Yönetimi", "Zaman Planlaması"]
     },
     "technical": {
       "title": "Sahne - Dekor - Ses - Işık",
-      "subtitle": "Teknik ve Estetik Kusursuzluk",
-      "description": "Konuşmacıları ve mesajları öne çıkaran, markanızın ruhunu yansıtan etkileyici sahne tasarımları hazırlarız. Görsel estetik, teknik işlevsellikle buluşur.",
-      "features": ["Etki Odaklı Sahne Tasarımı", "Profesyonel Ses Sistemleri", "Atmosferik Işık Düzeni", "Marka Uyumlu Dekor"]
+      "subtitle": "Teknik Mükemmellik",
+      "description": "Markanızı öne çıkaran sahne tasarımları ve teknik altyapı sağlıyoruz.",
+      "features": ["Sahne Tasarımı", "Ses Sistemleri", "Işık Düzeni", "Marka Uyumlu Dekor"]
     },
     "transfer": {
-      "title": "Transfer Hizmeti ve Planlama",
-      "subtitle": "Zamanında ve Konforlu Akış",
-      "description": "Misafirleriniz için havaalanı, otel ve etkinlik noktası arasındaki transferleri dakik ve konforlu araçlarla organize ederiz.",
-      "features": ["Havaalanı Transferleri", "Otel Transferleri", "VIP Araç Hizmetleri", "Grup Transferleri"]
+      "title": "Transfer Hizmeti",
+      "subtitle": "Konforlu Ulaşım",
+      "description": "Havaalanı, otel ve etkinlik arası transferleri organize ediyoruz.",
+      "features": ["Havaalanı Transferi", "Otel Transferi", "VIP Araç", "Grup Transferi"]
     },
     "decoration": {
-      "title": "Aktivite - Süsleme Hizmetleri",
-      "subtitle": "Detaylarda Saklı Büyü",
-      "description": "Mekânın Ruhunu Yansıtan Süslemeler: Etkinliğin temasına ve ruhuna uygun, yüksek estetik değere sahip çiçek düzenlemeleri, masa dekorasyonları ve genel mekân giydirmeleri ile atmosferi sıradanlıktan uzaklaştırırız. Her köşenin bir iletişim noktası ve her aktivitenin bir anı olmasını sağlıyoruz.",
-      "features": ["Çiçek Düzenlemeleri", "Masa Dekorasyonları", "Oyunlaştırma Aktiviteleri", "Sosyal Medya Yarışmaları"]
+      "title": "Aktivite - Süsleme",
+      "subtitle": "Detaylarda Fark",
+      "description": "Çiçek, dekor ve aktivitelerle etkinliğinize renk katıyoruz.",
+      "features": ["Çiçek Düzenlemeleri", "Masa Dekorasyonları", "Aktiviteler", "Sosyal Medya"]
     },
     "cta": "İletişim",
     "process": {
       "badge": "Nasıl Çalışıyoruz",
       "title": "Sürecimiz",
-      "subtitle": "Penta'nın beş boyutlu mükemmellik yaklaşımı",
+      "subtitle": "Penta'nın mükemmellik yaklaşımı",
       "steps": [
         {
           "title": "Planlama",
-          "description": "Detaylı ve proaktif ön hazırlıkla, sürprizlere yer bırakmayız."
+          "description": "Detaylı ön hazırlıkla sürprizlere yer bırakmayız."
         },
         {
           "title": "Personel",
-          "description": "En iyi eğitimi almış, güler yüzlü ve sorumluluk sahibi kadromuz."
+          "description": "Eğitimli, güler yüzlü ve sorumluluk sahibi kadro."
         },
         {
           "title": "Performans",
-          "description": "Taahhüt edilen sonucun beklentilerin ötesinde eksiksiz teslimi."
+          "description": "Beklentilerin ötesinde eksiksiz teslimat."
         },
         {
           "title": "Uygulama",
-          "description": "Deneyimli ekibimiz etkinlik gününde kusursuz bir deneyim sunar."
+          "description": "Etkinlik gününde kusursuz deneyim."
         }
       ]
     }
@@ -168,60 +168,60 @@
   "about": {
     "hero": {
       "badge": "Hakkımızda",
-      "title": "Genç Bir Marka, Tecrübeli Bir Kadro",
-      "subtitle": "Güven ve kusursuz planlama ile unutulmaz etkinlikler yaratıyoruz"
+      "title": "10 Yılı Aşkın<br><span class=\"text-gradient\">Deneyim</span>",
+      "subtitle": "Güven ve kusursuz planlama ile unutulmaz etkinlikler"
     },
     "story": {
       "badge": "Hikayemiz",
       "title": "Yeniyiz Ama Tecrübeliyiz",
-      "text1": "Biz, Penta Organizasyon olarak yeni doğmuş bir marka gibiyiz. Ancak ekibimizin gücünü, sektörde 10 yılı aşkın süredir biriktirdiğimiz bireysel deneyim ve birikimden alıyoruz. Her birimiz, etkinlik dünyasının en büyük organizasyonlarında yer aldık ve bu tecrübelerimizi Penta çatısı altında birleştirdik.",
-      "text2": "Ekip arkadaşlarımız on yıllık kariyerleri boyunca sayısız karmaşayı yönetti, binlerce detayı çözdü. Bu zengin tecrübeden yola çıkarak kendi huzur felsefemizi yarattık.",
-      "text3": "Kendimizi sadece bir organizasyon firması olarak görmüyoruz; biz, vizyonunuzu kusursuz bir gerçekliğe dönüştüren çözüm ortağınız, en kritik anlarda yanınızda duran güvenilir dostunuzuz."
+      "text1": "Penta yeni bir marka. Ancak ekibimiz sektörde 10+ yıllık bireysel deneyime sahip. En büyük etkinliklerde yer aldık ve tecrübelerimizi Penta çatısı altında birleştirdik.",
+      "text2": "Ekibimiz sayısız projeyi yönetti, binlerce detayı çözdü. Bu tecrübeyle kendi huzur felsefemizi yarattık.",
+      "text3": "Sadece bir organizasyon firması değiliz; vizyonunuzu gerçeğe dönüştüren çözüm ortağınızız."
     },
     "philosophy": {
       "badge": "Felsefemiz",
-      "title": "Penta'nın Beş Boyutlu Mükemmelliği",
-      "subtitle": "Adımız olan 'Penta' (Yunancada 'beş'), operasyonel başarımızın temelini oluşturan beş ana unsurdan gelir.",
+      "title": "Penta'nın 5P'si",
+      "subtitle": "'Penta' (Yunancada 'beş') - başarımızın beş temel unsuru.",
       "items": [
-        { "title": "Planlama", "letter": "P", "text": "Detaylı ve proaktif ön hazırlıkla, sürprizlere yer bırakmayız." },
-        { "title": "Personel", "letter": "P", "text": "En iyi eğitimi almış, güler yüzlü ve sorumluluk sahibi kadromuz." },
-        { "title": "Performans", "letter": "P", "text": "Taahhüt edilen sonucun beklentilerin ötesinde eksiksiz teslimi sözü." },
-        { "title": "Proaktivite", "letter": "P", "text": "Olası sorunları, siz fark etmeden çözme yeteneği." },
-        { "title": "Pürüzsüzlük", "letter": "P", "text": "Konukların hissettiği kesintisiz, akıcı ve keyifli deneyim." }
+        { "title": "Planlama", "letter": "P", "text": "Detaylı hazırlıkla sürprizlere yer yok." },
+        { "title": "Personel", "letter": "P", "text": "Eğitimli, güler yüzlü ve sorumlu kadro." },
+        { "title": "Performans", "letter": "P", "text": "Beklentilerin ötesinde teslimat." },
+        { "title": "Proaktivite", "letter": "P", "text": "Sorunları önceden çözme yeteneği." },
+        { "title": "Pürüzsüzlük", "letter": "P", "text": "Akıcı ve keyifli deneyim." }
       ]
     },
     "mission": {
       "title": "Misyonumuz",
-      "text": "Müşterilerimizin yükünü tamamen alarak, organizasyonel süreçleri bir stres kaynağı olmaktan çıkarıp, bir keyif ve başarı hikayesine dönüştürmek."
+      "text": "Organizasyonu stres kaynağı olmaktan çıkarıp, keyif ve başarı hikayesine dönüştürmek."
     },
     "vision": {
       "title": "Vizyonumuz",
-      "text": "Türkiye'nin en çok güvenilen, samimi ve yenilikçi organizasyon çözüm ortağı olmak."
+      "text": "Türkiye'nin en güvenilir ve yenilikçi organizasyon ortağı olmak."
     },
     "values": {
       "title": "Değerlerimiz",
-      "text": "İşimizi profesyonel ciddiyetle yürütürken, size ve misafirlerinize yaklaşımımızda her zaman sıcak ve samimiyiz. Çünkü biliyoruz ki, en iyi iş birliği, deneyim ve güvene dayalı ilişkilerle kurulur."
+      "text": "Profesyonel ama samimi. En iyi iş birliği güvene dayalı ilişkilerle kurulur."
     },
     "cta": {
       "title": "Bizimle Çalışmak İster misiniz?",
-      "subtitle": "Sadece bir adım atın, gerisini biz planlayalım.",
+      "subtitle": "Bir adım atın, gerisini biz planlayalım.",
       "button": "İletişime Geçin"
     }
   },
   "portfolio": {
     "hero": {
       "badge": "Referanslar",
-      "title": "Birlikte Çalıştığımız Markalar",
-      "subtitle": "Birlikte çalışmaktan gurur duyduğumuz iş ortaklarımız"
+      "title": "Birlikte Çalıştığımız<br><span class=\"text-gradient\">Markalar</span>",
+      "subtitle": "Birlikte çalışmaktan gurur duyduğumuz markalar"
     },
     "clients": {
-      "badge": "Güvenilir Markalar",
+      "badge": "Markalar",
       "title": "İş Ortaklarımız",
-      "subtitle": "Türkiye'nin ve dünyanın önde gelen markaları bizimle çalışıyor"
+      "subtitle": "Türkiye'nin önde gelen markaları bizimle çalışıyor"
     },
     "trust": {
       "title": "Neden Bize Güveniyorlar?",
-      "text": "Ekibimizin 10 yılı aşkın bireysel deneyimi, detaylara gösterdiğimiz özen ve proaktif yaklaşımımız sayesinde Türkiye'nin en büyük markaları organizasyonel ihtiyaçları için bizi tercih ediyor.",
+      "text": "10+ yıllık ekip deneyimi, detaylara özen ve proaktif yaklaşımımız.",
       "stats": {
         "events": "Başarılı Etkinlik",
         "experience": "Yıllık Deneyim",
@@ -229,36 +229,36 @@
       }
     },
     "cta": {
-      "title": "Siz de Aramıza Katılın",
-      "subtitle": "Markanızı en iyi şekilde temsil edecek etkinlikler için bizimle iletişime geçin.",
+      "title": "Siz de Katılın",
+      "subtitle": "Etkinlikleriniz için bizimle iletişime geçin.",
       "button": "İletişime Geçin"
     }
   },
   "careers": {
     "hero": {
-      "title": "Ekibimize Katılın",
-      "subtitle": "Esnek çalışma, değerli deneyimler ve sektörün en iyi etkinliklerinin parçası olma fırsatı"
+      "title": "Ekibimize<br><span class=\"text-gradient\">Katılın</span>",
+      "subtitle": "Esnek çalışma ve değerli deneyimler"
     },
     "intro": {
-      "text1": "Biliyoruz ki, hayatın yoğun. Belki öğrenci, belki yeni mezunsun; belki de sadece esnek ve güvenilir bir ek iş arıyorsun. İşte tam bu noktada, Penta Organizasyon devreye giriyor!",
-      "text2": "Biz, etkinlik dünyasının arka planındaki o enerjik, çözüm odaklı aileyiz. Bizimle çalışmak, sadece para kazanmak değil; her projede yeni insanlarla tanışmak, farklı kurumsal kültürleri deneyimlemek ve özgeçmişini paha biçilmez tecrübelerle doldurmak demek.",
-      "text3": "Eğer titizliğe, zaman yönetimine ve en önemlisi marka temsiliyeti bilincine sahipseniz; Penta, size sadece bir iş değil, sürekli gelişim ve organizasyonel mükemmelliğin bir parçası olma fırsatını sunar."
+      "text1": "Öğrenci veya yeni mezun olabilirsin, esnek bir ek iş arıyor olabilirsin. Penta tam sana göre!",
+      "text2": "Bizimle çalışmak sadece para kazanmak değil; yeni insanlarla tanışmak ve özgeçmişini değerli tecrübelerle doldurmak demek.",
+      "text3": "Titizlik ve marka bilincine sahipsen, Penta seni bekliyor."
     },
     "benefits": {
       "badge": "Neden Penta?",
       "title": "Bizimle Çalışmak",
-      "subtitle": "Deneyiminizi nakde çevirin, esnek bir düzende çalışın ve sektördeki en iyi etkinliklerin parçası olun.",
+      "subtitle": "Esnek çalışma ve sektörün en iyi etkinliklerinin parçası olun.",
       "items": [
-        { "title": "Esnek Çalışma", "text": "Kendi programınıza uygun esnek çalışma saatleri ve proje bazlı görevler." },
-        { "title": "Yeni İnsanlar", "text": "Her projede farklı insanlarla tanışma ve networking fırsatları." },
-        { "title": "Değerli Deneyim", "text": "Özgeçmişinizi paha biçilmez kurumsal etkinlik tecrübeleriyle doldurun." },
-        { "title": "Ek Gelir", "text": "Deneyiminizi nakde çevirin ve esnek bir düzende çalışın." }
+        { "title": "Esnek Çalışma", "text": "Programınıza uygun saatler ve proje bazlı görevler." },
+        { "title": "Yeni İnsanlar", "text": "Her projede networking fırsatları." },
+        { "title": "Değerli Deneyim", "text": "Kurumsal etkinlik tecrübeleri." },
+        { "title": "Ek Gelir", "text": "Deneyiminizi nakde çevirin." }
       ]
     },
     "apply": {
       "badge": "Başvuru",
       "title": "Bize Katılın",
-      "subtitle": "Başvurunuzu dikkatle değerlendirmeyi sabırsızlıkla bekliyoruz.",
+      "subtitle": "Başvurunuzu bekliyoruz.",
       "form": {
         "name": "İsim *",
         "namePlaceholder": "Adınız",
@@ -279,8 +279,8 @@
   "contact": {
     "hero": {
       "badge": "Bize Ulaşın",
-      "title": "Projenizi Hayata Geçirelim",
-      "subtitle": "Sorularınızı yanıtlamak ve projelerinizi birlikte planlamak için buradayız. Size en uygun iletişim kanalından bize ulaşın."
+      "title": "Projenizi Hayata<br><span class=\"text-gradient\">Geçirelim</span>",
+      "subtitle": "Sorularınız için bize ulaşın."
     },
     "quick": {
       "whatsapp": "WhatsApp",
@@ -327,25 +327,25 @@
       "directions": "Yol Tarifi Al"
     },
     "faq": {
-      "badge": "Sıkça Sorulan Sorular",
-      "title": "Merak Edilenler",
-      "subtitle": "En çok sorulan soruların yanıtları",
+      "badge": "SSS",
+      "title": "Sık Sorulan Sorular",
+      "subtitle": "Merak edilenler",
       "items": [
         {
-          "question": "Hizmet almak için minimum etkinlik büyüklüğü var mı?",
-          "answer": "Hayır, her ölçekte etkinliğe hizmet veriyoruz. Küçük bir toplantıdan büyük bir festival organizasyonuna kadar her proje bizim için önemlidir."
+          "question": "Minimum etkinlik büyüklüğü var mı?",
+          "answer": "Hayır, her ölçekte etkinliğe hizmet veriyoruz."
         },
         {
-          "question": "Etkinlik tarihinden ne kadar önce iletişime geçmeliyim?",
-          "answer": "İdeal olarak etkinlikten 2-4 hafta önce iletişime geçmenizi öneririz. Ancak acil talepler için de elimizden geleni yapıyoruz."
+          "question": "Ne kadar önce iletişime geçmeliyim?",
+          "answer": "İdeal olarak 2-4 hafta önce. Acil talepler için de yardımcı oluyoruz."
         },
         {
           "question": "Fiyatlandırma nasıl belirleniyor?",
-          "answer": "Fiyatlandırmamız etkinlik türü, süre, personel sayısı ve teknik gereksinimler gibi faktörlere göre belirlenir. Size özel teklif için formu doldurun veya bizi arayın."
+          "answer": "Etkinlik türü, süre ve personel sayısına göre. Teklif için bizi arayın."
         },
         {
-          "question": "Antalya dışında hizmet veriyor musunuz?",
-          "answer": "Evet, Türkiye genelinde ve yurt dışında hizmet veriyoruz. Lokasyon detaylarını paylaşarak size özel çözümler sunabiliriz."
+          "question": "Antalya dışında hizmet var mı?",
+          "answer": "Evet, Türkiye genelinde ve yurt dışında hizmet veriyoruz."
         }
       ]
     }

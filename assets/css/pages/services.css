@@ -319,18 +319,124 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
+/* 3D SVG Container */
 .service-card__image img {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 140px;
+  max-height: 140px;
   object-fit: contain;
-  transition: transform var(--transition-slow);
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+  animation: rotate3d 8s linear infinite;
+  transition: filter 0.4s ease, animation-duration 0.4s ease;
 }
 
+/* 3D Rotation Animation */
+@keyframes rotate3d {
+  0% {
+    transform: perspective(800px) rotateY(0deg) rotateX(5deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(360deg) rotateX(5deg);
+  }
+}
+
+/* 3D Hover Effect - Faster rotation */
 .service-card:hover .service-card__image img {
-  transform: scale(1.1);
+  animation-duration: 2s;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.25))
+          drop-shadow(0 15px 20px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 5px 8px rgba(var(--color-primary-rgb), 0.3));
+}
+
+/* Reflection/Glow Effect */
+.service-card__image::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotateX(90deg) translateZ(-30px);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(var(--color-primary-rgb), 0.3) 0%, transparent 70%);
+  filter: blur(15px);
+  opacity: 0.6;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}
+
+.service-card:hover .service-card__image::after {
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  filter: blur(20px);
+}
+
+/* Staggered Animation Delays - Different start points */
+.service-card:nth-child(1) .service-card__image img { animation-delay: 0s; }
+.service-card:nth-child(2) .service-card__image img { animation-delay: -1.5s; }
+.service-card:nth-child(3) .service-card__image img { animation-delay: -3s; }
+.service-card:nth-child(4) .service-card__image img { animation-delay: -4.5s; }
+.service-card:nth-child(5) .service-card__image img { animation-delay: -6s; }
+
+/* Alternate rotation direction for variety */
+.service-card:nth-child(even) .service-card__image img {
+  animation-name: rotate3d-reverse;
+}
+
+@keyframes rotate3d-reverse {
+  0% {
+    transform: perspective(800px) rotateY(360deg) rotateX(-5deg);
+  }
+  100% {
+    transform: perspective(800px) rotateY(0deg) rotateX(-5deg);
+  }
+}
+
+/* Shimmer effect on hover */
+.service-card__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-card:hover .service-card__image::before {
+  left: 100%;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .service-card__image img {
+    animation: none;
+    transform: none;
+  }
+
+  .service-card:hover .service-card__image img {
+    animation: none;
+    transform: scale(1.05);
+  }
+
+  .service-card__image::before,
+  .service-card__image::after {
+    display: none;
+  }
 }
 
 .service-card__content {
