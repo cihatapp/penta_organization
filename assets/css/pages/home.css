@@ -518,18 +518,22 @@
 
 /* 3D Model Icon Styling */
 .card--service .card__icon--3d {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   background: transparent;
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card--service .card__icon--3d model-viewer {
   width: 100%;
   height: 100%;
   --poster-color: transparent;
+  --min-hotspot-opacity: 0;
 }
 
 .card--service .card__icon--3d model-viewer::part(default-progress-bar) {
