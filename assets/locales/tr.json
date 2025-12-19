@@ -25,7 +25,7 @@
   },
   "home": {
     "hero": {
-      "badge": "10+ Yıllık Deneyim",
+      "badge": "Tecrübeli Ekip",
       "title": {
         "line1": "Mükemmel anlar,",
         "line2": "kusursuz bağlarla başlar.",
@@ -168,14 +168,14 @@
   "about": {
     "hero": {
       "badge": "Hakkımızda",
-      "title": "10 Yılı Aşkın Deneyim",
+      "title": "Genç Bir Marka, Tecrübeli Bir Kadro",
       "subtitle": "Güven ve kusursuz planlama ile unutulmaz etkinlikler yaratıyoruz"
     },
     "story": {
       "badge": "Hikayemiz",
-      "title": "10 Yılı Aşkın Süredir Sahadayız",
-      "text1": "Biz, Penta Organizasyon olarak, bu sektörde 10 yılı aşkın süredir sahada, en büyük etkinliklerin kalbindeyiz. Bu uzun soluklu yolculuk bize şunu öğretti: En ihtişamlı organizasyonların bile arkasında, yalnızca güven ve kusursuz planlama yatar.",
-      "text2": "On yıl boyunca sayısız karmaşayı yönettik, binlerce detayı çözdük ve bu tecrübemizden yola çıkarak kendi huzur felsefemizi yarattık.",
+      "title": "Yeniyiz Ama Tecrübeliyiz",
+      "text1": "Biz, Penta Organizasyon olarak yeni doğmuş bir marka gibiyiz. Ancak ekibimizin gücünü, sektörde 10 yılı aşkın süredir biriktirdiğimiz bireysel deneyim ve birikimden alıyoruz. Her birimiz, etkinlik dünyasının en büyük organizasyonlarında yer aldık ve bu tecrübelerimizi Penta çatısı altında birleştirdik.",
+      "text2": "Ekip arkadaşlarımız on yıllık kariyerleri boyunca sayısız karmaşayı yönetti, binlerce detayı çözdü. Bu zengin tecrübeden yola çıkarak kendi huzur felsefemizi yarattık.",
       "text3": "Kendimizi sadece bir organizasyon firması olarak görmüyoruz; biz, vizyonunuzu kusursuz bir gerçekliğe dönüştüren çözüm ortağınız, en kritik anlarda yanınızda duran güvenilir dostunuzuz."
     },
     "philosophy": {
@@ -221,7 +221,7 @@
     },
     "trust": {
       "title": "Neden Bize Güveniyorlar?",
-      "text": "10 yılı aşkın deneyimimiz, detaylara gösterdiğimiz özen ve proaktif yaklaşımımız sayesinde Türkiye'nin en büyük markaları organizasyonel ihtiyaçları için bizi tercih ediyor.",
+      "text": "Ekibimizin 10 yılı aşkın bireysel deneyimi, detaylara gösterdiğimiz özen ve proaktif yaklaşımımız sayesinde Türkiye'nin en büyük markaları organizasyonel ihtiyaçları için bizi tercih ediyor.",
       "stats": {
         "events": "Başarılı Etkinlik",
         "experience": "Yıllık Deneyim",
