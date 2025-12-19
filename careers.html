@@ -344,8 +344,20 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="footer__logo">
-            <img src="./assets/images/logo.png" alt="Penta Organizasyon" class="footer__logo-img footer__logo-img--light">
-            <img src="./assets/images/logo_dark.png" alt="Penta Organizasyon" class="footer__logo-img footer__logo-img--dark">
+            <model-viewer
+              src="./assets/3d/logo_3d_just_icon.glb"
+              alt="Penta Logo 3D"
+              auto-rotate
+              rotation-per-second="30deg"
+              camera-orbit="0deg 90deg 2.5m"
+              camera-controls
+              disable-zoom
+              shadow-intensity="0"
+              class="footer__logo-3d"
+              loading="lazy"
+            ></model-viewer>
+            <img src="./assets/images/logo_3d_just_text.png" alt="Penta Organization" class="footer__logo-img footer__logo-img--light">
+            <img src="./assets/images/logo_dark_3d_just_text.png" alt="Penta Organization" class="footer__logo-img footer__logo-img--dark">
           </a>
           <p class="footer__tagline" data-i18n="footer.tagline">Mükemmel anlar, kusursuz bağlarla başlar.</p>
           <div class="footer__social">
