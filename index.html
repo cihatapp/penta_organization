@@ -152,6 +152,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
   <link rel="manifest" href="./manifest.json">
   <meta name="theme-color" content="#6366f1">
+
+  <!-- Preload Model Viewer library for instant 3D rendering -->
+  <link rel="modulepreload" href="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+
+  <!-- Preload ALL 3D models used on homepage - critical for instant loading -->
+  <link rel="preload" href="./assets/3d/logo_3d_just_icon.glb" as="fetch" crossorigin type="model/gltf-binary">
+  <link rel="preload" href="./assets/3d/staff.glb" as="fetch" crossorigin type="model/gltf-binary">
+  <link rel="preload" href="./assets/3d/corparete_event.glb" as="fetch" crossorigin type="model/gltf-binary">
+  <link rel="preload" href="./assets/3d/technical.glb" as="fetch" crossorigin type="model/gltf-binary">
+  <link rel="preload" href="./assets/3d/transfer.glb" as="fetch" crossorigin type="model/gltf-binary">
+
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -164,6 +175,17 @@
 
   <!-- Model Viewer for 3D Icons -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Ultra-early 3D Model Preloading - starts before DOM is ready -->
+  <script>
+  (function(){
+    if(!('caches'in window))return;
+    var m=['./assets/3d/logo_3d_just_icon.glb','./assets/3d/staff.glb','./assets/3d/corparete_event.glb','./assets/3d/technical.glb','./assets/3d/transfer.glb'];
+    caches.open('penta-3d-models-v1').then(function(c){
+      m.forEach(function(u){c.match(u).then(function(r){if(!r)fetch(u).then(function(f){if(f.ok)c.put(u,f)})})});
+    });
+  })();
+  </script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/variables.css">

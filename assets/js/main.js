@@ -9,6 +9,169 @@
   'use strict';
 
   /**
+   * Service Worker Manager
+   * Handles registration and 3D model caching
+   */
+  const ServiceWorkerManager = {
+    registration: null,
+
+    async init() {
+      if (!('serviceWorker' in navigator)) {
+        console.log('[App] Service Worker not supported');
+        return;
+      }
+
+      try {
+        this.registration = await navigator.serviceWorker.register('./sw.js', {
+          scope: './'
+        });
+
+        console.log('[App] Service Worker registered successfully');
+
+        // Listen for updates
+        this.registration.addEventListener('updatefound', () => {
+          const newWorker = this.registration.installing;
+          console.log('[App] Service Worker update found');
+
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              console.log('[App] New Service Worker installed, refresh for updates');
+            }
+          });
+        });
+
+        // Check cache status after registration
+        if (this.registration.active) {
+          this.checkCacheStatus();
+        }
+
+      } catch (error) {
+        console.error('[App] Service Worker registration failed:', error);
+      }
+    },
+
+    async checkCacheStatus() {
+      if (!this.registration?.active) return;
+
+      return new Promise((resolve) => {
+        const messageChannel = new MessageChannel();
+        messageChannel.port1.onmessage = (event) => {
+          console.log('[App] Cache status:', event.data);
+          resolve(event.data);
+        };
+
+        this.registration.active.postMessage(
+          { type: 'CACHE_STATUS' },
+          [messageChannel.port2]
+        );
+      });
+    },
+
+    async preloadModels() {
+      if (!this.registration?.active) return;
+
+      return new Promise((resolve) => {
+        const messageChannel = new MessageChannel();
+        messageChannel.port1.onmessage = (event) => {
+          console.log('[App] Models preloaded:', event.data);
+          resolve(event.data);
+        };
+
+        this.registration.active.postMessage(
+          { type: 'PRELOAD_MODELS' },
+          [messageChannel.port2]
+        );
+      });
+    }
+  };
+
+  /**
+   * 3D Model Preloader - Aggressive Loading Strategy
+   * Preloads ALL 3D models immediately for instant display
+   */
+  const ModelPreloader = {
+    // ALL models in priority order
+    models: [
+      './assets/3d/logo_3d_just_icon.glb',  // Critical - every page
+      './assets/3d/staff.glb',               // Home + Services
+      './assets/3d/corparete_event.glb',     // Home + Services
+      './assets/3d/technical.glb',           // Home + Services
+      './assets/3d/transfer.glb',            // Home + Services
+      './assets/3d/decoration.glb'           // Services only
+    ],
+
+    async init() {
+      // Start aggressive preloading immediately
+      this.preloadAllModels();
+
+      // Also use requestIdleCallback for background loading
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => this.ensureAllCached(), { timeout: 5000 });
+      }
+    },
+
+    async preloadAllModels() {
+      if (!('caches' in window)) return;
+
+      try {
+        const cache = await caches.open('penta-3d-models-v1');
+        const startTime = performance.now();
+
+        // Load all models in parallel for maximum speed
+        const promises = this.models.map(async (model) => {
+          const cached = await cache.match(model);
+          if (!cached) {
+            return this.preloadWithFetch(model, cache);
+          }
+          return Promise.resolve();
+        });
+
+        await Promise.all(promises);
+
+        const loadTime = (performance.now() - startTime).toFixed(0);
+        console.log(`[Preloader] All models ready in ${loadTime}ms`);
+
+      } catch (error) {
+        console.warn('[Preloader] Parallel load error:', error);
+      }
+    },
+
+    async preloadWithFetch(url, cache) {
+      try {
+        // Use high priority for critical models
+        const priority = url.includes('logo') ? 'high' : 'auto';
+        const response = await fetch(url, { priority });
+
+        if (response.ok) {
+          await cache.put(url, response);
+          console.log(`[Preloader] Cached: ${url.split('/').pop()}`);
+        }
+      } catch (error) {
+        console.warn(`[Preloader] Failed: ${url.split('/').pop()}`, error);
+      }
+    },
+
+    async ensureAllCached() {
+      // Double-check all models are cached during idle time
+      if (!('caches' in window)) return;
+
+      const cache = await caches.open('penta-3d-models-v1');
+      for (const model of this.models) {
+        const cached = await cache.match(model);
+        if (!cached) {
+          this.preloadWithFetch(model, cache);
+        }
+      }
+    }
+  };
+
+  // Expose for debugging
+  window.PentaCache = {
+    getStatus: () => ServiceWorkerManager.checkCacheStatus(),
+    preloadModels: () => ServiceWorkerManager.preloadModels()
+  };
+
+  /**
    * Initialize testimonials carousel
    */
   function initTestimonials() {
@@ -290,6 +453,12 @@
    */
   async function init() {
     console.log('Initializing Penta Organization website...');
+
+    // Initialize Service Worker for caching (non-blocking)
+    ServiceWorkerManager.init();
+
+    // Preload critical 3D models (non-blocking)
+    ModelPreloader.init();
 
     // Theme is auto-initialized in theme.js
 
