@@ -94,6 +94,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Model Viewer for 3D Icons -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/typography.css">
@@ -108,8 +111,19 @@
   <header class="header">
     <div class="container header__container">
       <a href="index.html" class="header__logo">
-        <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
-        <img src="./assets/images/logo_dark.png" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
+        <model-viewer
+          src="./assets/3d/logo_3d_just_icon.glb"
+          alt="Penta Logo 3D"
+          auto-rotate
+          rotation-per-second="60deg"
+          camera-orbit="0deg 90deg 2.5m"
+          disable-zoom
+          interaction-prompt="none"
+          shadow-intensity="0"
+          class="header__logo-3d"
+        ></model-viewer>
+        <img src="./assets/images/logo_3d_just_text.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
+        <img src="./assets/images/logo_dark_3d_just_text.png" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
       </a>
 
       <nav class="nav" aria-label="Ana navigasyon">

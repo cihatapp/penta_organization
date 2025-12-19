@@ -120,6 +120,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Model Viewer for 3D Icons -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/typography.css">
@@ -134,8 +137,19 @@
   <header class="header">
     <div class="container header__container">
       <a href="index.html" class="header__logo">
-        <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
-        <img src="./assets/images/logo_dark.png" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
+        <model-viewer
+          src="./assets/3d/logo_3d_just_icon.glb"
+          alt="Penta Logo 3D"
+          auto-rotate
+          rotation-per-second="60deg"
+          camera-orbit="0deg 90deg 2.5m"
+          disable-zoom
+          interaction-prompt="none"
+          shadow-intensity="0"
+          class="header__logo-3d"
+        ></model-viewer>
+        <img src="./assets/images/logo_3d_just_text.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
+        <img src="./assets/images/logo_dark_3d_just_text.png" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
       </a>
 
       <nav class="nav" aria-label="Main navigation">
@@ -216,8 +230,18 @@
         <div class="services-grid" data-stagger="100">
           <!-- Part Time Ekip Tedariği -->
           <article class="service-card" id="staff" data-category="staff" data-animate="fade-up">
-            <div class="service-card__image">
-              <img src="./assets/images/services/staff.svg" alt="Part Time Ekip Tedariği" loading="lazy">
+            <div class="service-card__image service-card__image--3d">
+              <model-viewer
+                src="./assets/3d/staff.glb"
+                alt="Part Time Ekip 3D"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="30deg 75deg 2.2m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="1"
+                exposure="1"
+              ></model-viewer>
             </div>
             <div class="service-card__content">
               <div class="service-card__icon">
@@ -240,8 +264,18 @@
 
           <!-- Kurumsal Etkinlik Yönetimi -->
           <article class="service-card" id="event" data-category="event" data-animate="fade-up">
-            <div class="service-card__image">
-              <img src="./assets/images/services/corporate.svg" alt="Kurumsal Etkinlik Yönetimi" loading="lazy">
+            <div class="service-card__image service-card__image--3d">
+              <model-viewer
+                src="./assets/3d/corparete_event.glb"
+                alt="Kurumsal Etkinlik 3D"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="30deg 75deg 2.2m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="1"
+                exposure="1"
+              ></model-viewer>
             </div>
             <div class="service-card__content">
               <div class="service-card__icon">
@@ -264,8 +298,18 @@
 
           <!-- Sahne - Dekor - Ses - Işık -->
           <article class="service-card" id="technical" data-category="technical" data-animate="fade-up">
-            <div class="service-card__image">
-              <img src="./assets/images/services/concert.svg" alt="Sahne - Dekor - Ses - Işık" loading="lazy">
+            <div class="service-card__image service-card__image--3d">
+              <model-viewer
+                src="./assets/3d/technical.glb"
+                alt="Sahne Dekor Ses Işık 3D"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="30deg 75deg 2.2m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="1"
+                exposure="1"
+              ></model-viewer>
             </div>
             <div class="service-card__content">
               <div class="service-card__icon">
@@ -288,8 +332,18 @@
 
           <!-- Transfer Hizmeti ve Planlama -->
           <article class="service-card" id="transfer" data-category="logistics" data-animate="fade-up">
-            <div class="service-card__image">
-              <img src="./assets/images/services/transfer.svg" alt="Transfer Hizmeti" loading="lazy">
+            <div class="service-card__image service-card__image--3d">
+              <model-viewer
+                src="./assets/3d/transfer.glb"
+                alt="Transfer Hizmeti 3D"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="30deg 75deg 2.2m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="1"
+                exposure="1"
+              ></model-viewer>
             </div>
             <div class="service-card__content">
               <div class="service-card__icon">
@@ -312,8 +366,18 @@
 
           <!-- Aktivite - Süsleme Hizmetleri -->
           <article class="service-card" id="decoration" data-category="event" data-animate="fade-up">
-            <div class="service-card__image">
-              <img src="./assets/images/services/special.svg" alt="Aktivite - Süsleme Hizmetleri" loading="lazy">
+            <div class="service-card__image service-card__image--3d">
+              <model-viewer
+                src="./assets/3d/decoration.glb"
+                alt="Aktivite Süsleme 3D"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="30deg 75deg 2.2m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="1"
+                exposure="1"
+              ></model-viewer>
             </div>
             <div class="service-card__content">
               <div class="service-card__icon">

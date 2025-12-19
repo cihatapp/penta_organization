@@ -326,6 +326,17 @@
   border-radius: var(--radius-sm);
 }
 
+/* 3D Logo */
+.header__logo-3d {
+  width: 45px;
+  height: 45px;
+  --poster-color: transparent;
+}
+
+.header__logo-3d::part(default-progress-bar) {
+  display: none;
+}
+
 .footer__logo-img {
   height: 50px;
   width: auto;

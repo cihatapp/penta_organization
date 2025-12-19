@@ -162,6 +162,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Model Viewer for 3D Icons -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
@@ -182,8 +185,19 @@
     <div class="container header__container">
       <!-- Logo -->
       <a href="index.html" class="header__logo">
-        <img src="./assets/images/logo.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
-        <img src="./assets/images/logo_dark.png" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
+        <model-viewer
+          src="./assets/3d/logo_3d_just_icon.glb"
+          alt="Penta Logo 3D"
+          auto-rotate
+          rotation-per-second="60deg"
+          camera-orbit="0deg 90deg 2.5m"
+          disable-zoom
+          interaction-prompt="none"
+          shadow-intensity="0"
+          class="header__logo-3d"
+        ></model-viewer>
+        <img src="./assets/images/logo_3d_just_text.png" alt="Penta Organization" class="header__logo-img header__logo-img--light">
+        <img src="./assets/images/logo_dark_3d_just_text.png" alt="Penta Organization" class="header__logo-img header__logo-img--dark">
       </a>
 
       <!-- Desktop Navigation -->
@@ -312,11 +326,6 @@
         <div class="services-preview__grid" data-stagger="100">
           <!-- Part Time Ekip -->
           <div class="card card--service" data-animate="fade-up">
-            <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
             <h3 class="card__title" data-i18n="home.services.staff.title">Part Time Ekip Tedariği</h3>
             <p class="card__text" data-i18n="home.services.staff.description">Markanızın güler yüzü olacak, eğitimli ve sorumluluk sahibi ekip arkadaşları.</p>
             <a href="services.html#staff" class="card__link" data-i18n="common.learnMore">Detaylı Bilgi</a>
@@ -324,10 +333,17 @@
 
           <!-- Kurumsal Etkinlik -->
           <div class="card card--service" data-animate="fade-up">
-            <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
+            <div class="card__icon card__icon--3d">
+              <model-viewer
+                src="./assets/3d/corparete_event.glb"
+                alt="Kurumsal Etkinlik 3D Icon"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="45deg 75deg 2.5m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="0"
+              ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.event.title">Kurumsal Etkinlik Yönetimi</h3>
             <p class="card__text" data-i18n="home.services.event.description">Vizyonunuzu gerçeğe dönüştüren stratejik konsept ve planlama hizmetleri.</p>
@@ -336,10 +352,17 @@
 
           <!-- Sahne Dekor -->
           <div class="card card--service" data-animate="fade-up">
-            <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
-              </svg>
+            <div class="card__icon card__icon--3d">
+              <model-viewer
+                src="./assets/3d/technical.glb"
+                alt="Sahne Dekor 3D Icon"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="45deg 75deg 2.5m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="0"
+              ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.technical.title">Sahne - Dekor - Ses - Işık</h3>
             <p class="card__text" data-i18n="home.services.technical.description">Teknik ve estetik kusursuzluk ile etkileyici sahne tasarımları.</p>
@@ -348,10 +371,17 @@
 
           <!-- Transfer -->
           <div class="card card--service" data-animate="fade-up">
-            <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
+            <div class="card__icon card__icon--3d">
+              <model-viewer
+                src="./assets/3d/transfer.glb"
+                alt="Transfer 3D Icon"
+                auto-rotate
+                rotation-per-second="90deg"
+                camera-orbit="45deg 75deg 2.5m"
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="0"
+              ></model-viewer>
             </div>
             <h3 class="card__title" data-i18n="home.services.transfer.title">Transfer Hizmeti</h3>
             <p class="card__text" data-i18n="home.services.transfer.description">Zamanında ve konforlu ulaşım için profesyonel transfer çözümleri.</p>
