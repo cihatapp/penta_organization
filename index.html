@@ -189,8 +189,9 @@
           src="./assets/3d/logo_3d_just_icon.glb"
           alt="Penta Logo 3D"
           auto-rotate
-          rotation-per-second="60deg"
+          rotation-per-second="30deg"
           camera-orbit="0deg 90deg 2.5m"
+          camera-controls
           disable-zoom
           interaction-prompt="none"
           shadow-intensity="0"
@@ -326,6 +327,19 @@
         <div class="services-preview__grid" data-stagger="100">
           <!-- Part Time Ekip -->
           <div class="card card--service" data-animate="fade-up">
+            <div class="card__icon card__icon--3d">
+              <model-viewer
+                src="./assets/3d/staff.glb"
+                alt="Part Time Ekip 3D Icon"
+                auto-rotate
+                rotation-per-second="35deg"
+                camera-orbit="45deg 75deg 2.5m"
+                camera-controls
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="0"
+              ></model-viewer>
+            </div>
             <h3 class="card__title" data-i18n="home.services.staff.title">Part Time Ekip Tedariği</h3>
             <p class="card__text" data-i18n="home.services.staff.description">Markanızın güler yüzü olacak, eğitimli ve sorumluluk sahibi ekip arkadaşları.</p>
             <a href="services.html#staff" class="card__link" data-i18n="common.learnMore">Detaylı Bilgi</a>
@@ -338,8 +352,9 @@
                 src="./assets/3d/corparete_event.glb"
                 alt="Kurumsal Etkinlik 3D Icon"
                 auto-rotate
-                rotation-per-second="90deg"
+                rotation-per-second="35deg"
                 camera-orbit="45deg 75deg 2.5m"
+                camera-controls
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
@@ -357,8 +372,9 @@
                 src="./assets/3d/technical.glb"
                 alt="Sahne Dekor 3D Icon"
                 auto-rotate
-                rotation-per-second="90deg"
+                rotation-per-second="35deg"
                 camera-orbit="45deg 75deg 2.5m"
+                camera-controls
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
@@ -376,8 +392,9 @@
                 src="./assets/3d/transfer.glb"
                 alt="Transfer 3D Icon"
                 auto-rotate
-                rotation-per-second="90deg"
+                rotation-per-second="35deg"
                 camera-orbit="45deg 75deg 2.5m"
+                camera-controls
                 disable-zoom
                 interaction-prompt="none"
                 shadow-intensity="0"
