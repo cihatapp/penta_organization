@@ -172,6 +172,53 @@
   };
 
   /**
+   * 3D Model Performance Optimizer
+   * Pauses models when not in viewport to reduce GPU load
+   */
+  const ModelOptimizer = {
+    observer: null,
+
+    init() {
+      const modelViewers = document.querySelectorAll('model-viewer');
+      if (modelViewers.length === 0) return;
+
+      // Use IntersectionObserver to pause/resume models
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const model = entry.target;
+
+          if (entry.isIntersecting) {
+            // Resume animation when visible
+            model.removeAttribute('pause-on-hidden');
+            if (model.hasAttribute('data-was-rotating')) {
+              model.setAttribute('auto-rotate', '');
+            }
+          } else {
+            // Pause animation when hidden
+            if (model.hasAttribute('auto-rotate')) {
+              model.setAttribute('data-was-rotating', '');
+              model.removeAttribute('auto-rotate');
+            }
+          }
+        });
+      }, {
+        rootMargin: '100px', // Start loading slightly before visible
+        threshold: 0
+      });
+
+      modelViewers.forEach(model => {
+        // Mark initially rotating models
+        if (model.hasAttribute('auto-rotate')) {
+          model.setAttribute('data-was-rotating', '');
+        }
+        this.observer.observe(model);
+      });
+
+      console.log(`[ModelOptimizer] Watching ${modelViewers.length} 3D models`);
+    }
+  };
+
+  /**
    * Initialize testimonials carousel
    */
   function initTestimonials() {
@@ -459,6 +506,9 @@
 
     // Preload critical 3D models (non-blocking)
     ModelPreloader.init();
+
+    // Optimize 3D models - pause when not visible
+    ModelOptimizer.init();
 
     // Theme is auto-initialized in theme.js
 

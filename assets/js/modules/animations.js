@@ -102,27 +102,44 @@ const AnimationManager = (function() {
   }
 
   /**
-   * Initialize parallax effects
+   * Initialize parallax effects - Optimized with RAF throttling
    */
   function initParallax() {
     const parallaxElements = document.querySelectorAll('[data-parallax]');
 
     if (parallaxElements.length === 0) return;
 
-    function updateParallax() {
-      const scrollY = window.scrollY;
+    let ticking = false;
+    let lastScrollY = window.scrollY;
 
+    function updateParallax() {
       parallaxElements.forEach(element => {
         const speed = parseFloat(element.dataset.parallax) || 0.5;
         const rect = element.getBoundingClientRect();
-        const elementTop = rect.top + scrollY;
-        const offset = (scrollY - elementTop) * speed;
 
-        element.style.transform = `translateY(${offset}px)`;
+        // Only update if element is in viewport (with buffer)
+        if (rect.bottom < -100 || rect.top > window.innerHeight + 100) return;
+
+        const elementTop = rect.top + lastScrollY;
+        const offset = (lastScrollY - elementTop) * speed;
+
+        // Use transform3d for GPU acceleration
+        element.style.transform = `translate3d(0, ${offset}px, 0)`;
       });
+
+      ticking = false;
     }
 
-    window.addEventListener('scroll', updateParallax, { passive: true });
+    function onScroll() {
+      lastScrollY = window.scrollY;
+
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
     updateParallax();
   }
 

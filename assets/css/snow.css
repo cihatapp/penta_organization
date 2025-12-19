@@ -22,10 +22,13 @@
   top: -20px;
   pointer-events: none;
   animation: snowfall linear infinite;
-  will-change: transform;
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Force GPU layer */
+  backface-visibility: hidden;
   font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
   line-height: 1;
   text-align: center;
+  contain: strict; /* Isolate paint/layout */
 }
 
 /* Snowflake Types */
@@ -45,35 +48,26 @@
   content: "•";
 }
 
-/* Dark Theme - White/Ice Blue Snowflakes */
+/* Dark Theme - White/Ice Blue Snowflakes (Optimized - single shadow) */
 [data-theme="dark"] .snowflake {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow:
-    0 0 5px rgba(255, 255, 255, 0.8),
-    0 0 10px rgba(200, 230, 255, 0.5),
-    0 0 20px rgba(180, 220, 255, 0.3);
-  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 6px rgba(200, 230, 255, 0.5);
+  /* filter removed for performance */
 }
 
 [data-theme="dark"] .snowflake--dot::before {
-  text-shadow:
-    0 0 3px rgba(255, 255, 255, 0.9),
-    0 0 6px rgba(200, 230, 255, 0.6);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
 }
 
-/* Light Theme - Subtle Blue-Gray Snowflakes */
+/* Light Theme - Subtle Blue-Gray Snowflakes (Optimized - single shadow) */
 [data-theme="light"] .snowflake {
-  color: rgba(100, 130, 170, 0.75);
-  text-shadow:
-    0 0 3px rgba(100, 130, 170, 0.4),
-    0 0 8px rgba(120, 150, 190, 0.25);
-  filter: drop-shadow(0 0 1px rgba(80, 110, 150, 0.5));
+  color: rgba(100, 130, 170, 0.7);
+  text-shadow: 0 0 4px rgba(100, 130, 170, 0.3);
+  /* filter removed for performance */
 }
 
 [data-theme="light"] .snowflake--dot::before {
-  text-shadow:
-    0 0 2px rgba(100, 130, 170, 0.6),
-    0 0 4px rgba(120, 150, 190, 0.3);
+  text-shadow: 0 0 3px rgba(100, 130, 170, 0.4);
 }
 
 /* Snowfall Animation */
