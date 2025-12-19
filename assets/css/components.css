@@ -321,15 +321,15 @@
 
 .header__logo img,
 .header__logo-img {
-  height: 45px;
+  height: 35px;
   width: auto;
   border-radius: var(--radius-sm);
 }
 
 /* 3D Logo */
 .header__logo-3d {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   --poster-color: transparent;
 }
 
@@ -339,8 +339,8 @@
 
 /* Footer 3D Logo - same size as header */
 .footer__logo-3d {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   --poster-color: transparent;
 }
 
@@ -349,7 +349,7 @@
 }
 
 .footer__logo-img {
-  height: 45px;
+  height: 35px;
   width: auto;
   border-radius: var(--radius-sm);
 }
