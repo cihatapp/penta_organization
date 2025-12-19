@@ -328,9 +328,12 @@
 
 /* 3D Logo */
 .header__logo-3d {
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
+  min-width: 35px;
+  min-height: 35px;
   --poster-color: transparent;
+  touch-action: pan-y;
 }
 
 .header__logo-3d::part(default-progress-bar) {
@@ -339,9 +342,12 @@
 
 /* Footer 3D Logo - same size as header */
 .footer__logo-3d {
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
+  min-width: 35px;
+  min-height: 35px;
   --poster-color: transparent;
+  touch-action: pan-y;
 }
 
 .footer__logo-3d::part(default-progress-bar) {
