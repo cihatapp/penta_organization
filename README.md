@@ -186,7 +186,6 @@ penta_organization/
 
 - **Website:** [pentaorganizasyon.com](https://www.pentaorganizasyon.com)
 - **Email:** hello@pentaorganizasyon.com
-- **Phone:** +90 530 913 79 75
 - **Location:** Kepez, Antalya, Turkey
 
 ---

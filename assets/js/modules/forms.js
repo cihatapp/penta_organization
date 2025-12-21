@@ -316,8 +316,8 @@ const FormsManager = (function() {
    */
   function sendViaWhatsApp(data) {
     return new Promise((resolve) => {
-      // WhatsApp number (without + sign)
-      const phoneNumber = '905309137975';
+      // WhatsApp number (without + sign) - TODO: Configure phone number
+      const phoneNumber = '';
 
       // Format the message (using text symbols instead of emojis for better compatibility)
       const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
