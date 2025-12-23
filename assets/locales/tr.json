@@ -309,6 +309,9 @@
       "message": "Mesajınız",
       "messagePlaceholder": "Etkinlik vizyonunuz, tarih ve katılımcı sayısı hakkında bilgi verin...",
       "messageHint": "Maksimum 2000 karakter",
+      "sendMethod": "Gönderim Yöntemi",
+      "sendEmail": "E-posta",
+      "sendWhatsapp": "WhatsApp",
       "submit": "Mesaj Gönder"
     },
     "info": {
@@ -341,7 +344,7 @@
         },
         {
           "question": "Fiyatlandırma nasıl belirleniyor?",
-          "answer": "Etkinlik türü, süre ve personel sayısına göre. Teklif için bizi arayın."
+          "answer": "Etkinlik türü, süre ve personel sayısına göre. Teklif için bizimle iletişime geçin."
         },
         {
           "question": "Antalya dışında hizmet var mı?",

@@ -48,31 +48,119 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-2xl);
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  padding: var(--space-lg);
+  background: rgba(var(--color-bg-rgb), 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .filter-tab {
-  padding: var(--space-sm) var(--space-lg);
+  position: relative;
+  padding: var(--space-md) var(--space-xl);
   font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Subtle background on non-active */
+.filter-tab::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.filter-tab:hover::before {
+  opacity: 1;
 }
 
 .filter-tab:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-text-primary);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
+/* Active state - Premium gradient */
 .filter-tab--active {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
   color: white;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    color-mix(in srgb, var(--color-primary) 80%, #000) 100%
+  );
+  border-color: transparent;
+  box-shadow:
+    0 4px 20px rgba(var(--color-primary-rgb), 0.4),
+    0 0 40px rgba(var(--color-primary-rgb), 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.filter-tab--active:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 8px 30px rgba(var(--color-primary-rgb), 0.5),
+    0 0 60px rgba(var(--color-primary-rgb), 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Shine effect on active */
+.filter-tab--active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.filter-tab--active:hover::after {
+  left: 100%;
+}
+
+/* Focus state for accessibility */
+.filter-tab:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .filter-tabs {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .filter-tab {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-xs);
+  }
 }
 
 /* ===================
@@ -599,4 +687,17 @@
   .why-choose-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ===================
+   SERVICE CARD FILTER
+   =================== */
+.service-card {
+  transition: all var(--transition-normal), opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-card--hidden {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
 }

@@ -217,8 +217,8 @@ const FormsManager = (function() {
 
       // Form data already collected above
 
-      // Send form data via Email
-      await sendViaEmail(data);
+      // Send form data via Email (pass original FormData for file uploads)
+      await sendViaEmail(data, formData);
 
       // Show success message
       const successMsg = typeof I18nManager !== 'undefined'
@@ -277,11 +277,52 @@ const FormsManager = (function() {
   /**
    * Send form data via Email using Web3Forms
    * Sends form data to the configured email address
+   * Supports file attachments for career applications
    */
-  async function sendViaEmail(data) {
+  async function sendViaEmail(data, originalFormData = null) {
     const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
 
-    const formData = {
+    // Check if this is a career application with file upload
+    const hasFileUpload = originalFormData && originalFormData.get('resume');
+
+    if (hasFileUpload) {
+      // Use FormData for file uploads (multipart/form-data)
+      const submitData = new FormData();
+      submitData.append('access_key', config.web3formsApiKey);
+      submitData.append('subject', `Yeni Kariyer Başvurusu - ${data.fullName || data.name} ${data.surname || ''}`);
+      submitData.append('from_name', 'Penta Organizasyon Kariyer');
+
+      // Append all text fields
+      submitData.append('fullName', data.fullName || 'Belirtilmedi');
+      submitData.append('surname', data.surname || 'Belirtilmedi');
+      submitData.append('email', data.email || 'Belirtilmedi');
+      submitData.append('phone', data.phone || 'Belirtilmedi');
+
+      // Append file attachment
+      const resumeFile = originalFormData.get('resume');
+      if (resumeFile && resumeFile.size > 0) {
+        submitData.append('attachment', resumeFile);
+      }
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: submitData  // FormData - browser sets Content-Type automatically with boundary
+      });
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || 'E-posta gönderilemedi');
+      }
+
+      return result;
+    }
+
+    // Standard JSON submission for contact forms (no files)
+    const formDataJson = {
       access_key: config.web3formsApiKey,
       subject: `Yeni İletişim Formu - ${data.name}`,
       from_name: 'Penta Organizasyon Web Sitesi',
@@ -298,7 +339,7 @@ const FormsManager = (function() {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formDataJson)
     });
 
     const result = await response.json();
@@ -316,8 +357,8 @@ const FormsManager = (function() {
    */
   function sendViaWhatsApp(data) {
     return new Promise((resolve) => {
-      // WhatsApp number (without + sign) - TODO: Configure phone number
-      const phoneNumber = '';
+      // WhatsApp number (without + sign)
+      const phoneNumber = '905309137975';
 
       // Format the message (using text symbols instead of emojis for better compatibility)
       const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';

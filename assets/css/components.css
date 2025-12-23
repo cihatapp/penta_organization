@@ -1570,6 +1570,73 @@ select.input {
 }
 
 /* ===================
+   RADIO BUTTONS
+   =================== */
+.form__radio-group {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio__mark {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--color-bg-primary);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.radio__mark::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.radio input[type="radio"]:checked + .radio__mark {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.radio input[type="radio"]:checked + .radio__mark::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio:hover .radio__mark {
+  border-color: var(--color-primary);
+}
+
+.radio__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ===================
    FILE UPLOAD
    =================== */
 .file-upload__label {

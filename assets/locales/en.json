@@ -309,6 +309,9 @@
       "message": "Your Message",
       "messagePlaceholder": "Tell us about your event vision, date, and number of participants...",
       "messageHint": "Maximum 2000 characters",
+      "sendMethod": "Send Method",
+      "sendEmail": "Email",
+      "sendWhatsapp": "WhatsApp",
       "submit": "Send Message"
     },
     "info": {
