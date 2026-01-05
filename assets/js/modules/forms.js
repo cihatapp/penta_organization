@@ -49,9 +49,25 @@ const FormsManager = (function() {
     if (type === 'file') {
       const files = field.files;
       const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
-      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
 
-      // Required check for file
+      // Different allowed types based on field name
+      const isContactAttachment = field.name === 'attachment';
+      const allowedTypes = isContactAttachment
+        ? [
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'image/jpeg',
+            'image/png',
+            'image/gif'
+          ]
+        : [
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+          ];
+
+      // Required check for file (only if required attribute is set)
       if (required && (!files || files.length === 0)) {
         isValid = false;
         errorMessage = getErrorMessage('fileRequired', field);
@@ -66,7 +82,9 @@ const FormsManager = (function() {
         // File type check
         else if (!allowedTypes.includes(file.type)) {
           isValid = false;
-          errorMessage = getErrorMessage('fileType', field);
+          errorMessage = isContactAttachment
+            ? getErrorMessage('fileTypeContact', field)
+            : getErrorMessage('fileType', field);
         }
       }
 
@@ -125,9 +143,10 @@ const FormsManager = (function() {
       minLength: `${fieldName} must be at least ${param} characters`,
       maxLength: `${fieldName} must be no more than ${param} characters`,
       pattern: `Please enter a valid ${fieldName.toLowerCase()}`,
-      fileRequired: 'Lütfen bir CV dosyası seçin',
+      fileRequired: 'Lütfen bir dosya seçin',
       fileSize: `Dosya boyutu ${param} değerini aşmamalıdır`,
-      fileType: 'Sadece PDF, DOC veya DOCX dosyaları kabul edilir'
+      fileType: 'Sadece PDF, DOC veya DOCX dosyaları kabul edilir',
+      fileTypeContact: 'Sadece PDF, DOC, DOCX, JPG, PNG veya GIF dosyaları kabul edilir'
     };
 
     // Try to get translated message from i18n

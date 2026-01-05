@@ -362,6 +362,27 @@
                 <span class="form__hint" data-i18n="contact.form.messageHint">Maksimum 2000 karakter</span>
               </div>
 
+              <div class="form__group">
+                <label for="attachment" class="form__label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                  </svg>
+                  <span data-i18n="contact.form.attachment">Dosya Ekle (İsteğe Bağlı)</span>
+                </label>
+                <div class="file-upload">
+                  <input type="file" id="attachment" name="attachment" class="file-upload__input" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.gif">
+                  <label for="attachment" class="file-upload__label">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <span class="file-upload__name" data-i18n="contact.form.uploadText">Dosya yüklemek için tıklayın</span>
+                    <span class="file-upload__hint" data-i18n="contact.form.uploadHint">PDF, DOC, DOCX, JPG, PNG (Maks 5MB)</span>
+                  </label>
+                </div>
+              </div>
+
               <button type="submit" class="btn btn--primary btn--lg btn--full btn--submit">
                 <span class="btn__text" data-i18n="contact.form.submit">Mesaj Gönder</span>
                 <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
