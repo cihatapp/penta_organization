@@ -283,8 +283,6 @@
       "subtitle": "Reach us through the most convenient channel for you."
     },
     "quick": {
-      "whatsapp": "WhatsApp",
-      "whatsappValue": "Message Us",
       "phone": "Phone",
       "email": "Email"
     },
@@ -311,7 +309,6 @@
       "messageHint": "Maximum 2000 characters",
       "sendMethod": "Send Method",
       "sendEmail": "Email",
-      "sendWhatsapp": "WhatsApp",
       "submit": "Send Message"
     },
     "info": {
@@ -320,8 +317,7 @@
       "hours": "Working Hours",
       "hoursValue": "Monday - Saturday<br>09:00 - 18:00",
       "phone": "Phone",
-      "email": "Email",
-      "whatsappBtn": "Message on WhatsApp"
+      "email": "Email"
     },
     "social": {
       "title": "Follow Us"

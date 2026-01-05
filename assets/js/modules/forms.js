@@ -11,7 +11,18 @@ const FormsManager = (function() {
     errorClass: 'form__field--error',
     successClass: 'form__field--success',
     messageClass: 'form__message',
-    web3formsApiKey: 'edbe25f9-466d-4a4d-b014-3c4812e2e5d9'
+    // Form Service Configuration (Formsubmit.co - Free & Unlimited)
+    formService: {
+      provider: 'formsubmit',
+      email: 'hello@pentaorganizasyon.com',
+      endpoint: 'https://formsubmit.co/ajax/hello@pentaorganizasyon.com',
+      // Formsubmit.co special fields
+      captcha: false,        // Disable captcha for AJAX
+      template: 'table'      // Email template: 'table' or 'box'
+      // Note: Spam protection uses two layers:
+      // 1. Client-side: 'website' field in HTML forms (checked in handleSubmit)
+      // 2. Server-side: Formsubmit.co's built-in spam filtering
+    }
   };
 
   // Validation patterns
@@ -329,6 +340,18 @@ const FormsManager = (function() {
         if (msg) msg.remove();
       });
 
+      // Reset file upload UI elements
+      form.querySelectorAll('.file-upload__name').forEach(el => {
+        el.textContent = el.dataset.originalText || 'Dosya seçilmedi';
+      });
+      form.querySelectorAll('.file-upload__label').forEach(el => {
+        el.classList.remove('file-upload__label--error', 'file-upload__label--success');
+      });
+      form.querySelectorAll('.file-upload__preview').forEach(el => {
+        el.style.display = 'none';
+        el.src = '';
+      });
+
     } catch (error) {
       console.error('Form submission error:', error);
 
@@ -367,133 +390,92 @@ const FormsManager = (function() {
   };
 
   /**
-   * Send form data via Email using Web3Forms
+   * Send form data via Email using Formsubmit.co (Free & Unlimited)
    * Sends form data to the configured email address
-   * Supports file attachments for career applications
+   * Supports file attachments for both contact and career forms
    */
   async function sendViaEmail(data, originalFormData = null) {
     const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
+    const { endpoint, captcha, template } = config.formService;
 
-    // Check if this is a career application with file upload
+    // Check for file uploads (resume for careers, attachment for contact)
     const resumeFile = originalFormData ? originalFormData.get('resume') : null;
-    const hasFileUpload = resumeFile && resumeFile instanceof File && resumeFile.size > 0;
+    const attachmentFile = originalFormData ? originalFormData.get('attachment') : null;
+    const hasResumeUpload = resumeFile && resumeFile instanceof File && resumeFile.size > 0;
+    const hasAttachmentUpload = attachmentFile && attachmentFile instanceof File && attachmentFile.size > 0;
 
-    console.log('sendViaEmail called:', { hasFileUpload, fileSize: resumeFile?.size, fileName: resumeFile?.name });
+    // Determine form type
+    const isCareerForm = hasResumeUpload || data.fullName || data.surname;
 
-    if (hasFileUpload) {
-      // Use FormData for file uploads (multipart/form-data)
-      const submitData = new FormData();
-      submitData.append('access_key', config.web3formsApiKey);
-      submitData.append('subject', `Yeni Kariyer Başvurusu - ${data.fullName || data.name} ${data.surname || ''}`);
-      submitData.append('from_name', 'Penta Organizasyon Kariyer');
+    console.log('sendViaEmail called:', {
+      provider: config.formService.provider,
+      isCareerForm,
+      hasResumeUpload,
+      hasAttachmentUpload
+    });
 
-      // Append all text fields
+    // Build FormData for Formsubmit.co (works for both with and without files)
+    const submitData = new FormData();
+
+    // Formsubmit.co special fields
+    submitData.append('_captcha', captcha.toString());
+    submitData.append('_template', template);
+
+    if (isCareerForm) {
+      // Career Application Form
+      submitData.append('_subject', `Yeni Kariyer Başvurusu - ${data.fullName || ''} ${data.surname || ''}`);
       submitData.append('Ad', data.fullName || 'Belirtilmedi');
       submitData.append('Soyad', data.surname || 'Belirtilmedi');
       submitData.append('E-posta', data.email || 'Belirtilmedi');
       submitData.append('Telefon', data.phone || 'Belirtilmedi');
 
-      // Append file attachment - Web3Forms requires 'attachment' field name
-      submitData.append('attachment', resumeFile, resumeFile.name);
+      // Append resume file if present
+      if (hasResumeUpload) {
+        submitData.append('attachment', resumeFile, resumeFile.name);
+        console.log('Attaching resume:', resumeFile.name, resumeFile.size, 'bytes');
+      }
+    } else {
+      // Contact Form
+      submitData.append('_subject', `Yeni İletişim Formu - ${data.name || 'İsimsiz'}`);
+      submitData.append('Ad', data.name || 'Belirtilmedi');
+      submitData.append('E-posta', data.email || 'Belirtilmedi');
+      submitData.append('Telefon', data.phone || 'Belirtilmedi');
+      submitData.append('Hizmet', serviceName);
+      submitData.append('Mesaj', data.message || 'Mesaj yok');
 
-      console.log('Sending career application with file:', resumeFile.name, resumeFile.size, 'bytes');
-
-      try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json'
-          },
-          body: submitData  // FormData - browser sets Content-Type automatically with boundary
-        });
-
-        const result = await response.json();
-        console.log('Web3Forms response:', result);
-
-        if (!result.success) {
-          console.error('Web3Forms error:', result);
-          throw new Error(result.message || 'E-posta gönderilemedi');
-        }
-
-        return result;
-      } catch (error) {
-        console.error('Fetch error:', error);
-        throw error;
+      // Append attachment file if present
+      if (hasAttachmentUpload) {
+        submitData.append('attachment', attachmentFile, attachmentFile.name);
+        console.log('Attaching file:', attachmentFile.name, attachmentFile.size, 'bytes');
       }
     }
 
-    // Standard JSON submission for contact forms (no files)
-    const formDataJson = {
-      access_key: config.web3formsApiKey,
-      subject: `Yeni İletişim Formu - ${data.name}`,
-      from_name: 'Penta Organizasyon Web Sitesi',
-      Ad: data.name || 'Belirtilmedi',
-      'E-posta': data.email || 'Belirtilmedi',
-      Telefon: data.phone || 'Belirtilmedi',
-      Hizmet: serviceName,
-      Mesaj: data.message || 'Mesaj yok'
-    };
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: submitData
+      });
 
-    console.log('Sending contact form:', formDataJson);
+      const result = await response.json();
+      console.log('Formsubmit.co response:', result);
 
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(formDataJson)
-    });
+      // Formsubmit.co returns { success: "true", message: "..." } on success
+      // or { success: "false", message: "..." } on failure
+      if (result.success === 'true' || result.success === true) {
+        console.log('Form submitted successfully:', result.message);
+        return result;
+      }
 
-    const result = await response.json();
-    console.log('Web3Forms response:', result);
-
-    if (!result.success) {
-      console.error('Web3Forms error:', result);
+      // If not explicitly successful, treat as error
+      console.error('Formsubmit.co error:', result);
       throw new Error(result.message || 'E-posta gönderilemedi');
+    } catch (error) {
+      console.error('Form submission error:', error);
+      throw error;
     }
-
-    return result;
-  }
-
-  /**
-   * Send form data via WhatsApp
-   * Formats form data into a readable message and opens WhatsApp
-   */
-  function sendViaWhatsApp(data) {
-    return new Promise((resolve) => {
-      // WhatsApp number (without + sign)
-      const phoneNumber = '905309137975';
-
-      // Format the message (using text symbols instead of emojis for better compatibility)
-      const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
-
-      const message = `*YENI ILETISIM FORMU*
-------------------------
-> *Ad Soyad:* ${data.name || 'Belirtilmedi'}
-> *E-posta:* ${data.email || 'Belirtilmedi'}
-> *Telefon:* ${data.phone || 'Belirtilmedi'}
-> *Hizmet:* ${serviceName}
-------------------------
-*Mesaj:*
-${data.message || 'Mesaj yok'}
-------------------------
-_${new Date().toLocaleString('tr-TR')}_`;
-
-      // Encode message for URL
-      const encodedMessage = encodeURIComponent(message);
-
-      // Create WhatsApp URL
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-      // Open WhatsApp in new tab
-      window.open(whatsappURL, '_blank');
-
-      // Resolve after a short delay to show success message
-      setTimeout(() => {
-        resolve({ success: true });
-      }, 500);
-    });
   }
 
   /**
@@ -504,6 +486,11 @@ _${new Date().toLocaleString('tr-TR')}_`;
     const preview = input.parentElement.querySelector('.file-upload__preview');
     const fileName = input.parentElement.querySelector('.file-upload__name');
     const originalText = fileName ? fileName.textContent : '';
+
+    // Store original text for reset
+    if (fileName && !fileName.dataset.originalText) {
+      fileName.dataset.originalText = originalText;
+    }
 
     input.addEventListener('change', () => {
       const file = input.files[0];

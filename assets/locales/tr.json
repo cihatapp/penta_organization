@@ -283,8 +283,6 @@
       "subtitle": "Sorularınız için bize ulaşın."
     },
     "quick": {
-      "whatsapp": "WhatsApp",
-      "whatsappValue": "Hemen Yazın",
       "phone": "Telefon",
       "email": "E-posta"
     },
@@ -311,7 +309,6 @@
       "messageHint": "Maksimum 2000 karakter",
       "sendMethod": "Gönderim Yöntemi",
       "sendEmail": "E-posta",
-      "sendWhatsapp": "WhatsApp",
       "submit": "Mesaj Gönder"
     },
     "info": {
@@ -320,8 +317,7 @@
       "hours": "Çalışma Saatleri",
       "hoursValue": "Pazartesi - Cumartesi<br>09:00 - 18:00",
       "phone": "Telefon",
-      "email": "E-posta",
-      "whatsappBtn": "WhatsApp ile Yazın"
+      "email": "E-posta"
     },
     "social": {
       "title": "Bizi Takip Edin"

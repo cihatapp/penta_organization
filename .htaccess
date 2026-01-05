@@ -27,8 +27,8 @@ RewriteEngine On
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
 
     # Content Security Policy
-    # Allow model-viewer from unpkg, Google Fonts, and Web3Forms API
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https://wa.me; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com;"
+    # Allow model-viewer from unpkg, Google Fonts, and Formsubmit.co API (free form service)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formsubmit.co;"
 
     # HSTS - Force HTTPS (uncomment after confirming HTTPS works)
     # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
