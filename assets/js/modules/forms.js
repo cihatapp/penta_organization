@@ -26,7 +26,6 @@ const FormsManager = (function() {
    * Validate a single field
    */
   function validateField(field) {
-    const value = field.value.trim();
     const type = field.type;
     const required = field.required;
     const minLength = field.minLength;
@@ -35,6 +34,48 @@ const FormsManager = (function() {
 
     let isValid = true;
     let errorMessage = '';
+
+    // Handle checkbox validation separately
+    if (type === 'checkbox') {
+      if (required && !field.checked) {
+        isValid = false;
+        errorMessage = getErrorMessage('required', field);
+      }
+      updateFieldStatus(field, isValid, errorMessage);
+      return isValid;
+    }
+
+    // Handle file input validation separately
+    if (type === 'file') {
+      const files = field.files;
+      const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+
+      // Required check for file
+      if (required && (!files || files.length === 0)) {
+        isValid = false;
+        errorMessage = getErrorMessage('fileRequired', field);
+      }
+      // File size check
+      else if (files && files.length > 0) {
+        const file = files[0];
+        if (file.size > maxFileSize) {
+          isValid = false;
+          errorMessage = getErrorMessage('fileSize', field, '5MB');
+        }
+        // File type check
+        else if (!allowedTypes.includes(file.type)) {
+          isValid = false;
+          errorMessage = getErrorMessage('fileType', field);
+        }
+      }
+
+      updateFieldStatus(field, isValid, errorMessage);
+      return isValid;
+    }
+
+    // Standard text/email/tel input validation
+    const value = field.value.trim();
 
     // Required check
     if (required && !value) {
@@ -83,7 +124,10 @@ const FormsManager = (function() {
       phone: 'Please enter a valid phone number',
       minLength: `${fieldName} must be at least ${param} characters`,
       maxLength: `${fieldName} must be no more than ${param} characters`,
-      pattern: `Please enter a valid ${fieldName.toLowerCase()}`
+      pattern: `Please enter a valid ${fieldName.toLowerCase()}`,
+      fileRequired: 'Lütfen bir CV dosyası seçin',
+      fileSize: `Dosya boyutu ${param} değerini aşmamalıdır`,
+      fileType: 'Sadece PDF, DOC veya DOCX dosyaları kabul edilir'
     };
 
     // Try to get translated message from i18n
@@ -102,11 +146,33 @@ const FormsManager = (function() {
    * Update field visual status
    */
   function updateFieldStatus(field, isValid, errorMessage = '') {
-    const wrapper = field.closest('.form__group') || field.parentElement;
+    // For checkbox, get the parent label or form group
+    let wrapper;
+    if (field.type === 'checkbox') {
+      wrapper = field.closest('.form__group--checkbox') || field.closest('.form__group') || field.parentElement.parentElement;
+    } else if (field.type === 'file') {
+      wrapper = field.closest('.form__group') || field.parentElement.parentElement;
+    } else {
+      wrapper = field.closest('.form__group') || field.parentElement;
+    }
+
     if (!wrapper) return;
 
     // Remove existing status classes
     wrapper.classList.remove(config.errorClass, config.successClass);
+
+    // For file uploads, also update the file-upload label styling
+    if (field.type === 'file') {
+      const fileUploadLabel = wrapper.querySelector('.file-upload__label');
+      if (fileUploadLabel) {
+        fileUploadLabel.classList.remove('file-upload__label--error', 'file-upload__label--success');
+        if (!isValid) {
+          fileUploadLabel.classList.add('file-upload__label--error');
+        } else if (field.files && field.files.length > 0) {
+          fileUploadLabel.classList.add('file-upload__label--success');
+        }
+      }
+    }
 
     // Remove existing error message
     const existingError = wrapper.querySelector(`.${config.messageClass}`);
@@ -126,8 +192,15 @@ const FormsManager = (function() {
       field.setAttribute('aria-invalid', 'true');
       field.setAttribute('aria-describedby', `${field.id}-error`);
       errorEl.id = `${field.id}-error`;
-    } else if (isValid && field.value.trim()) {
-      wrapper.classList.add(config.successClass);
+    } else if (isValid) {
+      // Check for valid state - different for different field types
+      const hasValue = field.type === 'checkbox'
+        ? field.checked
+        : (field.type === 'file' ? (field.files && field.files.length > 0) : field.value.trim());
+
+      if (hasValue) {
+        wrapper.classList.add(config.successClass);
+      }
       field.setAttribute('aria-invalid', 'false');
       field.removeAttribute('aria-describedby');
     }
@@ -283,7 +356,10 @@ const FormsManager = (function() {
     const serviceName = serviceLabels[data.service] || data.service || 'Belirtilmedi';
 
     // Check if this is a career application with file upload
-    const hasFileUpload = originalFormData && originalFormData.get('resume');
+    const resumeFile = originalFormData ? originalFormData.get('resume') : null;
+    const hasFileUpload = resumeFile && resumeFile instanceof File && resumeFile.size > 0;
+
+    console.log('sendViaEmail called:', { hasFileUpload, fileSize: resumeFile?.size, fileName: resumeFile?.name });
 
     if (hasFileUpload) {
       // Use FormData for file uploads (multipart/form-data)
@@ -293,32 +369,38 @@ const FormsManager = (function() {
       submitData.append('from_name', 'Penta Organizasyon Kariyer');
 
       // Append all text fields
-      submitData.append('fullName', data.fullName || 'Belirtilmedi');
-      submitData.append('surname', data.surname || 'Belirtilmedi');
-      submitData.append('email', data.email || 'Belirtilmedi');
-      submitData.append('phone', data.phone || 'Belirtilmedi');
+      submitData.append('Ad', data.fullName || 'Belirtilmedi');
+      submitData.append('Soyad', data.surname || 'Belirtilmedi');
+      submitData.append('E-posta', data.email || 'Belirtilmedi');
+      submitData.append('Telefon', data.phone || 'Belirtilmedi');
 
-      // Append file attachment
-      const resumeFile = originalFormData.get('resume');
-      if (resumeFile && resumeFile.size > 0) {
-        submitData.append('attachment', resumeFile);
+      // Append file attachment - Web3Forms requires 'attachment' field name
+      submitData.append('attachment', resumeFile, resumeFile.name);
+
+      console.log('Sending career application with file:', resumeFile.name, resumeFile.size, 'bytes');
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: submitData  // FormData - browser sets Content-Type automatically with boundary
+        });
+
+        const result = await response.json();
+        console.log('Web3Forms response:', result);
+
+        if (!result.success) {
+          console.error('Web3Forms error:', result);
+          throw new Error(result.message || 'E-posta gönderilemedi');
+        }
+
+        return result;
+      } catch (error) {
+        console.error('Fetch error:', error);
+        throw error;
       }
-
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: submitData  // FormData - browser sets Content-Type automatically with boundary
-      });
-
-      const result = await response.json();
-
-      if (!result.success) {
-        throw new Error(result.message || 'E-posta gönderilemedi');
-      }
-
-      return result;
     }
 
     // Standard JSON submission for contact forms (no files)
@@ -326,12 +408,14 @@ const FormsManager = (function() {
       access_key: config.web3formsApiKey,
       subject: `Yeni İletişim Formu - ${data.name}`,
       from_name: 'Penta Organizasyon Web Sitesi',
-      name: data.name || 'Belirtilmedi',
-      email: data.email || 'Belirtilmedi',
-      phone: data.phone || 'Belirtilmedi',
-      service: serviceName,
-      message: data.message || 'Mesaj yok'
+      Ad: data.name || 'Belirtilmedi',
+      'E-posta': data.email || 'Belirtilmedi',
+      Telefon: data.phone || 'Belirtilmedi',
+      Hizmet: serviceName,
+      Mesaj: data.message || 'Mesaj yok'
     };
+
+    console.log('Sending contact form:', formDataJson);
 
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -343,8 +427,10 @@ const FormsManager = (function() {
     });
 
     const result = await response.json();
+    console.log('Web3Forms response:', result);
 
     if (!result.success) {
+      console.error('Web3Forms error:', result);
       throw new Error(result.message || 'E-posta gönderilemedi');
     }
 
@@ -395,16 +481,23 @@ _${new Date().toLocaleString('tr-TR')}_`;
    * Initialize file upload preview
    */
   function initFileUpload(input) {
+    const wrapper = input.closest('.form__group') || input.parentElement.parentElement;
     const preview = input.parentElement.querySelector('.file-upload__preview');
     const fileName = input.parentElement.querySelector('.file-upload__name');
+    const originalText = fileName ? fileName.textContent : '';
 
     input.addEventListener('change', () => {
       const file = input.files[0];
 
       if (file) {
         if (fileName) {
-          fileName.textContent = file.name;
+          // Show filename with size
+          const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+          fileName.textContent = `${file.name} (${sizeMB} MB)`;
         }
+
+        // Validate the file immediately
+        validateField(input);
 
         // Image preview
         if (preview && file.type.startsWith('image/')) {
@@ -414,6 +507,19 @@ _${new Date().toLocaleString('tr-TR')}_`;
             preview.style.display = 'block';
           };
           reader.readAsDataURL(file);
+        }
+      } else {
+        // Reset to original text if no file selected
+        if (fileName) {
+          fileName.textContent = originalText;
+        }
+        // Clear validation state
+        if (wrapper) {
+          wrapper.classList.remove(config.errorClass, config.successClass);
+          const fileUploadLabel = wrapper.querySelector('.file-upload__label');
+          if (fileUploadLabel) {
+            fileUploadLabel.classList.remove('file-upload__label--error', 'file-upload__label--success');
+          }
         }
       }
     });
@@ -453,20 +559,50 @@ _${new Date().toLocaleString('tr-TR')}_`;
     const forms = document.querySelectorAll('[data-form]');
 
     forms.forEach(form => {
-      // Field validation on blur
+      // Field validation on blur and input
       const fields = form.querySelectorAll('input, textarea, select');
       fields.forEach(field => {
-        field.addEventListener('blur', () => validateField(field));
-        field.addEventListener('input', () => {
-          // Clear error on input
-          if (field.closest(`.${config.errorClass}`)) {
-            validateField(field);
-          }
-        });
+        // Checkbox uses 'change' event
+        if (field.type === 'checkbox') {
+          field.addEventListener('change', () => validateField(field));
+        }
+        // File input is handled separately by initFileUpload
+        else if (field.type !== 'file') {
+          field.addEventListener('blur', () => validateField(field));
+          field.addEventListener('input', () => {
+            // Clear error on input
+            if (field.closest(`.${config.errorClass}`)) {
+              validateField(field);
+            }
+          });
+        }
       });
 
       // Form submission
       form.addEventListener('submit', (e) => handleSubmit(e, form));
+
+      // Reset file upload visual state when form is reset
+      form.addEventListener('reset', () => {
+        setTimeout(() => {
+          // Clear all field statuses after reset
+          form.querySelectorAll('.form__group').forEach(group => {
+            group.classList.remove(config.errorClass, config.successClass);
+            const msg = group.querySelector(`.${config.messageClass}`);
+            if (msg) msg.remove();
+          });
+          // Reset file upload labels
+          form.querySelectorAll('.file-upload__label').forEach(label => {
+            label.classList.remove('file-upload__label--error', 'file-upload__label--success');
+          });
+          // Reset file upload names to original
+          form.querySelectorAll('.file-upload__name').forEach(nameEl => {
+            const originalText = nameEl.getAttribute('data-i18n')
+              ? (typeof I18nManager !== 'undefined' ? I18nManager.getTranslation(nameEl.getAttribute('data-i18n')) : 'Yüklemek için tıklayın veya sürükleyin')
+              : 'Yüklemek için tıklayın veya sürükleyin';
+            nameEl.textContent = originalText;
+          });
+        }, 0);
+      });
     });
 
     // File uploads

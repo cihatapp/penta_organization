@@ -1672,6 +1672,25 @@ select.input {
   color: var(--color-text-muted);
 }
 
+/* File upload validation states */
+.file-upload__label--error {
+  border-color: var(--color-error);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.file-upload__label--error svg {
+  color: var(--color-error);
+}
+
+.file-upload__label--success {
+  border-color: var(--color-success);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.file-upload__label--success svg {
+  color: var(--color-success);
+}
+
 /* ===================
    BUTTON MODIFIERS
    =================== */
